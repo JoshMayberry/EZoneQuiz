@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=F44336&secondary.color=E0E0E0 -->
+    <color name="colorPrimary">#f44336</color>
+    <color name="colorPrimaryDark">#ba000d</color>
+    <color name="colorPrimaryLight">#ff7961</color>
+    <color name="colorSecondary">#e0e0e0</color>
+    <color name="colorSecondaryDark">#aeaeae</color>
+    <color name="colorSecondaryLight">#ffffff</color>
+</resources>
