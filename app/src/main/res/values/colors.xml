@@ -4,7 +4,10 @@
     <color name="colorPrimary">#f44336</color>
     <color name="colorPrimaryDark">#ba000d</color>
     <color name="colorPrimaryLight">#ff7961</color>
+    <color name="colorPrimaryText">#000000</color>
+
     <color name="colorSecondary">#e0e0e0</color>
     <color name="colorSecondaryDark">#aeaeae</color>
     <color name="colorSecondaryLight">#ffffff</color>
+    <color name="colorSecondaryText">#000000</color>
 </resources>
