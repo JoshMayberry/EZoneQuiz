@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- See: https://gamedev.stackexchange.com/questions/33714/should-npc-dialog-be-stored-in-xml-or-in-a-script/33718#33718 -->
+    <question>
+        <text>How many people are in your family?</text>
+        <options>
+            <answer>
+                <minimum>1</minimum>
+                <maximum>24</maximum>
+                <type>number</type>
+            </answer>
+        </options>
+    </question>
+    <question>
+        <text>Are fires common where you live?</text>
+        <options>
+            <answer>
+                <text>Yes</text>
+                <type>radio</type>
+            </answer>
+            <answer>
+                <text>No</text>
+                <type>radio</type>
+            </answer>
+            <answer>
+                <text>Not Sure</text>
+                <type>radio</type>
+            </answer>
+        </options>
+    </question>
+</resources>
