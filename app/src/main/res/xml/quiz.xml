@@ -5,9 +5,9 @@
         <text>How many people are in your family?</text>
         <options>
             <answer>
+                <type>int</type>
                 <minimum>1</minimum>
                 <maximum>24</maximum>
-                <type>number</type>
             </answer>
         </options>
     </question>
@@ -15,16 +15,16 @@
         <text>Are fires common where you live?</text>
         <options>
             <answer>
+                <type>bool</type>
                 <text>Yes</text>
-                <type>radio</type>
             </answer>
             <answer>
+                <type>bool</type>
                 <text>No</text>
-                <type>radio</type>
             </answer>
             <answer>
+                <type>bool</type>
                 <text>Not Sure</text>
-                <type>radio</type>
             </answer>
         </options>
     </question>
