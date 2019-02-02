@@ -44,20 +44,20 @@ public class QuizActivity extends AppCompatActivity {
         view_radioButton[2] = findViewById(R.id.radioButton_2);
         view_radioButton[3] = findViewById(R.id.radioButton_3);
         view_radioButton[4] = findViewById(R.id.radioButton_4);
-        view_checkBox[1] = findViewById(R.id.checkBox_0);
-        view_checkBox[2] = findViewById(R.id.checkBox_1);
-        view_checkBox[3] = findViewById(R.id.checkBox_2);
-        view_checkBox[4] = findViewById(R.id.checkBox_3);
-        view_checkBox[5] = findViewById(R.id.checkBox_4);
+        view_checkBox[0] = findViewById(R.id.checkBox_0);
+        view_checkBox[1] = findViewById(R.id.checkBox_1);
+        view_checkBox[2] = findViewById(R.id.checkBox_2);
+        view_checkBox[3] = findViewById(R.id.checkBox_3);
+        view_checkBox[4] = findViewById(R.id.checkBox_4);
         view_numberPicker = findViewById(R.id.numberPicker);
         view_spinner = findViewById(R.id.spinner);
         view_questionText = findViewById(R.id.quiz_title);
 
         correctList[0] = getResources().getString(R.string.correct_1);
-        correctList[2] = getResources().getString(R.string.correct_2);
-        correctList[3] = getResources().getString(R.string.correct_3);
+        correctList[1] = getResources().getString(R.string.correct_2);
+        correctList[2] = getResources().getString(R.string.correct_3);
         incorrectList[0] = getResources().getString(R.string.incorrect_1);
-        incorrectList[2] = getResources().getString(R.string.incorrect_2);
+        incorrectList[1] = getResources().getString(R.string.incorrect_2);
 
         generateQuestions();
         reset();
@@ -130,7 +130,7 @@ public class QuizActivity extends AppCompatActivity {
 
             for (int i=0; i<answerIdList.length; i++) {
                 this.answerList.add(answerIdList[i]);
-                this.viewList.add(view_radioButton[i]);
+                this.viewList.add(view_checkBox[i]);
             }
 
             for (int i: correctIndex) {
@@ -205,16 +205,11 @@ public class QuizActivity extends AppCompatActivity {
          * @return - Whether or not the user chose correctly
          */
         public boolean check() {
-            for (View view : currentQuestion.viewList) {
-                view.setVisibility(View.VISIBLE);
-            }
-            view_questionText.setText(currentQuestion.textId);
-
             switch (this.type) {
                 case Single:
-                    for (int i: this.correctIndex) {
+                    for (int i = 0; i < this.viewList.size(); i++) {
                         RadioButton view = (RadioButton) viewList.get(i);
-                        if (!view.isChecked()) {
+                        if (view.isChecked() != this.correctIndex.contains(i)) {
                             return false;
                         }
                     }
@@ -222,7 +217,7 @@ public class QuizActivity extends AppCompatActivity {
                 case Multiple:
                     for (int i = 0; i < this.viewList.size(); i++) {
                         CheckBox view = (CheckBox) viewList.get(i);
-                        if (!view.isChecked()) {
+                        if (view.isChecked() != this.correctIndex.contains(i)) {
                             return false;
                         }
                     }
@@ -335,7 +330,7 @@ public class QuizActivity extends AppCompatActivity {
         view_checkBox[4].setVisibility(View.GONE);
 
         //Scramble question order
-        Collections.shuffle(questions);
+//        Collections.shuffle(questions);
 
         //Reset progress bar
         view_progress.setMax(questions.size());
