@@ -15,7 +15,9 @@
 
     <style name="CategoryStyle">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/widget_menuItemHeight</item>
+        <!--<item name="android:layout_height">@dimen/widget_menuItemHeight</item>-->
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:padding">16dp</item>
         <item name="android:textColor">@android:color/white</item>

@@ -134,7 +134,7 @@
     <!-- These are the quiz questions and answers. They will be randomized. -->
     <!-- quiz[chapter]_[number] -->
     <string name="quiz">Test Your Knowledge</string>
-    <string name="quiz1_1">Fear us essential to survival.</string>
+    <string name="quiz1_1">Fear is essential to survival.</string>
     <string name="quiz1_1_correct"><xliff:g>%s</xliff:g>Fear turns on your “fight or flight” instinct.</string>
     <string name="quiz1_1_incorrect"><xliff:g>%s</xliff:g>What does fear do for you biologically?</string>
     <string name="quiz1_1_a1">True</string> <!-- correct -->

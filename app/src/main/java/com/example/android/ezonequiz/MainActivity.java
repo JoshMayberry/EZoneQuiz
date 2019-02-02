@@ -12,12 +12,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setupListener(findViewById(R.id.numbers), NumbersActivity.class);
-        setupListener(findViewById(R.id.phrases), PhrasesActivity.class);
-        setupListener(findViewById(R.id.family), FamilyActivity.class);
-        setupListener(findViewById(R.id.colors), ColorsActivity.class);
+        //Link Activities
+        setupListener(findViewById(R.id.quiz), QuizActivity.class);
     }
 
+    /**
+     * A helper function that connects buttons to other activities.
+     * @param view - What view to add a listener to
+     * @param cls - What class to listen for
+     * Example Input: setupListener(findViewById(R.id.quiz), QuizActivity.class);
+     */
     public void setupListener(View view, final Class cls) {
         view.setOnClickListener(new View.OnClickListener() {
             @Override

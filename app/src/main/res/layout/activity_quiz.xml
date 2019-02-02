@@ -13,6 +13,13 @@
         android:scaleType="fitCenter"
         android:src="@drawable/empty"
         android:layout_weight="1" />
+
+    <ProgressBar
+        android:id="@+id/quizProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,6 +63,36 @@
                 android:id="@+id/radioButton_4"
                 style="@style/Widget.AppCompat.EZoneQuiz.RadioButton.Answer" />
         </RadioGroup>
+        <CheckBox
+            android:id="@+id/checkBox_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/error"
+            />
+        <CheckBox
+            android:id="@+id/checkBox_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/error"
+            />
+        <CheckBox
+            android:id="@+id/checkBox_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/error"
+            />
+        <CheckBox
+            android:id="@+id/checkBox_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/error"
+            />
+        <CheckBox
+            android:id="@+id/checkBox_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/error"
+            />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

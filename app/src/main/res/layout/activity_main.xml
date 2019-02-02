@@ -35,9 +35,29 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/numbers"
+            android:id="@+id/section1"
             style="@style/CategoryStyle"
             android:background="@color/colorPrimaryLight"
-            android:text="Numbers" />
+            android:text="@string/section1" />
+        <TextView
+            android:id="@+id/section2"
+            style="@style/CategoryStyle"
+            android:background="@color/colorPrimaryLight"
+            android:text="@string/section2" />
+        <TextView
+            android:id="@+id/section3"
+            style="@style/CategoryStyle"
+            android:background="@color/colorPrimaryLight"
+            android:text="@string/section3" />
+        <TextView
+            android:id="@+id/section4"
+            style="@style/CategoryStyle"
+            android:background="@color/colorPrimaryLight"
+            android:text="@string/section4" />
+        <TextView
+            android:id="@+id/quiz"
+            style="@style/CategoryStyle"
+            android:background="@color/colorPrimaryLight"
+            android:text="@string/quiz" />
     </LinearLayout>
 </RelativeLayout>
