@@ -1,0 +1,8 @@
+package com.example.android.ezonequiz;
+
+import static org.junit.Assert.*;
+
+public class MainActivityTest {
+    
+
+}
