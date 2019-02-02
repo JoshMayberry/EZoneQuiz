@@ -3,6 +3,58 @@
     <string name="error">N/A</string>
     <string name="button_next">Next</string>
 
-    <string name="q1_text">How many people are in your home?</string>
-    <string name="q2_text">Are fires common where you live?</string>
+    <!-- Text taken from Emergency Zone Guide Book - https://www.emergencyzone.com/freepreparednessguidebook_a/275.htm -->
+    <!-- section[chapter]_[sub-chapter]_[section] -->
+    <!-- text[chapter]_[sub-chapter]_[section]_[paragraph] -->
+    <string name="section1">Introduction</string>
+    <string name="section1_1">Being Truly Prepared for Emergencies</string>
+    <string name="text1_1_1">Every time there’s a major disaster, fear kicks in and sales on emergency products go up significantly. Fear is a biological mechanism that tells your body to increase adrenaline production, which turns on your “fight or flight” instinct. When you see a car racing towards you, adrenaline can help you jump out of the way in time. In this sense, fear is essential to survival.</string>
+    <string name="text1_1_2">Fear as a lifestyle, however, can be more harmful than good. “Fight or flight” is a reaction that we can’t control, and it impedes us from becoming truly prepared for emergencies. How does it impede us? Here’s an example:</string>
+    <string name="text1_1_3">John is moving to the Gulf Coast, and he’s nervous about hurricanes. He buys a hurricane emergency kit and immediately feels safer. He stores it in his closet without looking at it much. A few months later a hurricane actually hits. His house is flooded and among other damages he loses his plumbing. John might respond with something like this: “I know I have a hurricane emergency kit somewhere, but I didn’t realize how hard going without a toilet for a week is. I didn’t sign up for this! Get me out of here!”</string>
+    <string name="text1_1_4">What happened to John? His fight or flight instinct was to buy a kit, and having satisfied his instinct he became content. He wasn’t ready for the reality of disasters and he wasn’t willing to adapt to his circumstances. If John had been living a prepared lifestyle, he might have been more willing to adapt: “Well, the toilet isn’t working and I can’t keep using it. I better find the portable toilet in the hurricane kit or find a way to dig a hole.” Charles Darwin explained the importance of adapting: “It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change.”</string>
+    <string name="text1_1_5"></string>
+    <string name="text1_1_6"></string>
+    <string name="text1_1_"></string>
+
+    <string name="section2">How to Prepare Without Fear</string>
+    <string name="section2_1">Become Fit</string>
+    <string name="section2_1_1">Physically</string>
+    <string name="section2_1_2">Financially</string>
+    <string name="section2_1_3">Mentally</string>
+    <string name="section2_2">Learn Skills</string>
+    <string name="section2_3">Emergency Plans</string>
+    <string name="section2_3_1">Family Disaster Plan</string>
+    <string name="section2_3_2">Template</string>
+    <string name="section2_4">Proper Supplies</string>
+
+    <string name="section3">What to Prepare For</string>
+    <string name="section3_1">General</string>
+    <string name="section3_1_1">Food and Water Storage</string>
+    <string name="section3_1_2">Bug Out Bag</string>
+    <string name="section3_1_3">Storage Supplies</string>
+    <string name="section3_2">Selected Disasters</string>
+    <string name="section3_2_1">Earthquake</string>
+    <string name="section3_2_2">Flood</string>
+    <string name="section3_2_3">House Fire/House Flood</string>
+    <string name="section3_2_4">Hurricane</string>
+    <string name="section3_2_5">Lightning Storm</string>
+    <string name="section3_2_6">Nuclear Disaster</string>
+    <string name="section3_2_7">Pandemic</string>
+    <string name="section3_2_8">Tornado</string>
+    <string name="section3_2_9">Water Contamination</string>
+    <string name="section3_2_10">Wildfire</string>
+    <string name="section3_2_11">Winter Storm</string>
+
+    <string name="section4">References</string>
+    <string name="section4_1">First Aid</string>
+    <string name="section4_2">Supplies: Side-by-Side</string>
+    <string name="section4_3">Emergency Contacts</string>
+
+    <string name="quiz">Test Your Knowledge</string>
+    <string name="quiz_1">Fear us essential to survival.</string>
+    <string name="quiz_1_hint">See: Introduction -> Being Truly Prepared for Emergencies</string>
+    <string name="quiz_1_correct">That\'s right. Fear turns on your “fight or flight” instinct.</string>
+    <string name="quiz_1_incorrect">Not quite. What does fear do for you biologically?</string>
+    <string name="quiz_1_1">True</string>
+    <string name="quiz_1_2">False</string>
 </resources>

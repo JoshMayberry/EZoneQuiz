@@ -1,70 +1,32 @@
 package com.example.android.ezonequiz;
 
-import android.content.res.XmlResourceParser;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.ContextThemeWrapper;
 import android.view.View;
-import android.widget.NumberPicker;
-import android.widget.RadioButton;
-import android.widget.Spinner;
-
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
-    private RadioButton[] view_radioButton = new RadioButton[5];
-    private NumberPicker view_numberPicker;
-    private Spinner view_spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Get Resources
-        view_radioButton[0] = findViewById(R.id.radioButton_0);
-        view_radioButton[1] = findViewById(R.id.radioButton_1);
-        view_radioButton[2] = findViewById(R.id.radioButton_2);
-        view_radioButton[3] = findViewById(R.id.radioButton_3);
-        view_radioButton[4] = findViewById(R.id.radioButton_4);
-        view_numberPicker = findViewById(R.id.numberPicker);
-        view_spinner = findViewById(R.id.spinner);
-
-        reset();
-        showNext();
+        setupListener(findViewById(R.id.numbers), NumbersActivity.class);
+        setupListener(findViewById(R.id.phrases), PhrasesActivity.class);
+        setupListener(findViewById(R.id.family), FamilyActivity.class);
+        setupListener(findViewById(R.id.colors), ColorsActivity.class);
     }
 
-    /**
-     * The user wants to submit their answer to this question and see the next question.
-     * @param view - The button view that fired this method
-     */
-    public void onNext(View view) {
-//        reset();
-    }
-
-    /**
-     * Hides all answer widgets.
-     */
-    private void reset() {
-        //See: https://stackoverflow.com/questions/17805040/how-to-create-a-number-picker-dialog/17806895#17806895
-//        view_numberPicker.setMaxValue(10);
-//        view_numberPicker.setMinValue(0);
-
-        view_numberPicker.setVisibility(0);
-        view_spinner.setVisibility(0);
-        view_radioButton[0].setVisibility(0);
-        view_radioButton[1].setVisibility(0);
-        view_radioButton[2].setVisibility(0);
-        view_radioButton[3].setVisibility(0);
-        view_radioButton[4].setVisibility(0);
-
+    public void setupListener(View view, final Class cls) {
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //http://www.vogella.com/tutorials/AndroidIntent/article.html#starting-activities-or-services
+                Intent intent = new Intent(MainActivity.this, cls);
+                startActivity(intent);
+            }
+        });
     }
 }
 
