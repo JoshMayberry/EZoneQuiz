@@ -10,7 +10,14 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/text_answerSize</item>
-        <item name="android:text">@string/error</item>
+        <item name="android:checked">false</item>
+    </style>
+
+    <style name="Widget.AppCompat.EZoneQuiz.CheckBox.Answer" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_answerSize</item>
+        <item name="android:checked">false</item>
     </style>
 
     <style name="CategoryStyle">

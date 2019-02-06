@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/error"
+            tools:text="Question Description"
             android:textSize="@dimen/text_titleSize"
             android:layout_marginBottom="@dimen/margin_answer" />
         <Spinner
@@ -43,55 +43,56 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
             <RadioButton
                 android:id="@+id/radioButton_0"
+                tools:text="radio answer 1"
                 style="@style/Widget.AppCompat.EZoneQuiz.RadioButton.Answer"
-                android:checked="false" />
+                />
             <RadioButton
                 android:id="@+id/radioButton_1"
+                tools:text="radio answer 2"
                 style="@style/Widget.AppCompat.EZoneQuiz.RadioButton.Answer"
-                android:checked="false" />
+                />
             <RadioButton
                 android:id="@+id/radioButton_2"
+                tools:text="radio answer 3"
                 style="@style/Widget.AppCompat.EZoneQuiz.RadioButton.Answer" />
             <RadioButton
                 android:id="@+id/radioButton_3"
+                tools:text="radio answer 4"
                 style="@style/Widget.AppCompat.EZoneQuiz.RadioButton.Answer" />
             <RadioButton
                 android:id="@+id/radioButton_4"
+                tools:text="radio answer 5"
                 style="@style/Widget.AppCompat.EZoneQuiz.RadioButton.Answer" />
         </RadioGroup>
         <CheckBox
             android:id="@+id/checkBox_0"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/error"
+            tools:text="check answer 1"
+            style="@style/Widget.AppCompat.EZoneQuiz.CheckBox.Answer"
             />
         <CheckBox
             android:id="@+id/checkBox_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/error"
+            tools:text="check answer 2"
+            style="@style/Widget.AppCompat.EZoneQuiz.CheckBox.Answer"
             />
         <CheckBox
             android:id="@+id/checkBox_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/error"
+            tools:text="check answer 3"
+            style="@style/Widget.AppCompat.EZoneQuiz.CheckBox.Answer"
             />
         <CheckBox
             android:id="@+id/checkBox_3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/error"
+            tools:text="check answer 4"
+            style="@style/Widget.AppCompat.EZoneQuiz.CheckBox.Answer"
             />
         <CheckBox
             android:id="@+id/checkBox_4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/error"
+            tools:text="check answer 5"
+            style="@style/Widget.AppCompat.EZoneQuiz.CheckBox.Answer"
             />
         <Button
             android:layout_width="match_parent"

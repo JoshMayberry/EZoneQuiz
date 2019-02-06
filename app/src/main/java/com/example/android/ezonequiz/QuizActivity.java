@@ -8,11 +8,11 @@ import android.widget.CheckBox;
 import android.widget.NumberPicker;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -20,6 +20,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private RadioButton[] view_radioButton = new RadioButton[5];
     private CheckBox[] view_checkBox = new CheckBox[5];
+    private RadioGroup view_radioGroup;
     private NumberPicker view_numberPicker;
     private TextView view_questionText;
     private ProgressBar view_progress;
@@ -28,6 +29,7 @@ public class QuizActivity extends AppCompatActivity {
     private List<Question> questions = new ArrayList<>();
     private Question currentQuestion;
 
+    private int score;
     private Random random = new Random();
     private String[] correctList = new String[3]; //Different ways to say correct
     private String[] incorrectList = new String[2]; //Different ways to say incorrect
@@ -52,6 +54,7 @@ public class QuizActivity extends AppCompatActivity {
         view_numberPicker = findViewById(R.id.numberPicker);
         view_spinner = findViewById(R.id.spinner);
         view_questionText = findViewById(R.id.quiz_title);
+        view_radioGroup = findViewById(R.id.radioGroup);
 
         correctList[0] = getResources().getString(R.string.correct_1);
         correctList[1] = getResources().getString(R.string.correct_2);
@@ -159,6 +162,7 @@ public class QuizActivity extends AppCompatActivity {
             assert rangeMin <= correctValue;
             assert rangeMax >= correctValue;
             this.correctValue = correctValue;
+            this.viewList.add(view_numberPicker);
         }
 
         /**
@@ -183,8 +187,8 @@ public class QuizActivity extends AppCompatActivity {
                     for (int i = 0; i < this.viewList.size(); i++) {
                         RadioButton view = (RadioButton) viewList.get(i);
                         view.setText(this.answerList.get(i));
-                        view.setChecked(false);
                     }
+                    view_radioGroup.clearCheck();
                     break;
                 case Multiple:
                     for (int i = 0; i < this.viewList.size(); i++) {
@@ -233,14 +237,14 @@ public class QuizActivity extends AppCompatActivity {
          * See: https://www.baeldung.com/java-random-list-element#highlighter_812240
          */
         public String getMessage_correct() {
-            return correctList[random.nextInt(correctList.length)] + getResources().getString(this.incorrectId);
+            return getResources().getString(this.correctId, correctList[random.nextInt(correctList.length)]);
         }
         /**
          * Returns a formatted message saying that the user chose incorrectly
          * @return The message to show in the dialog box
          */
         public String getMessage_incorrect() {
-            return incorrectList[random.nextInt(incorrectList.length)] + getResources().getString(this.incorrectId);
+            return getResources().getString(this.incorrectId, incorrectList[random.nextInt(incorrectList.length)]);
         }
     }
 
@@ -304,17 +308,11 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     /**
-     * The user wants to submit their answer to this question and see the next question.
-     * @param view - The button view that fired this method
-     */
-    public void onNext(View view) {
-        showNext();
-    }
-
-    /**
      * Hides all answer widgets.
      */
     private void reset() {
+        score = 0;
+
         //Hide all widgets
         view_spinner.setVisibility(View.GONE);
         view_numberPicker.setVisibility(View.GONE);
@@ -341,32 +339,44 @@ public class QuizActivity extends AppCompatActivity {
         showNext();
     }
     /**
-     * Shows the user how they did.
+     * The user wants to submit their answer to this question and see the next question.
+     * @param view - The button view that fired this method
      */
-    private void showScore() {
-
-    }
-    /**
-     * Shows the next question
-     */
-    private void showNext() {
+    public void onNext(View view) {
         if (questions.size() <= 0) {
-            showScore();
+            score += 1;
+            DialogCorrect dialogCorrect = new DialogCorrect(this,
+                    getResources().getString(R.string.dialog_score, score, view_numberPicker.getMaxValue()),
+                    getResources().getString(R.string.dialog_finish),
+                    true
+                    );
+            dialogCorrect.show();
             return;
         }
+        showDialog();
+    }
+    /**
+     * Shows the dialog box for moving on to the next question.
+     */
+    private void showDialog() {
         if (currentQuestion != null) {
             if (!currentQuestion.check()) {
-                Log.v("QuizActivity", currentQuestion.getMessage_incorrect());
-                //Show a dialog that says they did it wrong.
-                //If they say they want to try again then return. Otherwise, continue with this function.
+                DialogIncorrect dialogIncorrect = new DialogIncorrect(this, currentQuestion.getMessage_incorrect());
+                dialogIncorrect.show();
             } else {
-                Log.v("QuizActivity", currentQuestion.getMessage_correct());
-                //Show a dialog that says they did it correctly
+                DialogCorrect dialogCorrect = new DialogCorrect(this, currentQuestion.getMessage_correct());
+                dialogCorrect.show();
+                score += 1;
             }
-
+        }
+    }
+    /**
+     * Shows the next question.
+     */
+    public void showNext() {
+        if (currentQuestion != null) {
             currentQuestion.hide();
         }
-
         view_progress.setProgress(view_progress.getProgress() + 1);
         currentQuestion = questions.remove(0);
         currentQuestion.show();

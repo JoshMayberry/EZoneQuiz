@@ -4,4 +4,6 @@
     <dimen name="text_answerSize">16sp</dimen>
     <dimen name="margin_answer">12dp</dimen>
     <dimen name="widget_menuItemHeight">88dp</dimen>
+
+    <dimen name="dialog_border">10dp</dimen>
 </resources>

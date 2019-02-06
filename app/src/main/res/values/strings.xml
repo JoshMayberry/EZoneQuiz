@@ -123,9 +123,9 @@
     <string name="section4_s3">Emergency Contacts</string>
 
     <!-- These Strings will be inserted in quiz_[question]_correct -->
-    <string name="correct_1">Well done! </string>
-    <string name="correct_2">That\'s right! </string>
-    <string name="correct_3">Correct. </string>
+    <string name="correct_1">Well done!</string>
+    <string name="correct_2">That\'s right!</string>
+    <string name="correct_3">Correct.</string>
 
     <!-- These Strings will be inserted in quiz_[question]_incorrect -->
     <string name="incorrect_1">Not quite. </string>
@@ -135,20 +135,20 @@
     <!-- quiz[chapter]_[number] -->
     <string name="quiz">Test Your Knowledge</string>
     <string name="quiz1_1">Fear is essential to survival.</string>
-    <string name="quiz1_1_correct"><xliff:g>%s</xliff:g>Fear turns on your “fight or flight” instinct.</string>
-    <string name="quiz1_1_incorrect"><xliff:g>%s</xliff:g>What does fear do for you biologically?</string>
+    <string name="quiz1_1_correct"><xliff:g>%s</xliff:g> Fear turns on your “fight or flight” instinct.</string>
+    <string name="quiz1_1_incorrect"><xliff:g>%s</xliff:g> What does fear do for you biologically?</string>
     <string name="quiz1_1_a1">True</string> <!-- correct -->
     <string name="quiz1_1_a2">False</string>
 
     <string name="quiz1_2">In a survival situation, the strongest survive; survival of the fittest.</string>
-    <string name="quiz1_2_correct"><xliff:g>%s</xliff:g>“It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change." - Charles Darwin</string>
-    <string name="quiz1_2_incorrect"><xliff:g>%s</xliff:g>Do you remember the story of John from the Introduction?</string>
+    <string name="quiz1_2_correct"><xliff:g>%s</xliff:g> “It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change." - Charles Darwin</string>
+    <string name="quiz1_2_incorrect"><xliff:g>%s</xliff:g> Do you remember the story of John from the Introduction?</string>
     <string name="quiz1_2_a1">True</string>
     <string name="quiz1_2_a2">False</string> <!-- correct -->
 
     <string name="quiz1_3">Buying a kit from Emergency Zone is enough to be prepared.</string>
-    <string name="quiz1_3_correct"><xliff:g>%s</xliff:g>Preparedness must become a lifestyle.</string>
-    <string name="quiz1_3_incorrect"><xliff:g>%s</xliff:g>Do you remember the story of John from the Introduction?</string>
+    <string name="quiz1_3_correct"><xliff:g>%s</xliff:g> Preparedness must become a lifestyle.</string>
+    <string name="quiz1_3_incorrect"><xliff:g>%s</xliff:g> Do you remember the story of John from the Introduction?</string>
     <string name="quiz1_3_a1">True</string>
     <string name="quiz1_3_a2">False</string> <!-- correct -->
 
@@ -161,14 +161,21 @@
     <string name="quiz2_1_a4">Supplies</string> <!-- correct -->
 
     <string name="quiz3_1">What is the minimum weeks worth of water should you store?</string>
-    <string name="quiz3_1_correct"><xliff:g>%s</xliff:g>2 weeks</string>
+    <string name="quiz3_1_correct"><xliff:g>%s</xliff:g> 2 weeks</string>
     <string name="quiz3_1_incorrect"><xliff:g>%s</xliff:g></string>
 
     <string name="quiz3_2">What is the minimum months worth of food should you store?</string>
-    <string name="quiz3_2_correct"><xliff:g>%s</xliff:g>3 months</string>
+    <string name="quiz3_2_correct"><xliff:g>%s</xliff:g> 3 months</string>
     <string name="quiz3_2_incorrect"><xliff:g>%s</xliff:g></string>
 
     <string name="quiz3_3">What is the minimum hours your Bug Out Bag should last for?</string>
-    <string name="quiz3_3_correct"><xliff:g>%s</xliff:g>72 hours</string>
+    <string name="quiz3_3_correct"><xliff:g>%s</xliff:g> 72 hours</string>
     <string name="quiz3_3_incorrect"><xliff:g>%s</xliff:g></string>
+
+    <string name="dialog_score">You got <xliff:g>%d</xliff:g> out of <xliff:g>%d</xliff:g> correct</string>
+    <string name="dialog_tryAgain">Would you like to try again?</string>
+    <string name="dialog_finish">End Quiz</string>
+    <string name="dialog_next">Next Question</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
 </resources>
