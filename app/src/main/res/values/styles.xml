@@ -1,16 +1,53 @@
 <resources>
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorSecondaryDark</item>
-        <item name="colorButtonNormal">@color/colorSecondary</item>
+        <item name="colorAccent">@color/colorPrimaryLight</item>
+        <item name="colorButtonNormal">@color/colorPrimaryDark</item>
+        <item name="android:buttonTint">@color/colorPrimaryDark</item>
     </style>
-
+    <style name="AppTheme_Introduction" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorIntroduction</item>
+        <item name="colorPrimaryDark">@color/colorIntroductionDark</item>
+        <item name="colorAccent">@color/colorIntroductionLight</item>
+        <item name="colorButtonNormal">@color/colorIntroductionDark</item>
+        <item name="android:buttonTint">@color/colorIntroductionDark</item>
+    </style>
+    <style name="AppTheme_ChapterOne" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorChapterOne</item>
+        <item name="colorPrimaryDark">@color/colorChapterOneDark</item>
+        <item name="colorAccent">@color/colorChapterOneLight</item>
+        <item name="colorButtonNormal">@color/colorChapterOneDark</item>
+        <item name="android:buttonTint">@color/colorChapterOneDark</item>
+    </style>
+    <style name="AppTheme_ChapterTwo" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorChapterTwo</item>
+        <item name="colorPrimaryDark">@color/colorChapterTwoDark</item>
+        <item name="colorAccent">@color/colorChapterTwoLight</item>
+        <item name="colorButtonNormal">@color/colorChapterTwoDark</item>
+        <item name="android:buttonTint">@color/colorChapterTwoDark</item>
+    </style>
+    <style name="AppTheme_ChapterThree" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorChapterThree</item>
+        <item name="colorPrimaryDark">@color/colorChapterThreeDark</item>
+        <item name="colorAccent">@color/colorChapterThreeLight</item>
+        <item name="colorButtonNormal">@color/colorChapterThreeDark</item>
+        <item name="android:buttonTint">@color/colorChapterThreeDark</item>
+    </style>
+    <style name="AppTheme_Quiz" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorQuiz</item>
+        <item name="colorPrimaryDark">@color/colorQuizDark</item>
+        <item name="colorAccent">@color/colorQuizLight</item>
+        <item name="colorButtonNormal">@color/colorQuizDark</item>
+        <item name="android:buttonTint">@color/colorQuizDark</item>
+    </style>
     <style name="Widget.AppCompat.EZoneQuiz.RadioButton.Answer" parent="@style/Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/text_answerSize</item>
         <item name="android:checked">false</item>
+        <item name="android:buttonTint">@color/colorQuizDark</item>
     </style>
 
     <style name="Widget.AppCompat.EZoneQuiz.CheckBox.Answer" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
@@ -31,4 +68,13 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
     </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

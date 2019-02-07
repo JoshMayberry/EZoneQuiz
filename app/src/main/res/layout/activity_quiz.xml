@@ -5,13 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         >
-
         <ImageView
             android:id="@+id/quiz_image"
             android:layout_height="wrap_content"
@@ -19,7 +17,6 @@
             android:scaleType="centerCrop"
             android:src="@drawable/empty"
              />
-
         <ProgressBar
             android:id="@+id/quizProgress"
             style="?android:attr/progressBarStyleHorizontal"
@@ -57,6 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
             <RadioButton
+                android:checked="true"
                 android:id="@+id/radioButton_0"
                 tools:text="radio answer 1"
                 style="@style/Widget.AppCompat.EZoneQuiz.RadioButton.Answer"
@@ -108,6 +106,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_next"
+            android:textColor="@android:color/white"
             android:onClick="onNext"
             />
     </LinearLayout>

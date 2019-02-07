@@ -6,4 +6,5 @@
     <dimen name="widget_menuItemHeight">88dp</dimen>
 
     <dimen name="dialog_border">10dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

@@ -11,8 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".QuizActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".IntroductionActivity" android:label="@string/section1" android:theme="@style/AppTheme_Introduction"/>
+        <activity android:name=".ChapterOneActivity" android:label="@string/section2" android:theme="@style/AppTheme_ChapterOne"/>
+        <activity android:name=".ChapterTwoActivity"  android:label="@string/section3" android:theme="@style/AppTheme_ChapterTwo"/>
+        <activity android:name=".ChapterThreeActivity" android:label="@string/section4" android:theme="@style/AppTheme_ChapterThree"/>
+        <activity android:name=".QuizActivity" android:label="@string/quiz" android:theme="@style/AppTheme_Quiz"/>
+        <activity android:name=".MainActivity" android:label="@string/title" android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

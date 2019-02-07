@@ -13,6 +13,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Link Activities
+        setupListener(findViewById(R.id.section1), IntroductionActivity.class);
+        setupListener(findViewById(R.id.section2), ChapterOneActivity.class);
+        setupListener(findViewById(R.id.section3), ChapterTwoActivity.class);
+        setupListener(findViewById(R.id.section4), ChapterThreeActivity.class);
         setupListener(findViewById(R.id.quiz), QuizActivity.class);
     }
 

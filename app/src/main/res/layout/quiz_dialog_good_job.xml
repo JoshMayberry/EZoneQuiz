@@ -5,7 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="@dimen/dialog_border"
-    android:background="@color/colorSecondary"
+    android:background="@color/colorQuiz"
     android:orientation="vertical"
     >
     <TextView
@@ -30,11 +30,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:background="@color/colorSecondaryDark"
+            android:background="@color/colorQuizDark"
             android:focusable="true"
             android:clickable="true"
             tools:text="Next Question"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textStyle="bold"
             />
     </LinearLayout>

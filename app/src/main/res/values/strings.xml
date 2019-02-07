@@ -2,6 +2,7 @@
     <string name="app_name">EZoneQuiz</string>
     <string name="error">N/A</string>
     <string name="button_next">Next</string>
+    <string name="title">Prepare For Life</string>
 
     <!-- Text taken from Emergency Zone Guide Book - https://www.emergencyzone.com/freepreparednessguidebook_a/275.htm -->
     <!-- section[chapter]_[sub-chapter]_[section] -->
