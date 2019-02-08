@@ -4,20 +4,20 @@ package com.example.android.ezonequiz;
  * This is a container for holding information about each page.
  */
 class Page {
-    private int bodyId;
-    private int subtitleId;
-    private int quoteTextId;
-    private int quoteSourceId;
+    public int bodyId;
+    public int subtitleId;
+    public int quoteTextId;
+    public int quoteSourceId;
 
     Page() {
         newPage();
     }
 
     public Page newPage() {
-        this.bodyId = -1;
-        this.subtitleId = -1;
-        this.quoteTextId = -1;
-        this.quoteSourceId = -1;
+        this.bodyId = R.string.empty;
+        this.subtitleId = R.string.empty;
+        this.quoteTextId = R.string.empty;
+        this.quoteSourceId = R.string.empty;
         return this;
     }
     public Page set_body(int bodyId) {

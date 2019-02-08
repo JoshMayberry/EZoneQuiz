@@ -3,6 +3,7 @@
     <string name="error">N/A</string>
     <string name="button_next">Next</string>
     <string name="title">Prepare For Life</string>
+    <string name="empty"> </string>
 
     <!-- Text taken from Emergency Zone Guide BookSection - https://www.emergencyzone.com/freepreparednessguidebook_a/275.htm -->
     <!-- section[chapter]_[sub-chapter]_[section] -->
@@ -22,12 +23,12 @@
     <string name="section1_s1_quote_source">- Franklin D. Roosevelt</string>
 
     <string name="section2">How to Prepare Without Fear</string>
-    <string name="section2_s1_text">In this section we will cover the Four Pillars of Emergency Preparedness to equip you with a healthy lifestyle and the ability to adapt during emergencies.
+    <string name="section2_summary_text">In this section we will cover the Four Pillars of Emergency Preparedness to equip you with a healthy lifestyle and the ability to adapt during emergencies.
     \n\n
     When you live a prepared lifestyle, you are truly prepared to adapt to disasters and emergencies. Now you may ask, “What is a prepared lifestyle? How do I begin living one?” To help you on your path, Emergency Zone has developed the 4 pillars of how to live a prepared lifestyle. Like a building held up by columns, being truly prepared depends on all four categories:• Become Fit\n• Learn Skills\n• Make and Practice Emergency Plans\n• Have Proper Supplies</string>
 
-    <string name="section2_s2">Become Fit</string>
-    <string name="section2_s2_text">Being fit is the first pillar to being truly prepared. Fitness consists of physical, financial, and mental/emotional health. Each of these are intricately woven into one another so that when you improve one, you improve the other. For example, physical exercise makes you feel good and can help your emotional health by boosting your confidence and self-esteem. In this way being fit in each category will help you to be healthy, happy, and truly prepared.
+    <string name="section2_s1">Become Fit</string>
+    <string name="section2_s1_text">Being fit is the first pillar to being truly prepared. Fitness consists of physical, financial, and mental/emotional health. Each of these are intricately woven into one another so that when you improve one, you improve the other. For example, physical exercise makes you feel good and can help your emotional health by boosting your confidence and self-esteem. In this way being fit in each category will help you to be healthy, happy, and truly prepared.
     \n\n\n
     Physical Health
     \n
@@ -52,11 +53,11 @@
     • See challenges as opportunities\n• Stress management\n• Self-esteem\n• Learn how not to complain\n• Be courageous\n• Show gratitude and compassion to others\n• Care more about people than possessions
     \n\n\n
     Becoming fit physically, financially, and mentally is like filling your car up with gas; it gives you energy and you feel less worried. It is the first pillar because it is key to building a lifestyle that will equip you to adapt and survive in emergencies, but it is just one piece of the puzzle.</string>
-    <string name="section2_s2_quote_text">When you encounter uncomfortable situations, you can either decide to be a victim or an over-comer. Always choose to be an over-comer.</string>
-    <string name="section2_s2_quote_source">Lailah Gifty Akita</string>
+    <string name="section2_s1_quote_text">When you encounter uncomfortable situations, you can either decide to be a victim or an over-comer. Always choose to be an over-comer.</string>
+    <string name="section2_s1_quote_source">Lailah Gifty Akita</string>
 
-    <string name="section2_s3">Learn Useful Skills</string>
-    <string name="section2_s3_text">“The separation of talent and skill is one of the greatest misunderstood concepts for people who are trying to excel, who have dreams, who want to do things. Talent you have naturally. Skill is only developed by hours and hours and hours of beating on your craft.” - Will Smith
+    <string name="section2_s2">Learn Useful Skills</string>
+    <string name="section2_s2_text">“The separation of talent and skill is one of the greatest misunderstood concepts for people who are trying to excel, who have dreams, who want to do things. Talent you have naturally. Skill is only developed by hours and hours and hours of beating on your craft.” - Will Smith
     \n\n
     You may have the mental toughness to survive one night in the woods, or the financial wellness to live a few months after losing your job, but if you don’t have the skills to light a fire, or to get a new job how long will you last?
     \n\n
@@ -65,11 +66,11 @@
     • Swimming\n• Navigating\n• Knot tying\n• Sewing\n• Self defense\n• Wilderness survival\n• Growing and harvesting your own food\n• How to do well in a job interview\n• How to start a business\n• First Aid (See p.35 of this bookSection)
     \n\n
     Learning useful skills could save your life, but more importantly it will help you create a healthy, fulfilling lifestyle. </string>
-    <string name="section2_s3_quote_text">The more you know, the less you need.</string>
-    <string name="section2_s3_quote_source">David Wescott; Primitive Survival Skills Expert</string>
+    <string name="section2_s2_quote_text">The more you know, the less you need.</string>
+    <string name="section2_s2_quote_source">David Wescott; Primitive Survival Skills Expert</string>
 
-    <string name="section2_s4">Make and Practice Emergency Plans</string>
-    <string name="section2_s4_text">The third pillar, make and practice emergency plans, brings all four pillars together. Planning gives you the edge against emergencies because it helps you react faster and smarter. Each household member should take part in the planning and be familiar with it. Take into account your family’s specific needs and update and practice your plan so that it becomes an instinct. A plan could include:
+    <string name="section2_s3">Make and Practice Emergency Plans</string>
+    <string name="section2_s3_text">The third pillar, make and practice emergency plans, brings all four pillars together. Planning gives you the edge against emergencies because it helps you react faster and smarter. Each household member should take part in the planning and be familiar with it. Take into account your family’s specific needs and update and practice your plan so that it becomes an instinct. A plan could include:
     \n\n
     • Maps\n• Evacuation routes from home, neighborhood, and city\n• Emergency phone numbers and addresses\n• Safe or “bug-out” locations to meet at if something goes wrong or if you get split up\n• Procedures for what to do in case of a hurricane, earthquake, etc.\n• Locations of bug out bags in the house\n• Different plans depending on the time of day, i.e. what will we do if the kids are at school?\n• Specific plans according to which natural disasters occur in your area. See page 19
     \n\n
@@ -83,10 +84,10 @@
     \n\n
     When a disaster does occur, you’ll probably have to change and adapt plans. However, simply having made them in the first place will help you know how best to adapt them quickly</string>
 
-    <string name="section2_s5">Template</string> <!-- Fill out boxes and send an e-mail to yourself with a printout -->
+    <string name="section2_s4">Template</string> <!-- Fill out boxes and send an e-mail to yourself with a printout -->
 
-    <string name="section2_s6">Have Proper Supplies</string>
-    <string name="section2_s6_text">If you are fit, have useful skills, and make emergency plans then the last pillar of a prepared lifestyle is to have the proper supplies to survive. Look on pages 17–18 for a list of suggested supplies. Before stocking large amounts of supplies, it’s important to follow a few steps to avoid spending money on the wrong type of product (or one of poor quality.) Not all of these steps will be the same for each product, so follow the general idea:
+    <string name="section2_s5">Have Proper Supplies</string>
+    <string name="section2_s5_text">If you are fit, have useful skills, and make emergency plans then the last pillar of a prepared lifestyle is to have the proper supplies to survive. Look on pages 17–18 for a list of suggested supplies. Before stocking large amounts of supplies, it’s important to follow a few steps to avoid spending money on the wrong type of product (or one of poor quality.) Not all of these steps will be the same for each product, so follow the general idea:
     \n\n
     • Pick an item you need to stock up\n• Research what different types there are and which will work best for your needs\n• View videos/pictures of each type and read reviews\n• If a trusted friend or neighbor owns one of the products you’ve researched then ask them for their opinion\n• Purchase and test for a few weeks as many of your top choices as practical\n• Stock up on the item that most meets your needs
     \n\n
@@ -96,19 +97,19 @@
     \n\n
     Use the principle of power in knowledge to your advantage. It’s the same idea as the common proverb, “Give a man a fish and you feed him for a day. Teach a man to fish and you feed him for a lifetime.” That is why “Have Proper Supplies” comes after “Learn Useful Skills” in this bookSection. The right knowledge and skills are more powerful than the right supplies.</string>
 
-    <string name="section2_s7">Getting There</string>
-    <string name="section2_s7_text">The four pillars of preparedness living are simple, yet will require commitment and persistence. Don’t give up when you get discouraged. Creating a prepared, healthy lifestyle is the most rewarding thing you can do. It will also give you the mental toughness necessary to actually survive in real life emergencies.</string>
-    <string name="section2_s7_quote_text">“That which we persist in doing becomes easier, not that the task itself has become easier, but that our ability to perform it has improved.”</string>
-    <string name="section2_s7_quote_source">- Ralph Waldo Emerson</string>
+    <string name="section2_s6">Getting There</string>
+    <string name="section2_s6_text">The four pillars of preparedness living are simple, yet will require commitment and persistence. Don’t give up when you get discouraged. Creating a prepared, healthy lifestyle is the most rewarding thing you can do. It will also give you the mental toughness necessary to actually survive in real life emergencies.</string>
+    <string name="section2_s6_quote_text">“That which we persist in doing becomes easier, not that the task itself has become easier, but that our ability to perform it has improved.”</string>
+    <string name="section2_s6_quote_source">- Ralph Waldo Emerson</string>
 
 
     <string name="section3">What to Prepare For</string>
-    <string name="section3_s1_text">Every emergency requires specific supplies, preparation, and reaction. We go through what these emergencies have in common and then give you a disaster by disaster reference.
+    <string name="section3_summary_text">Every emergency requires specific supplies, preparation, and reaction. We go through what these emergencies have in common and then give you a disaster by disaster reference.
     \n\n
     Knowing how to prepare without fear is only half the battle; the other half is knowing what to prepare for. To prepare for general emergencies you’ll need water, food, bug out bags, and some basic supplies. Depending on where you live, you may need to make special preparations for tornadoes, hurricanes, etc. This section will cover all those things plus other specific emergencies. It’s important to adapt these guidelines to your own household, and to review this information often to stay updated.</string>
 
-    <string name="section3_s2">General Emergencies</string>
-    <string name="section3_s2_text">Water Storage
+    <string name="section3_s1">General Emergencies</string>
+    <string name="section3_s1_text">Water Storage
     \n
     Because each family member will have different requirements, you’ll need to study how much each person uses in one day. Take into account drinking, cooking, and hygiene. Decide how much they would need and properly store enough for at least 2 weeks. Generally, you should store at least 1 gallon per person per day. Ideally, you want a water source near your house that you can filter. If not, plan to store more water.
     \n\n\n
@@ -127,16 +128,16 @@
     Here’s a basic list for stocking your bug out/get home bags. Remember that not everything in this list will fit your circumstances. You will likely have to hike with this backpack, so only pack the essentials and purchase lightweight products.
     \n\n
     • Water\n• Water filter or other form of water sanitation\n• Food (jerky, freeze dried meals, and energy bars are good ideas)\n• Cooking pot/mess kit\n• Small hiking stove\n• Water bottle\n• First aid kit\n• Extra clothing appropriate for your climate\n• Hiking shoes/boots\n• Hygiene items\n• Sunscreen\n• Insect repellent\n• Flashlight/headlamp\n• Extra batteries\n• Extra socks!\n• Poncho or water-proof jacket\n• Fire starting tools (ferro rod, matches, lighters, kindling, etc.)\n• Survival knife\n• Small hatchet\n• A tent or tarp for shelter\n• Sleeping bag\n• Walkie talkies\n• Radio\n• 550 paracord\n• Cash and important documents\n• Emergency whistle, flare, and/or signal mirror\n• Fishing kit\n• Self defense item (machete, pistol, pepper spray, etc)\n• Notepad and pen\n• Duct tape\n• Maps and compass</string>
-    <string name="section3_s2_quote_text">If you know the enemy and know yourself, you need not fear the result of a hundred battles. If you know yourself but not the enemy, for every victory gained you will also suffer a defeat. If you know neither the enemy nor yourself, you will succumb in every battle.</string>
-    <string name="section3_s2_quote_source">- Sun Tzu</string>
+    <string name="section3_s1_quote_text">If you know the enemy and know yourself, you need not fear the result of a hundred battles. If you know yourself but not the enemy, for every victory gained you will also suffer a defeat. If you know neither the enemy nor yourself, you will succumb in every battle.</string>
+    <string name="section3_s1_quote_source">- Sun Tzu</string>
 
-    <string name="section3_s3">Storage Supplies</string>
-    <string name="section3_s3_text">These are the supplies you need for when you have to “bug in”, or survive at home. It’s very similar to the bug out bag list, except weight isn’t an issue and you should stock up enough for as many months as you can, preferably over 3 months:
+    <string name="section3_s2">Storage Supplies</string>
+    <string name="section3_s2_text">These are the supplies you need for when you have to “bug in”, or survive at home. It’s very similar to the bug out bag list, except weight isn’t an issue and you should stock up enough for as many months as you can, preferably over 3 months:
     \n\n
     • Axe\n• Tarp\n• Rope\n• Food\n• Water\n• Radio\n• Seeds\n• Gloves\n• Blankets\n• Firewood\n• Duct tape\n• Pet Supplies\n• Survival knife\n• Sleeping bags\n• Garden tools\n• Cleaning supplies\n• Water filtration methods\n• Non-electric cooking stoves and fuel\n• Portable toilet with waste bags and toilet paper\n• Candles or lanterns\n• Hand crank flashlights\n• Extra batteries\n• Clothing suited to climate\n• First aid kit\n• Prescription medications, contact lenses, eye glasses, etc\n• Fire extinguishers\n• Hygiene items\n• Sunscreen and insect repellent\n• Walkie Talkies or other communication method\n• Fire starting tools (ferro rod, matches, lighters, newspaper for kindling, etc)\n• Gun or bow and arrow for hunting\n• Self defense weapons (pepper spray, shotgun, etc)\n• Unread books and small treats for good morale</string>
 
-    <string name="section3_s4">Types of Disasters</string>
-    <string name="section3_s4_text">This reference section gives some tips for preparing and surviving selected crises. We have given lists of general supplies for emergencies, but there may be emergency-specific supplies that will be helpful.
+    <string name="section3_s3">Types of Disasters</string>
+    <string name="section3_s3_text">This reference section gives some tips for preparing and surviving selected crises. We have given lists of general supplies for emergencies, but there may be emergency-specific supplies that will be helpful.
     \n\n\n
 
     Earthquake
