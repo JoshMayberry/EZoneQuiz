@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    tools:context="com.example.android.ezonequiz.MainActivity"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:orientation="vertical"
+    tools:context="com.example.android.ezonequiz.MainActivity">
 
-    <ImageView
-        android:id="@+id/mainImage"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp"
-        android:src="@drawable/empty" />
+        android:layout_height="0dp"
+        android:layout_weight="4">
+        <ImageView
+            android:id="@+id/mainImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/empty" />
+
+        <TextView
+            android:id="@+id/mainSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/mainImage"
+            android:text="@string/tagLine"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_titleSize" />
+    </RelativeLayout>
 
     <TextView
-        android:id="@+id/mainSubtitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Prepare for the Worst\nHope for the Best"
-        android:textAlignment="center"
-        android:textSize="@dimen/text_titleSize"
-        android:layout_alignBottom="@id/mainImage"
-        />
+        android:id="@+id/section1"
+        style="@style/CategoryStyle"
+        android:background="@color/colorIntroduction"
+        android:text="@string/section1" />
 
-    <LinearLayout
-        android:id="@+id/mainMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/mainImage"
-        android:layout_alignParentBottom="true"
-        android:orientation="vertical">
+    <TextView
+        android:id="@+id/section2"
+        style="@style/CategoryStyle"
+        android:background="@color/colorChapterOne"
+        android:text="@string/section2" />
 
-        <TextView
-            android:id="@+id/section1"
-            style="@style/CategoryStyle"
-            android:background="@color/colorIntroduction"
-            android:text="@string/section1" />
-        <TextView
-            android:id="@+id/section2"
-            style="@style/CategoryStyle"
-            android:background="@color/colorChapterOne"
-            android:text="@string/section2" />
-        <TextView
-            android:id="@+id/section3"
-            style="@style/CategoryStyle"
-            android:background="@color/colorChapterTwo"
-            android:text="@string/section3" />
-        <TextView
-            android:id="@+id/section4"
-            style="@style/CategoryStyle"
-            android:background="@color/colorChapterThree"
-            android:text="@string/section4" />
-        <TextView
-            android:id="@+id/quiz"
-            style="@style/CategoryStyle"
-            android:background="@color/colorQuiz"
-            android:text="@string/quiz" />
-    </LinearLayout>
-</RelativeLayout>
+    <TextView
+        android:id="@+id/section3"
+        style="@style/CategoryStyle"
+        android:background="@color/colorChapterTwo"
+        android:text="@string/section3" />
+
+    <TextView
+        android:id="@+id/section4"
+        style="@style/CategoryStyle"
+        android:background="@color/colorChapterThree"
+        android:text="@string/section4" />
+
+    <TextView
+        android:id="@+id/quiz"
+        style="@style/CategoryStyle"
+        android:background="@color/colorQuiz"
+        android:text="@string/quiz" />
+</LinearLayout>

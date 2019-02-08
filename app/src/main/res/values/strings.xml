@@ -9,13 +9,17 @@
     <!-- text[chapter]_[sub-chapter]_[section]_[paragraph] -->
     <string name="section1">Introduction</string>
     <string name="section1_s1">Being Truly Prepared for Emergencies</string>
-    <string name="text1_s1_p1">Every time there’s a major disaster, fear kicks in and sales on emergency products go up significantly. Fear is a biological mechanism that tells your body to increase adrenaline production, which turns on your “fight or flight” instinct. When you see a car racing towards you, adrenaline can help you jump out of the way in time. In this sense, fear is essential to survival.</string>
-    <string name="text1_s1_p2">Fear as a lifestyle, however, can be more harmful than good. “Fight or flight” is a reaction that we can’t control, and it impedes us from becoming truly prepared for emergencies. How does it impede us? Here’s an example:</string>
-    <string name="text1_s1_p3">John is moving to the Gulf Coast, and he’s nervous about hurricanes. He buys a hurricane emergency kit and immediately feels safer. He stores it in his closet without looking at it much. A few months later a hurricane actually hits. His house is flooded and among other damages he loses his plumbing. John might respond with something like this: “I know I have a hurricane emergency kit somewhere, but I didn’t realize how hard going without a toilet for a week is. I didn’t sign up for this! Get me out of here!”</string>
-    <string name="text1_s1_p4">What happened to John? His fight or flight instinct was to buy a kit, and having satisfied his instinct he became content. He wasn’t ready for the reality of disasters and he wasn’t willing to adapt to his circumstances. If John had been living a prepared lifestyle, he might have been more willing to adapt: “Well, the toilet isn’t working and I can’t keep using it. I better find the portable toilet in the hurricane kit or find a way to dig a hole.” Charles Darwin explained the importance of adapting: “It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change.”</string>
-    <string name="text1_s1_p5">It is necessary to make emergency preparedness a lifestyle, not just a purchase. Call it faith, hard work, optimism, mental toughness, or whatever else you’d like, but preparing in this way equips us with the ability to adapt in the event of an actual emergency. Using this booklet will help you create an emergency preparedness lifestyle by learning (1) how to prepare without fear and knowing (2) what to prepare for.</string>
-    <string name="quote1_1_text">The only thing we have to fear is fear itself.</string>
-    <string name="quote1_1_source">Franklin D. Roosevelt</string>
+    <string name="section1_s1_text">Every time there’s a major disaster, fear kicks in and sales on emergency products go up significantly. Fear is a biological mechanism that tells your body to increase adrenaline production, which turns on your “fight or flight” instinct. When you see a car racing towards you, adrenaline can help you jump out of the way in time. In this sense, fear is essential to survival.
+    \n\n
+    Fear as a lifestyle, however, can be more harmful than good. “Fight or flight” is a reaction that we can’t control, and it impedes us from becoming truly prepared for emergencies. How does it impede us? Here’s an example:
+    \n\n
+    John is moving to the Gulf Coast, and he’s nervous about hurricanes. He buys a hurricane emergency kit and immediately feels safer. He stores it in his closet without looking at it much. A few months later a hurricane actually hits. His house is flooded and among other damages he loses his plumbing. John might respond with something like this: “I know I have a hurricane emergency kit somewhere, but I didn’t realize how hard going without a toilet for a week is. I didn’t sign up for this! Get me out of here!”
+    \n\n
+    What happened to John? His fight or flight instinct was to buy a kit, and having satisfied his instinct he became content. He wasn’t ready for the reality of disasters and he wasn’t willing to adapt to his circumstances. If John had been living a prepared lifestyle, he might have been more willing to adapt: “Well, the toilet isn’t working and I can’t keep using it. I better find the portable toilet in the hurricane kit or find a way to dig a hole.” Charles Darwin explained the importance of adapting: “It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change.”
+    \n\n
+    It is necessary to make emergency preparedness a lifestyle, not just a purchase. Call it faith, hard work, optimism, mental toughness, or whatever else you’d like, but preparing in this way equips us with the ability to adapt in the event of an actual emergency. Using this booklet will help you create an emergency preparedness lifestyle by learning (1) how to prepare without fear and knowing (2) what to prepare for.</string>
+    <string name="quote1_1_text">\"The only thing we have to fear is fear itself.\"</string>
+    <string name="quote1_1_source">- Franklin D. Roosevelt</string>
 
     <string name="section2">How to Prepare Without Fear</string>
     <string name="section2_summary">In this section we will cover the Four Pillars of Emergency Preparedness to equip you with a healthy lifestyle and the ability to adapt during emergencies.</string>
@@ -179,4 +183,5 @@
     <string name="dialog_next">Next Question</string>
     <string name="dialog_yes">Yes</string>
     <string name="dialog_no">No</string>
+    <string name="tagLine">Prepare for the Worst\nHope for the Best</string>
 </resources>
