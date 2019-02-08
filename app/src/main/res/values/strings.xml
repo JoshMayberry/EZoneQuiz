@@ -4,7 +4,7 @@
     <string name="button_next">Next</string>
     <string name="title">Prepare For Life</string>
 
-    <!-- Text taken from Emergency Zone Guide Book - https://www.emergencyzone.com/freepreparednessguidebook_a/275.htm -->
+    <!-- Text taken from Emergency Zone Guide BookSection - https://www.emergencyzone.com/freepreparednessguidebook_a/275.htm -->
     <!-- section[chapter]_[sub-chapter]_[section] -->
     <!-- text[chapter]_[sub-chapter]_[section]_[paragraph] -->
     <string name="section1">Introduction</string>
@@ -18,109 +18,175 @@
     What happened to John? His fight or flight instinct was to buy a kit, and having satisfied his instinct he became content. He wasn’t ready for the reality of disasters and he wasn’t willing to adapt to his circumstances. If John had been living a prepared lifestyle, he might have been more willing to adapt: “Well, the toilet isn’t working and I can’t keep using it. I better find the portable toilet in the hurricane kit or find a way to dig a hole.” Charles Darwin explained the importance of adapting: “It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change.”
     \n\n
     It is necessary to make emergency preparedness a lifestyle, not just a purchase. Call it faith, hard work, optimism, mental toughness, or whatever else you’d like, but preparing in this way equips us with the ability to adapt in the event of an actual emergency. Using this booklet will help you create an emergency preparedness lifestyle by learning (1) how to prepare without fear and knowing (2) what to prepare for.</string>
-    <string name="quote1_1_text">\"The only thing we have to fear is fear itself.\"</string>
-    <string name="quote1_1_source">- Franklin D. Roosevelt</string>
+    <string name="section1_s1_quote_text">\"The only thing we have to fear is fear itself.\"</string>
+    <string name="section1_s1_quote_source">- Franklin D. Roosevelt</string>
 
     <string name="section2">How to Prepare Without Fear</string>
-    <string name="section2_summary">In this section we will cover the Four Pillars of Emergency Preparedness to equip you with a healthy lifestyle and the ability to adapt during emergencies.</string>
-    <string name="text2_p1">When you live a prepared lifestyle, you are truly prepared to adapt to disasters and emergencies. Now you may ask, “What is a prepared lifestyle? How do I begin living one?” To help you on your path, Emergency Zone has developed the 4 pillars of how to live a prepared lifestyle. Like a building held up by columns, being truly prepared depends on all four categories:• Become Fit\n• Learn Skills\n• Make and Practice Emergency Plans\n• Have Proper Supplies</string>
-    <string name="section2_s1">Become Fit</string>
-    <string name="text2_s1_p1">Being fit is the first pillar to being truly prepared. Fitness consists of physical, financial, and mental/emotional health. Each of these are intricately woven into one another so that when you improve one, you improve the other. For example, physical exercise makes you feel good and can help your emotional health by boosting your confidence and self-esteem. In this way being fit in each category will help you to be healthy, happy, and truly prepared.</string>
-    <string name="section2_s1_ss1">Physical Health</string>
-    <string name="text2_s1_ss1_p1">In an emergency you may need to walk or swim long distances. It is likely you will need to carry a heavy load, such as an injured person. You yourself may be injured or even sick in bed. To meet these challenges and prevent injury/illness you need to incorporate healthy habits into your daily life. There are a lot of different opinions about how to be healthy, but most agree with each other on certain key points. Adapt these basic principles to your individual needs, which may be different. We also recommend you do research for yourself and consult your doctor.</string>
-    <string name="text2_s1_ss1_p2">• Sleep 7–8 hours every night.\n• Get 30 minutes of vigorous exercise 5–6 days a week. In addition to working on your strength, work to improve your endurance, flexibility, and balance.\n• Eat lots of fresh fruits and vegetables, as well as whole grains. Eat a variety of meat, including beef, chicken, fish, and other seafood.\n• Limit foods with artificial preservatives and dubious ingredients.\n• Eat and drink as little added sugars as possible (cane sugar, corn syrup, etc).</string>
-    <string name="text2_s1_ss1_p3">Find a way to make exercise and nutrition fun! If a diet or workout plan isn’t fun then it won’t be sustainable and you’ll be less prepared for adapting in tough situations.</string>
-    <string name="section2_s1_ss2">Financial Health</string>
-    <string name="text2_s1_ss2_p1">Although saving up for retirement may not be a good way to prepare for the apocalypse, living a prepared lifestyle is about preparing yourself for anything, including the “end of the world” happening after your lifetime. Here are some basics on how to be financially fit for survival. Even though they are incredibly simple they are absolutely necessary for financial health:</string>
-    <string name="text2_s1_ss2_p2">• Get rid of debt and stay debt free\n• Have and keep a budget to avoid spending more than what you make\n• Work to have a healthy credit score\n• Make wise investments and prepare for retirement early on\n• Save enough money in a separate account to live off of for a few months if you lose your job\n• Have plenty of cash on hand, at least enough to be able to transport your family to safety in an emergency\n• Grow a garden\n• Learn to make and repair things on your own</string>
-    <string name="section2_s1_ss3">Mental/Emotional Health</string>
-    <string name="text2_s1_ss3_p1">When it comes to surviving, your attitude and perspective are powerful. A healthy mind and attitude says, “I can do hard things.” In emergencies you may have to endure pain, discomfort, and less-than-ideal situations. Enduring those things optimistically is learned with experience and effort.</string>
-    <string name="text2_s1_ss3_p2">To begin developing a healthy mind and attitude, take your daily struggles (like difficult projects at work or trying to be patient with your kids), and start focusing on the positive instead of the negative. When you have improved and built up some momentum, try new things to stretch your mental toughness. Train for a 5k run. Go back and finish college. Do what you’ve always wanted to do but never took the chance. Here are some other areas of emotional health that you can work on:</string>
-    <string name="text2_s1_ss3_p3">• See challenges as opportunities\n• Stress management\n• Self-esteem\n• Learn how not to complain\n• Be courageous\n• Show gratitude and compassion to others\n• Care more about people than possessions</string>
-    <string name="text2_s1_conclusion">Becoming fit physically, financially, and mentally is like filling your car up with gas; it gives you energy and you feel less worried. It is the first pillar because it is key to building a lifestyle that will equip you to adapt and survive in emergencies, but it is just one piece of the puzzle.</string>
-    <string name="quote2_1_text">When you encounter uncomfortable situations, you can either decide to be a victim or an over-comer. Always choose to be an over-comer.</string>
-    <string name="quote2_1_source">Lailah Gifty Akita</string>
-    <string name="section2_s2">Learn Useful Skills</string>
-    <string name="text2_s2_1">“The separation of talent and skill is one of the greatest misunderstood concepts for people who are trying to excel, who have dreams, who want to do things. Talent you have naturally. Skill is only developed by hours and hours and hours of beating on your craft.” - Will Smith</string>
-    <string name="text2_s2_2">You may have the mental toughness to survive one night in the woods, or the financial wellness to live a few months after losing your job, but if you don’t have the skills to light a fire, or to get a new job how long will you last? </string>
-    <string name="text2_s2_3">Having practical skills is where the rubber meets the road. Knowledge is power, and when you practice knowledge it becomes skill. The following list gives you ideas of some useful skills you could learn. Pick one at a time and make it fun! Use them as inspiration to come up with your own ideas. Include your family, look up classes that you can attend, and practice at home:</string>
-    <string name="text2_s2_4">• Swimming\n• Navigating\n• Knot tying\n• Sewing\n• Self defense\n• Wilderness survival\n• Growing and harvesting your own food\n• How to do well in a job interview\n• How to start a business\n• First Aid (See p.35 of this book)</string>
-    <string name="text2_s2_5">Learning useful skills could save your life, but more importantly it will help you create a healthy, fulfilling lifestyle. </string>
-    <string name="section2_s3">Make and Practice Emergency Plans</string>
-    <string name="section2_s3_ss1">Family Disaster Plan</string>
-    <string name="text2_s3_ss1_p1">The third pillar, make and practice emergency plans, brings all four pillars together. Planning gives you the edge against emergencies because it helps you react faster and smarter. Each household member should take part in the planning and be familiar with it. Take into account your family’s specific needs and update and practice your plan so that it becomes an instinct. A plan could include:</string>
-    <string name="text2_s3_ss1_p2">• Maps\n• Evacuation routes from home, neighborhood, and city\n• Emergency phone numbers and addresses\n• Safe or “bug-out” locations to meet at if something goes wrong or if you get split up\n• Procedures for what to do in case of a hurricane, earthquake, etc.\n• Locations of bug out bags in the house\n• Different plans depending on the time of day, i.e. what will we do if the kids are at school?\n• Specific plans according to which natural disasters occur in your area. See page 19</string>
-    <string name="text2_s3_ss1_p3">Once you’ve created your plan, a copy should be given to every household member and other copies should be placed around the house.</string>
-    <string name="text2_s3_ss1_p4">When you meet to create, update, and practice your emergency plans, you can go over the 4 pillars of living a prepared lifestyle as well and make plans to incorporate them into family activities. Here are some examples:</string>
-    <string name="text2_s3_ss1_p5">• Schedule camping or fishing trips where you’ll practice survival skills\n• Schedule time for physical activities\n• Decide what to plant in your garden\n• Take inventory on food and water storage supply\n• Have a game between household members, e.g. see who can start a fire the fastest without matches\n• Have some freeze dried desserts as a treat\n• Go shopping for emergency supplies together</string>
-    <string name="text2_s3_ss1_p6">Be creative and make it fun. Set family and individual goals that you want to accomplish before the next family planning meeting. Schedule your next meeting and put it on the calendar so each family member can look forward to it.</string>
-    <string name="text2_s3_ss1_p7">When a disaster does occur, you’ll probably have to change and adapt plans. However, simply having made them in the first place will help you know how best to adapt them quickly</string>
-    <string name="section2_s3_ss2">Template</string> <!-- Fill out boxes and send an e-mail to yourself with a printout -->
-    <string name="section2_s4">Have Proper Supplies</string>
-    <string name="text2_s4_p1">If you are fit, have useful skills, and make emergency plans then the last pillar of a prepared lifestyle is to have the proper supplies to survive. Look on pages 17–18 for a list of suggested supplies. Before stocking large amounts of supplies, it’s important to follow a few steps to avoid spending money on the wrong type of product (or one of poor quality.) Not all of these steps will be the same for each product, so follow the general idea:</string>
-    <string name="text2_s4_p2">• Pick an item you need to stock up\n• Research what different types there are and which will work best for your needs\n• View videos/pictures of each type and read reviews\n• If a trusted friend or neighbor owns one of the products you’ve researched then ask them for their opinion\n• Purchase and test for a few weeks as many of your top choices as practical\n• Stock up on the item that most meets your needs</string>
-    <string name="text2_s4_p3">If you’re stocking up on an item, these steps will make sure you don’t waste money. On page 49 you’ll find a side-by-side product comparison reference for help with step 1, researching. For example, if you want to stock up on blankets, then you can go to the page in this section about blankets and learn the pros and cons to wool, fleece, and emergency blankets. Your individual needs will decide which one works best for you. If you are stocking bug out bags you’ll need a different blanket than if you were stocking your home. Whatever your needs, this side by side comparison is a great reference to have.</string>
-    <string name="text2_s4_p4">There is no practical way to have enough supplies, especially food and water, to last an entire lifetime. Hence the quote, “The more you know, the less you need.” You don’t need a hundred matches if you can start fires without them.</string>
-    <string name="text2_s4_p5">Use the principle of power in knowledge to your advantage. It’s the same idea as the common proverb, “Give a man a fish and you feed him for a day. Teach a man to fish and you feed him for a lifetime.” That is why “Have Proper Supplies” comes after “Learn Useful Skills” in this book. The right knowledge and skills are more powerful than the right supplies.</string>
-    <string name="section2_s5">Getting There</string>
-    <string name="text2_s5_p1">The four pillars of preparedness living are simple, yet will require commitment and persistence. Don’t give up when you get discouraged. Creating a prepared, healthy lifestyle is the most rewarding thing you can do. It will also give you the mental toughness necessary to actually survive in real life emergencies.</string>
-    <string name="text2_s5_p2">“That which we persist in doing becomes easier, not that the task itself has become easier, but that our ability to perform it has improved.” - Ralph Waldo Emerson</string>
-    <string name="quote2_2_text">The more you know, the less you need.</string>
-    <string name="quote2_2_source">David Wescott; Primitive Survival Skills Expert</string>
+    <string name="section2_s1_text">In this section we will cover the Four Pillars of Emergency Preparedness to equip you with a healthy lifestyle and the ability to adapt during emergencies.
+    \n\n
+    When you live a prepared lifestyle, you are truly prepared to adapt to disasters and emergencies. Now you may ask, “What is a prepared lifestyle? How do I begin living one?” To help you on your path, Emergency Zone has developed the 4 pillars of how to live a prepared lifestyle. Like a building held up by columns, being truly prepared depends on all four categories:• Become Fit\n• Learn Skills\n• Make and Practice Emergency Plans\n• Have Proper Supplies</string>
+
+    <string name="section2_s2">Become Fit</string>
+    <string name="section2_s2_text">Being fit is the first pillar to being truly prepared. Fitness consists of physical, financial, and mental/emotional health. Each of these are intricately woven into one another so that when you improve one, you improve the other. For example, physical exercise makes you feel good and can help your emotional health by boosting your confidence and self-esteem. In this way being fit in each category will help you to be healthy, happy, and truly prepared.
+    \n\n\n
+    Physical Health
+    \n
+    In an emergency you may need to walk or swim long distances. It is likely you will need to carry a heavy load, such as an injured person. You yourself may be injured or even sick in bed. To meet these challenges and prevent injury/illness you need to incorporate healthy habits into your daily life. There are a lot of different opinions about how to be healthy, but most agree with each other on certain key points. Adapt these basic principles to your individual needs, which may be different. We also recommend you do research for yourself and consult your doctor.
+    \n\n
+    • Sleep 7–8 hours every night.\n• Get 30 minutes of vigorous exercise 5–6 days a week. In addition to working on your strength, work to improve your endurance, flexibility, and balance.\n• Eat lots of fresh fruits and vegetables, as well as whole grains. Eat a variety of meat, including beef, chicken, fish, and other seafood.\n• Limit foods with artificial preservatives and dubious ingredients.\n• Eat and drink as little added sugars as possible (cane sugar, corn syrup, etc).
+    \n\n
+    Find a way to make exercise and nutrition fun! If a diet or workout plan isn’t fun then it won’t be sustainable and you’ll be less prepared for adapting in tough situations.
+    \n\n\n
+    Financial Health
+    \n
+    Although saving up for retirement may not be a good way to prepare for the apocalypse, living a prepared lifestyle is about preparing yourself for anything, including the “end of the world” happening after your lifetime. Here are some basics on how to be financially fit for survival. Even though they are incredibly simple they are absolutely necessary for financial health:
+    \n\n
+    • Get rid of debt and stay debt free\n• Have and keep a budget to avoid spending more than what you make\n• Work to have a healthy credit score\n• Make wise investments and prepare for retirement early on\n• Save enough money in a separate account to live off of for a few months if you lose your job\n• Have plenty of cash on hand, at least enough to be able to transport your family to safety in an emergency\n• Grow a garden\n• Learn to make and repair things on your own
+    \n\n\n
+    Mental/Emotional Health
+    \n
+    When it comes to surviving, your attitude and perspective are powerful. A healthy mind and attitude says, “I can do hard things.” In emergencies you may have to endure pain, discomfort, and less-than-ideal situations. Enduring those things optimistically is learned with experience and effort.
+    \n\n
+    To begin developing a healthy mind and attitude, take your daily struggles (like difficult projects at work or trying to be patient with your kids), and start focusing on the positive instead of the negative. When you have improved and built up some momentum, try new things to stretch your mental toughness. Train for a 5k run. Go back and finish college. Do what you’ve always wanted to do but never took the chance. Here are some other areas of emotional health that you can work on:
+    \n\n
+    • See challenges as opportunities\n• Stress management\n• Self-esteem\n• Learn how not to complain\n• Be courageous\n• Show gratitude and compassion to others\n• Care more about people than possessions
+    \n\n\n
+    Becoming fit physically, financially, and mentally is like filling your car up with gas; it gives you energy and you feel less worried. It is the first pillar because it is key to building a lifestyle that will equip you to adapt and survive in emergencies, but it is just one piece of the puzzle.</string>
+    <string name="section2_s2_quote_text">When you encounter uncomfortable situations, you can either decide to be a victim or an over-comer. Always choose to be an over-comer.</string>
+    <string name="section2_s2_quote_source">Lailah Gifty Akita</string>
+
+    <string name="section2_s3">Learn Useful Skills</string>
+    <string name="section2_s3_text">“The separation of talent and skill is one of the greatest misunderstood concepts for people who are trying to excel, who have dreams, who want to do things. Talent you have naturally. Skill is only developed by hours and hours and hours of beating on your craft.” - Will Smith
+    \n\n
+    You may have the mental toughness to survive one night in the woods, or the financial wellness to live a few months after losing your job, but if you don’t have the skills to light a fire, or to get a new job how long will you last?
+    \n\n
+    Having practical skills is where the rubber meets the road. Knowledge is power, and when you practice knowledge it becomes skill. The following list gives you ideas of some useful skills you could learn. Pick one at a time and make it fun! Use them as inspiration to come up with your own ideas. Include your family, look up classes that you can attend, and practice at home:
+    \n\n
+    • Swimming\n• Navigating\n• Knot tying\n• Sewing\n• Self defense\n• Wilderness survival\n• Growing and harvesting your own food\n• How to do well in a job interview\n• How to start a business\n• First Aid (See p.35 of this bookSection)
+    \n\n
+    Learning useful skills could save your life, but more importantly it will help you create a healthy, fulfilling lifestyle. </string>
+    <string name="section2_s3_quote_text">The more you know, the less you need.</string>
+    <string name="section2_s3_quote_source">David Wescott; Primitive Survival Skills Expert</string>
+
+    <string name="section2_s4">Make and Practice Emergency Plans</string>
+    <string name="section2_s4_text">The third pillar, make and practice emergency plans, brings all four pillars together. Planning gives you the edge against emergencies because it helps you react faster and smarter. Each household member should take part in the planning and be familiar with it. Take into account your family’s specific needs and update and practice your plan so that it becomes an instinct. A plan could include:
+    \n\n
+    • Maps\n• Evacuation routes from home, neighborhood, and city\n• Emergency phone numbers and addresses\n• Safe or “bug-out” locations to meet at if something goes wrong or if you get split up\n• Procedures for what to do in case of a hurricane, earthquake, etc.\n• Locations of bug out bags in the house\n• Different plans depending on the time of day, i.e. what will we do if the kids are at school?\n• Specific plans according to which natural disasters occur in your area. See page 19
+    \n\n
+    Once you’ve created your plan, a copy should be given to every household member and other copies should be placed around the house.
+    \n\n
+    When you meet to create, update, and practice your emergency plans, you can go over the 4 pillars of living a prepared lifestyle as well and make plans to incorporate them into family activities. Here are some examples:
+    \n\n
+    • Schedule camping or fishing trips where you’ll practice survival skills\n• Schedule time for physical activities\n• Decide what to plant in your garden\n• Take inventory on food and water storage supply\n• Have a game between household members, e.g. see who can start a fire the fastest without matches\n• Have some freeze dried desserts as a treat\n• Go shopping for emergency supplies together
+    \n\n
+    Be creative and make it fun. Set family and individual goals that you want to accomplish before the next family planning meeting. Schedule your next meeting and put it on the calendar so each family member can look forward to it.
+    \n\n
+    When a disaster does occur, you’ll probably have to change and adapt plans. However, simply having made them in the first place will help you know how best to adapt them quickly</string>
+
+    <string name="section2_s5">Template</string> <!-- Fill out boxes and send an e-mail to yourself with a printout -->
+
+    <string name="section2_s6">Have Proper Supplies</string>
+    <string name="section2_s6_text">If you are fit, have useful skills, and make emergency plans then the last pillar of a prepared lifestyle is to have the proper supplies to survive. Look on pages 17–18 for a list of suggested supplies. Before stocking large amounts of supplies, it’s important to follow a few steps to avoid spending money on the wrong type of product (or one of poor quality.) Not all of these steps will be the same for each product, so follow the general idea:
+    \n\n
+    • Pick an item you need to stock up\n• Research what different types there are and which will work best for your needs\n• View videos/pictures of each type and read reviews\n• If a trusted friend or neighbor owns one of the products you’ve researched then ask them for their opinion\n• Purchase and test for a few weeks as many of your top choices as practical\n• Stock up on the item that most meets your needs
+    \n\n
+    If you’re stocking up on an item, these steps will make sure you don’t waste money. On page 49 you’ll find a side-by-side product comparison reference for help with step 1, researching. For example, if you want to stock up on blankets, then you can go to the page in this section about blankets and learn the pros and cons to wool, fleece, and emergency blankets. Your individual needs will decide which one works best for you. If you are stocking bug out bags you’ll need a different blanket than if you were stocking your home. Whatever your needs, this side by side comparison is a great reference to have.
+    \n\n
+    There is no practical way to have enough supplies, especially food and water, to last an entire lifetime. Hence the quote, “The more you know, the less you need.” You don’t need a hundred matches if you can start fires without them.
+    \n\n
+    Use the principle of power in knowledge to your advantage. It’s the same idea as the common proverb, “Give a man a fish and you feed him for a day. Teach a man to fish and you feed him for a lifetime.” That is why “Have Proper Supplies” comes after “Learn Useful Skills” in this bookSection. The right knowledge and skills are more powerful than the right supplies.</string>
+
+    <string name="section2_s7">Getting There</string>
+    <string name="section2_s7_text">The four pillars of preparedness living are simple, yet will require commitment and persistence. Don’t give up when you get discouraged. Creating a prepared, healthy lifestyle is the most rewarding thing you can do. It will also give you the mental toughness necessary to actually survive in real life emergencies.</string>
+    <string name="section2_s7_quote_text">“That which we persist in doing becomes easier, not that the task itself has become easier, but that our ability to perform it has improved.”</string>
+    <string name="section2_s7_quote_source">- Ralph Waldo Emerson</string>
+
 
     <string name="section3">What to Prepare For</string>
-    <string name="section3_summary">Every emergency requires specific supplies, preparation, and reaction. We go through what these emergencies have in common and then give you a disaster by disaster reference.</string>
-    <string name="text3_p1">Knowing how to prepare without fear is only half the battle; the other half is knowing what to prepare for. To prepare for general emergencies you’ll need water, food, bug out bags, and some basic supplies. Depending on where you live, you may need to make special preparations for tornadoes, hurricanes, etc. This section will cover all those things plus other specific emergencies. It’s important to adapt these guidelines to your own household, and to review this information often to stay updated.</string>
-    <string name="section3_s1">General Emergencies</string>
-    <string name="section3_s1_ss1">Water Storage</string>
-    <string name="text3_s1_ss1_p1">Because each family member will have different requirements, you’ll need to study how much each person uses in one day. Take into account drinking, cooking, and hygiene. Decide how much they would need and properly store enough for at least 2 weeks. Generally, you should store at least 1 gallon per person per day. Ideally, you want a water source near your house that you can filter. If not, plan to store more water.</string>
-    <string name="section3_s1_ss2">Food Storage</string>
-    <string name="text3_s1_ss2_p1"> Have two different supplies, short-term and long-term. Short-term food storage consists of food you normally eat (make sure you have the means to cook it without electricity). Have around one month of short-term food storage. Long-term food storage is different because you can store as much as you want. To play it safe, store at least 3 months-worth. Long-term food storage should consist of foods with a very long shelf life, such as freeze-dried food, rice, beans, wheat, oats, and pasta. If storing enough food seems daunting, then just buy a little bit each week and it will add up quickly.</string>
-    <string name="section3_s1_ss3">Bug Out Bag</string>
-    <string name="text3_s1_ss3_p1">Also known as a 72-hour kit or “go bag.” A bug out bag is a backpack or other bag that has the food, water, clothes, and other gear to help you survive until you can make it to your bug out location. For your bug out location, choose somewhere that could support you long term and is far enough away to be safe from disasters and riots but close enough to be practical.</string>
-    <string name="text3_s1_ss3_p2">Have one or more bug out bags per person in your household and store them in strategic locations so you can grab them quickly. At the same time, don’t place them in plain sight. Having survival supplies can make you a target to desperate people in dire circumstances.</string>
-    <string name="text3_s1_ss3_p3">You should also have a “get home bag.” Stock it with the same supplies as a bug out bag but place one in your office or car. “Get home bags” are to help you get home if you are caught at work or somewhere else in an emergency.</string>
-    <string name="text3_s1_ss3_p4">Here’s a basic list for stocking your bug out/get home bags. Remember that not everything in this list will fit your circumstances. You will likely have to hike with this backpack, so only pack the essentials and purchase lightweight products. </string>
-    <string name="text3_s1_ss3_p5">• Water\n• Water filter or other form of water sanitation\n• Food (jerky, freeze dried meals, and energy bars are good ideas)\n• Cooking pot/mess kit\n• Small hiking stove\n• Water bottle\n• First aid kit\n• Extra clothing appropriate for your climate\n• Hiking shoes/boots\n• Hygiene items\n• Sunscreen\n• Insect repellent\n• Flashlight/headlamp\n• Extra batteries\n• Extra socks!\n• Poncho or water-proof jacket\n• Fire starting tools (ferro rod, matches, lighters, kindling, etc.)\n• Survival knife\n• Small hatchet\n• A tent or tarp for shelter\n• Sleeping bag\n• Walkie talkies\n• Radio\n• 550 paracord\n• Cash and important documents\n• Emergency whistle, flare, and/or signal mirror\n• Fishing kit\n• Self defense item (machete, pistol, pepper spray, etc)\n• Notepad and pen\n• Duct tape\n• Maps and compass</string>
-    <string name="quote3_1_text">If you know the enemy and know yourself, you need not fear the result of a hundred battles. If you know yourself but not the enemy, for every victory gained you will also suffer a defeat. If you know neither the enemy nor yourself, you will succumb in every battle.</string>
-    <string name="quote3_1_source">Sun Tzu</string>
-    <string name="section3_s1_ss4">Storage Supplies</string>
-    <string name="text3_s1_ss4_p1">These are the supplies you need for when you have to “bug in”, or survive at home. It’s very similar to the bug out bag list, except weight isn’t an issue and you should stock up enough for as many months as you can, preferably over 3 months:</string>
-    <string name="text3_s1_ss4_p2">• Axe\n• Tarp\n• Rope\n• Food\n• Water\n• Radio\n• Seeds\n• Gloves\n• Blankets\n• Firewood\n• Duct tape\n• Pet Supplies\n• Survival knife\n• Sleeping bags\n• Garden tools\n• Cleaning supplies\n• Water filtration methods\n• Non-electric cooking stoves and fuel\n• Portable toilet with waste bags and toilet paper\n• Candles or lanterns\n• Hand crank flashlights\n• Extra batteries\n• Clothing suited to climate\n• First aid kit\n• Prescription medications, contact lenses, eye glasses, etc\n• Fire extinguishers\n• Hygiene items\n• Sunscreen and insect repellent\n• Walkie Talkies or other communication method\n• Fire starting tools (ferro rod, matches, lighters, newspaper for kindling, etc)\n• Gun or bow and arrow for hunting\n• Self defense weapons (pepper spray, shotgun, etc)\n• Unread books and small treats for good morale</string>
+    <string name="section3_s1_text">Every emergency requires specific supplies, preparation, and reaction. We go through what these emergencies have in common and then give you a disaster by disaster reference.
+    \n\n
+    Knowing how to prepare without fear is only half the battle; the other half is knowing what to prepare for. To prepare for general emergencies you’ll need water, food, bug out bags, and some basic supplies. Depending on where you live, you may need to make special preparations for tornadoes, hurricanes, etc. This section will cover all those things plus other specific emergencies. It’s important to adapt these guidelines to your own household, and to review this information often to stay updated.</string>
 
-    <string name="section3_s2">Types of Disasters</string>
-    <string name="text3_s2_p1">This reference section gives some tips for preparing and surviving selected crises. We have given lists of general supplies for emergencies, but there may be emergency-specific supplies that will be helpful.</string>
+    <string name="section3_s2">General Emergencies</string>
+    <string name="section3_s2_text">Water Storage
+    \n
+    Because each family member will have different requirements, you’ll need to study how much each person uses in one day. Take into account drinking, cooking, and hygiene. Decide how much they would need and properly store enough for at least 2 weeks. Generally, you should store at least 1 gallon per person per day. Ideally, you want a water source near your house that you can filter. If not, plan to store more water.
+    \n\n\n
+    Food Storage
+    \n
+    Have two different supplies, short-term and long-term. Short-term food storage consists of food you normally eat (make sure you have the means to cook it without electricity). Have around one month of short-term food storage. Long-term food storage is different because you can store as much as you want. To play it safe, store at least 3 months-worth. Long-term food storage should consist of foods with a very long shelf life, such as freeze-dried food, rice, beans, wheat, oats, and pasta. If storing enough food seems daunting, then just buy a little bit each week and it will add up quickly.
+    \n\n\n
+    Bug Out Bag
+    \n
+    Also known as a 72-hour kit or “go bag.” A bug out bag is a backpack or other bag that has the food, water, clothes, and other gear to help you survive until you can make it to your bug out location. For your bug out location, choose somewhere that could support you long term and is far enough away to be safe from disasters and riots but close enough to be practical.
+    \n\n
+    Have one or more bug out bags per person in your household and store them in strategic locations so you can grab them quickly. At the same time, don’t place them in plain sight. Having survival supplies can make you a target to desperate people in dire circumstances.
+    \n\n
+    You should also have a “get home bag.” Stock it with the same supplies as a bug out bag but place one in your office or car. “Get home bags” are to help you get home if you are caught at work or somewhere else in an emergency.
+    \n\n
+    Here’s a basic list for stocking your bug out/get home bags. Remember that not everything in this list will fit your circumstances. You will likely have to hike with this backpack, so only pack the essentials and purchase lightweight products.
+    \n\n
+    • Water\n• Water filter or other form of water sanitation\n• Food (jerky, freeze dried meals, and energy bars are good ideas)\n• Cooking pot/mess kit\n• Small hiking stove\n• Water bottle\n• First aid kit\n• Extra clothing appropriate for your climate\n• Hiking shoes/boots\n• Hygiene items\n• Sunscreen\n• Insect repellent\n• Flashlight/headlamp\n• Extra batteries\n• Extra socks!\n• Poncho or water-proof jacket\n• Fire starting tools (ferro rod, matches, lighters, kindling, etc.)\n• Survival knife\n• Small hatchet\n• A tent or tarp for shelter\n• Sleeping bag\n• Walkie talkies\n• Radio\n• 550 paracord\n• Cash and important documents\n• Emergency whistle, flare, and/or signal mirror\n• Fishing kit\n• Self defense item (machete, pistol, pepper spray, etc)\n• Notepad and pen\n• Duct tape\n• Maps and compass</string>
+    <string name="section3_s2_quote_text">If you know the enemy and know yourself, you need not fear the result of a hundred battles. If you know yourself but not the enemy, for every victory gained you will also suffer a defeat. If you know neither the enemy nor yourself, you will succumb in every battle.</string>
+    <string name="section3_s2_quote_source">- Sun Tzu</string>
 
-    <string name="section3_s2_ss1">Earthquake</string>
-    <string name="text3_s2_ss1_p1">An earthquake is a sudden release of energy in the Earth’s crust that releases seismic waves. This is felt by people as an intense shaking or a sudden slippage of the ground. Earthquakes usually occur along fault lines. They are unpredictable and strike without warning. The actual earthquake isn’t the problem, it is the collapsing buildings or falling objects that cause the most injuries. </string>
-    <string name="section3_s2_ss1_sss1">Prepare for an Earthquake</string>
-    <string name="text3_s2_ss1_sss1_p1">• Find out if you live by a fault line and know your area’s earthquake history.\n• Be prepared by having an emergency kit in your home.\n• Teach all family members how to shut off gas, electricity, and water main lines.\n• Keep a pair of shoes (there may be debris and broken glass) and flashlight by beds.\n• Place large, heavy or breakable items on lower shelves.\n• Do not hang pictures or objects that may fall over close to beds.\n• Place beds away from windows and shelves.\n• Fasten hot water heaters and top heavy appliances to a wall.\n• Make a plan with your family on what to do and where to meet if they get separated.\n• Store bleach, laundry soap, pesticides and other chemicals on the bottom shelf or in a closed cabinet.\n• Find a safe place (sturdy table, door way, inside wall) in each room of your house. </string>
-    <string name="section3_s2_ss1_sss2">During and After an Earthquake</string>
-    <string name="text3_s2_ss1_sss2_p1">• Stay calm.\n• If inside, stay inside. Find cover and hold on! See below.\n• If outside stay outside. Move away from buildings, utility poles/wires, trees and street lights.\n• If you are in a car stay in it. Drive away from overpasses, buildings, utility poles/wires, trees and street lights.\n• If dust is present cover your nose and mouth with a cloth if possible.\n• Don’t use any open flames until you are sure there isn’t a gas leak.\n• Be prepared for aftershocks.\n• If you live in a coastal area be prepared for possible tsunamis.\n• Do not use elevators.\n• After the quake check carefully for cracks in your house, gas leaks, water leaks, and electrical line damage. If any leaks happen turn off the main valve for the appropriate leak.</string>
+    <string name="section3_s3">Storage Supplies</string>
+    <string name="section3_s3_text">These are the supplies you need for when you have to “bug in”, or survive at home. It’s very similar to the bug out bag list, except weight isn’t an issue and you should stock up enough for as many months as you can, preferably over 3 months:
+    \n\n
+    • Axe\n• Tarp\n• Rope\n• Food\n• Water\n• Radio\n• Seeds\n• Gloves\n• Blankets\n• Firewood\n• Duct tape\n• Pet Supplies\n• Survival knife\n• Sleeping bags\n• Garden tools\n• Cleaning supplies\n• Water filtration methods\n• Non-electric cooking stoves and fuel\n• Portable toilet with waste bags and toilet paper\n• Candles or lanterns\n• Hand crank flashlights\n• Extra batteries\n• Clothing suited to climate\n• First aid kit\n• Prescription medications, contact lenses, eye glasses, etc\n• Fire extinguishers\n• Hygiene items\n• Sunscreen and insect repellent\n• Walkie Talkies or other communication method\n• Fire starting tools (ferro rod, matches, lighters, newspaper for kindling, etc)\n• Gun or bow and arrow for hunting\n• Self defense weapons (pepper spray, shotgun, etc)\n• Unread books and small treats for good morale</string>
 
-    <string name="section3_s2_ss2">Extended Power Outage</string>
-    <string name="text3_s2_ss2_p1">Power outages are relatively easy to handle, but they can become difficult over long periods of time. Many disasters can be so severe that it may take a long time to get the grid back online. You should be just fine if you have all the basic supplies we listed earlier, but an extended power outage may be dangerous to those with special medical needs. In this case, you may need to take some of the measures listed below.</string>
-    <string name="text3_s2_ss2_p2">Another thing to keep in mind is the entertainment needs of your family. Young kids will need extra planning and supplies.</string>
-    <string name="section3_s2_ss2_sss1">Proper Supplies for an Extended Power Outage</string>
-    <string name="text3_s2_ss2_sss1_p1">• Large plastic sheets\n• Portable cell phone charger\n• Extra propane\n• Prescription medicines</string>
-    <string name="section3_s2_ss2_sss2">For those with Special Needs</string>
-    <string name="text3_s2_ss2_sss2_p1">• Backup generator\n• Extra oxygen tanks, insulin, etc.\n• Solar or propane powered refrigerators, or a zeer pot for insulin storage</string>
-    <string name="section3_s2_ss2_sss3">During an Extended Power Outage</string>
-    <string name="text3_s2_ss2_sss3_p1">• Don’t open the fridge door at first; keeping it closed will keep the food cold for up to 4 hours\n• Don’t open the freezer, either. A full, unopened freezer can last 48 hours. If the power doesn’t come back on after your food has thawed try to eat it as soon as you can\n• Meat, milk products, eggs and other foods should be discarded if kept at or above 40 degrees for more than 2 hours. If kept at 90 degrees, discard after 1 hour\n• If you live in a cold climate, isolate a small room using blankets or plastic sheets. It’s easier and more efficient to heat a small space than your entire house. See also Winter Storms p.32\n• Don’t use charcoal or gas grills indoors. They create carbon monoxide, a poisonous gas</string>
+    <string name="section3_s4">Types of Disasters</string>
+    <string name="section3_s4_text">This reference section gives some tips for preparing and surviving selected crises. We have given lists of general supplies for emergencies, but there may be emergency-specific supplies that will be helpful.
+    \n\n\n
 
-    <string name="section3_s2_ss3">Flood</string>
-    <string name="text3_s2_ss3_p1">Floods can come from many different sources, such as rainfall, tsunamis, hurricanes, broken dams, etc. Pay attention to weather reports in order to have plenty of forewarning. Weather reports give flood watches and warnings. A watch means a flood is possible, while a warning means a flood will soon start or already has. The government uses this terminology for all disasters.</string>
-    <string name="section3_s2_ss3_sss1">Proper Supplies for a Flood</string>
-    <string name="text3_s2_ss3_sss1_p1">• NOAA weather radio\n• 4-in-1 disaster tool\n• Pictures of property before the flood and a camera to take pictures of after the flood for insurance purposes\n• N-95 masks to wear while cleaning up mold </string>
-    <string name="section3_s2_ss3_sss2">During a Flood</string>
-    <string name="text3_s2_ss3_sss2_p1">• When you receive a flood warning, shut off gas, electricity, and water main lines. Make sure each family member knows how to do this.\n• Find high ground to evacuate to (this should be in your family emergency plan)\n• Avoid touching flood water. Not only is it unsanitary, but just 6 inches of moving flood water can knock you down\n• Do not return to your home until you’re sure it’s safe\n• Do not drink flood water\n• After the flood, be cautious of downed power lines, broken gas lines, spoiled food, and damaged structures</string>
-    <string name="section3_s2_ss3_sss3">Tsunami</string>
-    <string name="text3_s2_ss3_sss3_p1">• Warning signs of a tsunami are tremors/earthquakes near coastal areas and the tide moving extremely and unseasonably far out.\n• Move to high ground as quickly as possible. If you cannot outrun the water, tie yourself securely to something. Do not rely on just holding on— a tsunami is stronger than you are.</string>
+    Earthquake
+    \n
+    An earthquake is a sudden release of energy in the Earth’s crust that releases seismic waves. This is felt by people as an intense shaking or a sudden slippage of the ground. Earthquakes usually occur along fault lines. They are unpredictable and strike without warning. The actual earthquake isn’t the problem, it is the collapsing buildings or falling objects that cause the most injuries.
+    \n\n
+    Prepare for an Earthquake
+    \n
+    • Find out if you live by a fault line and know your area’s earthquake history.\n• Be prepared by having an emergency kit in your home.\n• Teach all family members how to shut off gas, electricity, and water main lines.\n• Keep a pair of shoes (there may be debris and broken glass) and flashlight by beds.\n• Place large, heavy or breakable items on lower shelves.\n• Do not hang pictures or objects that may fall over close to beds.\n• Place beds away from windows and shelves.\n• Fasten hot water heaters and top heavy appliances to a wall.\n• Make a plan with your family on what to do and where to meet if they get separated.\n• Store bleach, laundry soap, pesticides and other chemicals on the bottom shelf or in a closed cabinet.\n• Find a safe place (sturdy table, door way, inside wall) in each room of your house.
+    \n\n
+    During and After an Earthquake
+    \n
+    • Stay calm.\n• If inside, stay inside. Find cover and hold on! See below.\n• If outside stay outside. Move away from buildings, utility poles/wires, trees and street lights.\n• If you are in a car stay in it. Drive away from overpasses, buildings, utility poles/wires, trees and street lights.\n• If dust is present cover your nose and mouth with a cloth if possible.\n• Don’t use any open flames until you are sure there isn’t a gas leak.\n• Be prepared for aftershocks.\n• If you live in a coastal area be prepared for possible tsunamis.\n• Do not use elevators.\n• After the quake check carefully for cracks in your house, gas leaks, water leaks, and electrical line damage. If any leaks happen turn off the main valve for the appropriate leak.
+    \n\n\n
 
-    <!--<string name="section3_s2_ss"></string>-->
-    <!--<string name="text3_s2_ss_p1"></string>-->
-    <!--<string name="section3_s2_ss_sss"></string>-->
-    <!--<string name="text3_s2_ss_sss_p1"></string>-->
+    Extended Power Outage
+    \n
+    Power outages are relatively easy to handle, but they can become difficult over long periods of time. Many disasters can be so severe that it may take a long time to get the grid back online. You should be just fine if you have all the basic supplies we listed earlier, but an extended power outage may be dangerous to those with special medical needs. In this case, you may need to take some of the measures listed below.
+    \n\n
+    Another thing to keep in mind is the entertainment needs of your family. Young kids will need extra planning and supplies.
+    \n\n
+    Proper Supplies for an Extended Power Outage
+    \n
+    • Large plastic sheets\n• Portable cell phone charger\n• Extra propane\n• Prescription medicines
+    \n\n
+    For those with Special Needs
+    \n
+    • Backup generator\n• Extra oxygen tanks, insulin, etc.\n• Solar or propane powered refrigerators, or a zeer pot for insulin storage
+    \n\n
+    During an Extended Power Outage
+    \n
+    • Don’t open the fridge door at first; keeping it closed will keep the food cold for up to 4 hours\n• Don’t open the freezer, either. A full, unopened freezer can last 48 hours. If the power doesn’t come back on after your food has thawed try to eat it as soon as you can\n• Meat, milk products, eggs and other foods should be discarded if kept at or above 40 degrees for more than 2 hours. If kept at 90 degrees, discard after 1 hour\n• If you live in a cold climate, isolate a small room using blankets or plastic sheets. It’s easier and more efficient to heat a small space than your entire house. See also Winter Storms p.32\n• Don’t use charcoal or gas grills indoors. They create carbon monoxide, a poisonous gas.
+    \n\n\n
+
+    Flood
+    \n
+    Floods can come from many different sources, such as rainfall, tsunamis, hurricanes, broken dams, etc. Pay attention to weather reports in order to have plenty of forewarning. Weather reports give flood watches and warnings. A watch means a flood is possible, while a warning means a flood will soon start or already has. The government uses this terminology for all disasters.
+    \n\n
+    Proper Supplies for a Flood
+    \n
+    • NOAA weather radio\n• 4-in-1 disaster tool\n• Pictures of property before the flood and a camera to take pictures of after the flood for insurance purposes\n• N-95 masks to wear while cleaning up mold
+    \n\n
+    During a Flood
+    \n
+    • When you receive a flood warning, shut off gas, electricity, and water main lines. Make sure each family member knows how to do this.\n• Find high ground to evacuate to (this should be in your family emergency plan)\n• Avoid touching flood water. Not only is it unsanitary, but just 6 inches of moving flood water can knock you down\n• Do not return to your home until you’re sure it’s safe\n• Do not drink flood water\n• After the flood, be cautious of downed power lines, broken gas lines, spoiled food, and damaged structures
+    \n\n\n
+
+    Tsunami
+    \n
+    • Warning signs of a tsunami are tremors/earthquakes near coastal areas and the tide moving extremely and unseasonably far out.\n• Move to high ground as quickly as possible. If you cannot outrun the water, tie yourself securely to something. Do not rely on just holding on— a tsunami is stronger than you are.</string>
 
     <string name="section4">References</string>
     <string name="section4_s1">First Aid</string>

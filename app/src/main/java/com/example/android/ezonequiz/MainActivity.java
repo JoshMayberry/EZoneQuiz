@@ -18,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
         view_image.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.storm));
 
         //Link Activities
-        setupListener(findViewById(R.id.section1), Book_IntroductionActivity.class);
-        setupListener(findViewById(R.id.section2), Book_ChapterOneActivity.class);
-        setupListener(findViewById(R.id.section3), Book_ChapterTwoActivity.class);
-        setupListener(findViewById(R.id.section4), Book_ChapterThreeActivity.class);
-        setupListener(findViewById(R.id.quiz), QuizActivity.class);
+        setupListener(R.id.section1, BookActivity.class);
+        setupListener(R.id.section2, BookActivity.class);
+        setupListener(R.id.section3, BookActivity.class);
+        setupListener(R.id.section4, BookActivity.class);
+        setupListener(R.id.quiz, QuizActivity.class);
     }
 
     /**
@@ -31,12 +31,14 @@ public class MainActivity extends AppCompatActivity {
      * @param cls - What class to listen for
      * Example Input: setupListener(findViewById(R.id.quiz), QuizActivity.class);
      */
-    public void setupListener(View view, final Class cls) {
+    public void setupListener(final int viewId, final Class cls) {
+        View view = findViewById(viewId);
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //http://www.vogella.com/tutorials/AndroidIntent/article.html#starting-activities-or-services
                 Intent intent = new Intent(MainActivity.this, cls);
+                intent.putExtra("resourceId", viewId);
                 startActivity(intent);
             }
         });
