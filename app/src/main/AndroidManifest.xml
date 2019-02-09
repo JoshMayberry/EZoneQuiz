@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".BookActivity" android:label="@string/section1" android:theme="@style/AppTheme_Introduction"/>
+        <activity android:name=".BookActivity_Text" android:label="@string/section1" android:theme="@style/AppTheme_Introduction"/>
         <activity android:name=".QuizActivity" android:label="@string/quiz" android:theme="@style/AppTheme_Quiz"/>
         <activity android:name=".MainActivity" android:label="@string/title" android:theme="@style/AppTheme">
             <intent-filter>
@@ -20,6 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BookActivity_ToC" />
     </application>
 
 </manifest>
