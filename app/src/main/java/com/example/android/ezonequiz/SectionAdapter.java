@@ -29,6 +29,7 @@ public class SectionAdapter extends ArrayAdapter<SectionBase> {
         SectionBase listItem = getItem(position);
 
         TextView view_textTop = view.findViewById(R.id.list_item_top);
+        assert listItem != null;
         view_textTop.setText(listItem.extra_title);
 
         return view;

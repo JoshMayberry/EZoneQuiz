@@ -30,6 +30,7 @@ public class DialogCorrect extends Dialog implements android.view.View.OnClickLi
         this.button_text = "Next";
         this.lastQuestion = false;
     }
+
     DialogCorrect(QuizActivity activity, String message, String button_text) {
         super(activity);
         this.activity = activity;
@@ -37,6 +38,7 @@ public class DialogCorrect extends Dialog implements android.view.View.OnClickLi
         this.button_text = button_text;
         this.lastQuestion = false;
     }
+
     DialogCorrect(QuizActivity activity, String message, String button_text, boolean lastQuestion) {
         super(activity);
         this.activity = activity;

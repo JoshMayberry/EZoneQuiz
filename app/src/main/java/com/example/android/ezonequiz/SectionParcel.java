@@ -8,7 +8,7 @@ import android.os.Parcelable;
  * One should be created for each item, and then stored in an Array or ArrayList.
  * @see BookListener_ToC
  * @see BookActivity_Text
- *
+ * <p>
  * Use: https://guides.codepath.com/android/using-parcelable#defining-a-parcelable-object
  */
 public class SectionParcel extends SectionBase<SectionParcel> implements Parcelable {
@@ -27,6 +27,7 @@ public class SectionParcel extends SectionBase<SectionParcel> implements Parcela
         out.writeInt(this.extra_text_subtitle);
         out.writeInt(this.extra_text_quote_source);
     }
+
     private SectionParcel(Parcel in) {
         this.extra_theme = in.readInt();
         this.extra_title = in.readInt();
@@ -35,15 +36,18 @@ public class SectionParcel extends SectionBase<SectionParcel> implements Parcela
         this.extra_text_subtitle = in.readInt();
         this.extra_text_quote_source = in.readInt();
     }
+
     @Override
     public int describeContents() {
         return 0;
     }
+
     public static final Parcelable.Creator<SectionParcel> CREATOR = new Parcelable.Creator<SectionParcel>() {
         @Override
         public SectionParcel createFromParcel(Parcel in) {
             return new SectionParcel(in);
         }
+
         @Override
         public SectionParcel[] newArray(int size) {
             return new SectionParcel[size];

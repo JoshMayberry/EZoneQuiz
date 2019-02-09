@@ -2,25 +2,25 @@ package com.example.android.ezonequiz;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 /**
  * This class is meant to be used as a listener for a button that will go to a page in the book.
  * @see MainActivity
  * @see BookActivity_ToC
- *
+ * <p>
  * What shows on the screen depends on what extra data the intent was given.
  * @see BookActivity_Text
  */
 public class BookListener_Text extends SectionBase<BookListener_Text> implements View.OnClickListener {
 
-    BookListener_Text(){
+    BookListener_Text() {
 
     }
 
     /**
      * This method is used to convert the item data from a selected table of contents item.
+     *
      * @param selectedItem - The item that the user selected
      * @see BookListener_Multiple_Text
      * @see SectionBase

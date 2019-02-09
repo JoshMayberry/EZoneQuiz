@@ -5,19 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="@dimen/padding_default"
     >
     <TextView
         android:id="@+id/list_item_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         tools:text="Become Fit"
         />
     <TextView
         android:id="@+id/list_item_bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="@dimen/tab_width"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         tools:text="Being fit is the first pillar to being truly prepared..."
         />
 </LinearLayout>

@@ -4,6 +4,7 @@
     <string name="button_next">Next</string>
     <string name="title">Prepare For Life</string>
     <string name="empty"> </string>
+    <string name="summary">Summary</string>
 
     <!-- Text taken from Emergency Zone Guide BookSection - https://www.emergencyzone.com/freepreparednessguidebook_a/275.htm -->
     <!-- section[chapter]_[sub-chapter]_[section] -->

@@ -16,23 +16,24 @@ public class MainActivity extends AppCompatActivity {
 
         //Apply main screen image
         //TO DO: Make this randomly pick from a selection of images?
-        ImageView view_image = findViewById(R.id.mainImage);
+        ImageView view_image = findViewById(R.id.main_image);
         view_image.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.storm));
 
         //Link Activities
-        findViewById(R.id.section1).setOnClickListener(
+        findViewById(R.id.main_section1).setOnClickListener(
                 new BookListener_Text()
-                        .set_theme(R.style.AppTheme_Introduction)
+                        .set_theme(R.style.Theme_AppCompat_EZoneQuiz_Introduction)
                         .set_title(R.string.section1)
                         .set_subtitle(R.string.section1_s1)
                         .set_body(R.string.section1_s1_text)
                         .set_quote(R.string.section1_s1_quote_text, R.string.section1_s1_quote_source)
         );
-        findViewById(R.id.section2).setOnClickListener(
+        findViewById(R.id.main_section2).setOnClickListener(
                 new BookListener_ToC()
-                        .set_theme(R.style.AppTheme_ChapterOne)
+                        .set_theme(R.style.Theme_AppCompat_EZoneQuiz_ChapterOne)
                         .set_title(R.string.section2)
-                        .set_summary(R.string.section2_summary_text)
+                        .add_section(R.string.summary)
+                        .set_section_body(R.string.section2_summary_text)
 
                         .add_section(R.string.section2_s1)
                         .set_section_body(R.string.section2_s1_text)
@@ -54,11 +55,12 @@ public class MainActivity extends AppCompatActivity {
                         .set_section_body(R.string.section2_s6_text)
                         .set_section_quote(R.string.section2_s6_quote_text, R.string.section2_s6_quote_source)
         );
-        findViewById(R.id.section3).setOnClickListener(
+        findViewById(R.id.main_section3).setOnClickListener(
                 new BookListener_ToC()
-                        .set_theme(R.style.AppTheme_ChapterTwo)
+                        .set_theme(R.style.Theme_AppCompat_EZoneQuiz_ChapterTwo)
                         .set_title(R.string.section3)
-                        .set_summary(R.string.section3_summary_text)
+                        .add_section(R.string.summary)
+                        .set_section_body(R.string.section3_summary_text)
 
                         .add_section(R.string.section3_s1)
                         .set_section_body(R.string.section3_s1_text)
@@ -70,9 +72,9 @@ public class MainActivity extends AppCompatActivity {
                         .add_section(R.string.section3_s3)
                         .set_section_body(R.string.section3_s3_text)
         );
-        findViewById(R.id.section4).setOnClickListener(
+        findViewById(R.id.main_section4).setOnClickListener(
                 new BookListener_ToC()
-                        .set_theme(R.style.AppTheme_ChapterThree)
+                        .set_theme(R.style.Theme_AppCompat_EZoneQuiz_ChapterThree)
                         .set_title(R.string.section4)
 
                         .add_section(R.string.section4_s1)
@@ -81,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
                         .add_section(R.string.section4_s3)
         );
-        findViewById(R.id.quiz).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.main_quiz).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //http://www.vogella.com/tutorials/AndroidIntent/article.html#starting-activities-or-services

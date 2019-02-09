@@ -1,7 +1,6 @@
 package com.example.android.ezonequiz;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.EditText;
@@ -9,10 +8,10 @@ import android.widget.EditText;
 /**
  * The text is too small in the native NumberPicker.
  * This increases the text size so it is more visible.
- *
+ * <p>
  * I would rather modify the text size of android.widget.NumberPicker.mInputText before the number picker's constructor runs, but I cannot figure out how to do it.
  * (The text size is inherited by the text size of mInputText when the widget is created).
- *
+ * <p>
  * This code is from aheuermann on: https://stackoverflow.com/questions/6958460/android-can-i-increase-the-textsize-for-the-numberpicker-widget/12084420#12084420
  */
 public class MyNumberPicker extends android.widget.NumberPicker {
@@ -44,11 +43,8 @@ public class MyNumberPicker extends android.widget.NumberPicker {
      * As aheuermann put it, "Not ideal, but it works".
      */
     private void updateView(View view) {
-        if (view instanceof EditText){
-            // Log.v("MyNumberPicker", "Updated");
-            ((EditText) view).setTextSize(getResources().getDimension(R.dimen.text_answerSize));
-            ((EditText) view).setTextColor(ContextCompat.getColor(getContext(), R.color.colorPrimaryText));
+        if (view instanceof EditText) {
+            ((EditText) view).setTextAppearance(view.getContext(), android.R.style.TextAppearance_Large);
         }
     }
-
 }

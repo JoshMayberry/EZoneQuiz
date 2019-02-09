@@ -1,6 +1,5 @@
 package com.example.android.ezonequiz;
 
-import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.CheckBox;
@@ -35,13 +34,14 @@ public class Question {
 
     /**
      * Used for questions that use the radio buttons.
-     * @param textId - The resource id for the string to use for the question
-     * @param correctId - The resource id for the string to use for the correct answer message
-     * @param incorrectId - The resource id for the string to use for the incorrect answer message
+     *
+     * @param textId       - The resource id for the string to use for the question
+     * @param correctId    - The resource id for the string to use for the correct answer message
+     * @param incorrectId  - The resource id for the string to use for the incorrect answer message
      * @param answerIdList - The resource ids for the strings to use for the answer widgets
      * @param correctIndex - The index of the correct answer
      */
-    Question(QuizActivity activity, int imageId, int textId, int correctId, int incorrectId, int[] answerIdList, int correctIndex){
+    Question(QuizActivity activity, int imageId, int textId, int correctId, int incorrectId, int[] answerIdList, int correctIndex) {
         this.activity = activity;
         this.type = QuestionType.Single;
         this.textId = textId;
@@ -49,7 +49,7 @@ public class Question {
         this.correctId = correctId;
         this.incorrectId = incorrectId;
 
-        for (int i=0; i<answerIdList.length; i++) {
+        for (int i = 0; i < answerIdList.length; i++) {
             this.answerList.add(answerIdList[i]);
             this.viewList.add(activity.view_radioButton[i]);
         }
@@ -58,15 +58,17 @@ public class Question {
         this.correctIndex.add(correctIndex);
 
     }
+
     /**
      * Used for questions that use the check boxes.
-     * @param textId - The resource id for the string to use for the question
-     * @param correctId - The resource id for the string to use for the correct answer message
-     * @param incorrectId - The resource id for the string to use for the incorrect answer message
+     *
+     * @param textId       - The resource id for the string to use for the question
+     * @param correctId    - The resource id for the string to use for the correct answer message
+     * @param incorrectId  - The resource id for the string to use for the incorrect answer message
      * @param answerIdList - The resource ids for the strings to use for the answer widgets
      * @param correctIndex - The indexes of the correct answers
      */
-    Question(QuizActivity activity, int imageId, int textId, int correctId, int incorrectId, int[] answerIdList, int[] correctIndex){
+    Question(QuizActivity activity, int imageId, int textId, int correctId, int incorrectId, int[] answerIdList, int[] correctIndex) {
         this.activity = activity;
         this.type = QuestionType.Multiple;
         this.textId = textId;
@@ -74,12 +76,12 @@ public class Question {
         this.correctId = correctId;
         this.incorrectId = incorrectId;
 
-        for (int i=0; i<answerIdList.length; i++) {
+        for (int i = 0; i < answerIdList.length; i++) {
             this.answerList.add(answerIdList[i]);
             this.viewList.add(this.activity.view_checkBox[i]);
         }
 
-        for (int i: correctIndex) {
+        for (int i : correctIndex) {
             assert this.answerList.size() > i;
             this.correctIndex.add(i);
         }
@@ -87,11 +89,12 @@ public class Question {
 
     /**
      * Used for questions with a number spinner.
-     * @param textId - The resource id for the string to use for the question
-     * @param correctId - The resource id for the string to use for the correct answer message
-     * @param incorrectId - The resource id for the string to use for the incorrect answer message
-     * @param rangeMin - The lowest value the number spinner can have
-     * @param rangeMax - The highest value the number spinner can have
+     *
+     * @param textId       - The resource id for the string to use for the question
+     * @param correctId    - The resource id for the string to use for the correct answer message
+     * @param incorrectId  - The resource id for the string to use for the incorrect answer message
+     * @param rangeMin     - The lowest value the number spinner can have
+     * @param rangeMax     - The highest value the number spinner can have
      * @param correctValue - The correct value to select
      */
     Question(QuizActivity activity, int imageId, int textId, int correctId, int incorrectId, int rangeMin, int rangeMax, int correctValue) {
@@ -114,10 +117,11 @@ public class Question {
      * Hides this question on the screen.
      */
     public void hide() {
-        for (View view: this.activity.currentQuestion.viewList) {
+        for (View view : this.activity.currentQuestion.viewList) {
             view.setVisibility(View.GONE);
         }
     }
+
     /**
      * Shows this question on the screen.
      */
@@ -151,8 +155,10 @@ public class Question {
                 //Use: https://stackoverflow.com/questions/12979643/change-the-step-size-of-a-numberpicker/30469826#30469826
         }
     }
+
     /**
      * Checks the user's answer.
+     *
      * @return - Whether or not the user chose correctly
      */
     public boolean check() {
@@ -178,16 +184,20 @@ public class Question {
         }
         return false;
     }
+
     /**
      * Returns a formatted message saying that the user chose correctly
+     *
      * @return The message to show in the dialog box
      * See: https://www.baeldung.com/java-random-list-element#highlighter_812240
      */
     public String getMessage_correct() {
         return this.activity.getResources().getString(this.correctId, this.activity.correctList[this.activity.random.nextInt(this.activity.correctList.length)]);
     }
+
     /**
      * Returns a formatted message saying that the user chose incorrectly
+     *
      * @return The message to show in the dialog box
      */
     public String getMessage_incorrect() {

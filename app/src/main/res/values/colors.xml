@@ -4,35 +4,29 @@
     <color name="colorPrimary">#9e9e9e</color>
     <color name="colorPrimaryDark">#707070</color>
     <color name="colorPrimaryLight">#cfcfcf</color>
-    <color name="colorPrimaryText">#000000</color>
 
     <!-- https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=03A9F4 -->
     <color name="colorIntroduction">#03a9f4</color>
     <color name="colorIntroductionDark">#007ac1</color>
     <color name="colorIntroductionLight">#67daff</color>
-    <color name="colorIntroductionText">#000000</color>
 
     <!-- https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=4CAF50 -->
     <color name="colorChapterOne">#4caf50</color>
     <color name="colorChapterOneDark">#087f23</color>
     <color name="colorChapterOneLight">#80e27e</color>
-    <color name="colorChapterOneText">#000000</color>
 
     <!-- https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=FFC107 -->
     <color name="colorChapterTwo">#ffc107</color>
     <color name="colorChapterTwoDark">#c79100</color>
     <color name="colorChapterTwoLight">#fff350</color>
-    <color name="colorChapterTwoText">#000000</color>
 
     <!-- https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=ba000d -->
     <color name="colorChapterThree">#ba000d</color>
     <color name="colorChapterThreeDark">#820000</color>
     <color name="colorChapterThreeLight">#f44b37</color>
-    <color name="colorChapterThreeText">#000000</color>
 
     <!-- https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=9C27B0 -->
     <color name="colorQuiz">#9c27b0</color>
     <color name="colorQuizDark">#6a0080</color>
     <color name="colorQuizLight">#d05ce3</color>
-    <color name="colorQuizText">#000000</color>
 </resources>
