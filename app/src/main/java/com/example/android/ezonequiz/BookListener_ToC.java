@@ -113,6 +113,24 @@ public class BookListener_ToC implements View.OnClickListener {
         return this;
     }
 
+    BookListener_ToC set_section_image(int imageId) {
+        return set_section_image(lastIndex, imageId);
+    }
+
+    BookListener_ToC set_section_image(int index, int imageId) {
+        this.extra_sections.get(index).set_image(imageId);
+        return this;
+    }
+
+    BookListener_ToC set_section_image_scaleType(int scaleType) {
+        return set_section_image_scaleType(lastIndex, scaleType);
+    }
+
+    BookListener_ToC set_section_image_scaleType(int index, int scaleType) {
+        this.extra_sections.get(index).set_image_scaleType(scaleType);
+        return this;
+    }
+
     @Override
     public void onClick(View view) {
         //http://www.vogella.com/tutorials/AndroidIntent/article.html#starting-activities-or-services

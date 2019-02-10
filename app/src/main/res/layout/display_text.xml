@@ -16,6 +16,9 @@
 
             <ImageView
                 android:id="@+id/book_image"
+                android:layout_height="300dp"
+                tools:src="@drawable/section1_s1"
+                tools:scaleType="centerInside"
                 style="@style/Theme.AppCompat.EZoneQuiz.ImageView" />
 
             <TextView

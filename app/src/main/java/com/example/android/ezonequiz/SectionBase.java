@@ -12,6 +12,8 @@ public class SectionBase<T extends SectionBase<T>> {
 
     int extra_theme = R.style.Theme_AppCompat_EZoneQuiz;
     int extra_title = R.string.app_name;
+    int extra_image = R.drawable.empty;
+    int extra_image_scaleType = 0;
     int extra_text_body = R.string.future_content;
     int extra_text_quote = R.string.future_content;
     int extra_text_subtitle = R.string.empty;
@@ -30,9 +32,11 @@ public class SectionBase<T extends SectionBase<T>> {
     SectionBase(SectionParcel parcel) {
         this.extra_theme = parcel.extra_theme;
         this.extra_title = parcel.extra_title;
+        this.extra_image = parcel.extra_image;
         this.extra_text_body = parcel.extra_text_body;
         this.extra_text_quote = parcel.extra_text_quote;
         this.extra_text_subtitle = parcel.extra_text_subtitle;
+        this.extra_image_scaleType = parcel.extra_image_scaleType;
         this.extra_text_quote_source = parcel.extra_text_quote_source;
     }
 
@@ -78,4 +82,20 @@ public class SectionBase<T extends SectionBase<T>> {
         return (T) this;
     }
 
+    T set_image(int imageId) {
+        this.extra_image = imageId;
+        return (T) this;
+    }
+
+    /**
+     * Changes how the image is scaled.
+     * 0: centerCrop
+     * 1: centerInside
+     * @param scaleType - Which ScaleType to use for the image
+     * @return
+     */
+    T set_image_scaleType(int scaleType) {
+        this.extra_image_scaleType = scaleType;
+        return (T) this;
+    }
 }

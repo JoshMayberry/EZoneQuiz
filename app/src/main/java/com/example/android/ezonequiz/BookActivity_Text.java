@@ -2,16 +2,10 @@ package com.example.android.ezonequiz;
 
 import android.content.Intent;
 import android.content.res.Resources;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
-import android.util.Log;
 import android.util.TypedValue;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -23,6 +17,7 @@ public class BookActivity_Text extends AppCompatActivity {
     public TextView view_subtitle;
     public TextView view_quoteText;
     public TextView view_quoteSource;
+    public ImageView view_image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +34,7 @@ public class BookActivity_Text extends AppCompatActivity {
         view_subtitle = findViewById(R.id.book_subtitle);
         view_quoteText = findViewById(R.id.book_quoteText);
         view_quoteSource = findViewById(R.id.book_quoteSource);
+        view_image = findViewById(R.id.book_image);
 
         applyExtras_intent(intent);
         applyExtras_theme();
@@ -53,9 +49,19 @@ public class BookActivity_Text extends AppCompatActivity {
      */
     private void applyExtras_intent(Intent intent) {
         setTitle(intent.getIntExtra("title", R.string.app_name));
+        view_image.setImageResource(intent.getIntExtra("image", R.drawable.empty));
 
-        view_body.setText(intent.getIntExtra("text_body", R.string.empty));
-        view_subtitle.setText(intent.getIntExtra("text_subtitle", R.string.empty));
+        switch (intent.getIntExtra("image_scaleType", 0)) {
+            case 0:
+                view_image.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                break;
+            case 1:
+                view_image.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+                break;
+        }
+
+        view_body.setText(intent.getIntExtra("text_body", R.string.future_content));
+        view_subtitle.setText(intent.getIntExtra("text_subtitle", R.string.future_content));
         view_quoteText.setText(intent.getIntExtra("text_quote", R.string.empty));
         view_quoteSource.setText(intent.getIntExtra("text_quote_source", R.string.empty));
     }
@@ -75,6 +81,7 @@ public class BookActivity_Text extends AppCompatActivity {
             typedValue.data = R.color.colorPrimaryLight;
         }
         view_body.setBackgroundColor(typedValue.data);
+        view_image.setBackgroundColor(typedValue.data);
 
         if (!(myTheme.resolveAttribute(R.attr.colorPrimary, typedValue, true))) {
             typedValue.data = R.color.colorPrimary;

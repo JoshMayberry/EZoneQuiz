@@ -22,18 +22,22 @@ public class SectionParcel extends SectionBase<SectionParcel> implements Parcela
     public void writeToParcel(Parcel out, int flags) {
         out.writeInt(this.extra_theme);
         out.writeInt(this.extra_title);
+        out.writeInt(this.extra_image);
         out.writeInt(this.extra_text_body);
         out.writeInt(this.extra_text_quote);
         out.writeInt(this.extra_text_subtitle);
+        out.writeInt(this.extra_image_scaleType);
         out.writeInt(this.extra_text_quote_source);
     }
 
     private SectionParcel(Parcel in) {
         this.extra_theme = in.readInt();
         this.extra_title = in.readInt();
+        this.extra_image = in.readInt();
         this.extra_text_body = in.readInt();
         this.extra_text_quote = in.readInt();
         this.extra_text_subtitle = in.readInt();
+        this.extra_image_scaleType = in.readInt();
         this.extra_text_quote_source = in.readInt();
     }
 

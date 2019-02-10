@@ -82,7 +82,7 @@ public class QuizActivity extends AppCompatActivity {
     private void generateQuestions() {
         questions.clear();
         questions.add(new Question(this,
-                R.drawable.word_tiles_fear,
+                R.drawable.quiz1_1,
                 R.string.quiz1_1,
                 R.string.quiz1_1_correct,
                 R.string.quiz1_1_incorrect,
@@ -90,7 +90,7 @@ public class QuizActivity extends AppCompatActivity {
                 0
         ));
         questions.add(new Question(this,
-                R.drawable.dumbbell,
+                R.drawable.quiz1_2,
                 R.string.quiz1_2,
                 R.string.quiz1_2_correct,
                 R.string.quiz1_2_incorrect,
@@ -98,7 +98,7 @@ public class QuizActivity extends AppCompatActivity {
                 1
         ));
         questions.add(new Question(this,
-                R.drawable.survival_kit,
+                R.drawable.quiz1_3,
                 R.string.quiz1_3,
                 R.string.quiz1_3_correct,
                 R.string.quiz1_3_incorrect,
@@ -106,7 +106,7 @@ public class QuizActivity extends AppCompatActivity {
                 1
         ));
         questions.add(new Question(this,
-                R.drawable.pillars,
+                R.drawable.quiz2_1,
                 R.string.quiz2_1,
                 R.string.quiz2_1_correct,
                 R.string.quiz2_1_incorrect,
@@ -114,7 +114,7 @@ public class QuizActivity extends AppCompatActivity {
                 new int[]{0, 1, 2, 3}
         ));
         questions.add(new Question(this,
-                R.drawable.water,
+                R.drawable.quiz3_1,
                 R.string.quiz3_1,
                 R.string.quiz3_1_correct,
                 R.string.quiz3_1_incorrect,
@@ -123,7 +123,7 @@ public class QuizActivity extends AppCompatActivity {
                 2
         ));
         questions.add(new Question(this,
-                R.drawable.food_storage,
+                R.drawable.quiz3_2,
                 R.string.quiz3_2,
                 R.string.quiz3_2_correct,
                 R.string.quiz3_2_incorrect,
@@ -132,7 +132,7 @@ public class QuizActivity extends AppCompatActivity {
                 3
         ));
         questions.add(new Question(this,
-                R.drawable.bug_out_bag,
+                R.drawable.quiz_3_3,
                 R.string.quiz3_3,
                 R.string.quiz3_3_correct,
                 R.string.quiz3_3_incorrect,
