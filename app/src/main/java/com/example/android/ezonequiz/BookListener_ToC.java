@@ -8,22 +8,22 @@ import java.util.ArrayList;
 
 public class BookListener_ToC implements View.OnClickListener {
 
-    private int lastIndex = -1;
-    private int extra_theme = R.style.Theme_AppCompat_EZoneQuiz;
-    private int extra_title = R.string.app_name;
-    private ArrayList<SectionParcel> extra_sections = new ArrayList<>();
+    private int mLastIndex = -1;
+    private int mExtraTheme = R.style.Theme_AppCompat_EZoneQuiz;
+    private int mExtraTitle = R.string.app_name;
+    private ArrayList<SectionParcel> mExtraSections = new ArrayList<>();
 
     BookListener_ToC() {
 
     }
 
     BookListener_ToC set_theme(int themeId) {
-        this.extra_theme = themeId;
+        this.mExtraTheme = themeId;
         return this;
     }
 
     BookListener_ToC set_title(int textId) {
-        this.extra_title = textId;
+        this.mExtraTitle = textId;
         return this;
     }
 
@@ -36,11 +36,11 @@ public class BookListener_ToC implements View.OnClickListener {
      * @see this.set_section_title
      */
     BookListener_ToC add_section() {
-        return add_section(this.extra_title);
+        return add_section(this.mExtraTitle);
     }
 
     BookListener_ToC add_section(int textId) {
-        return add_section(textId, this.extra_theme);
+        return add_section(textId, this.mExtraTheme);
     }
 
     BookListener_ToC add_section(int textId, int themeId) {
@@ -48,8 +48,8 @@ public class BookListener_ToC implements View.OnClickListener {
         sectionDetails.set_theme(themeId);
         sectionDetails.set_title(textId);
 
-        lastIndex = this.extra_sections.size();
-        this.extra_sections.add(sectionDetails);
+        mLastIndex = this.mExtraSections.size();
+        this.mExtraSections.add(sectionDetails);
         return this;
     }
 
@@ -61,73 +61,73 @@ public class BookListener_ToC implements View.OnClickListener {
      * @see this.set_section_theme(int, int)
      */
     BookListener_ToC set_section_theme(int themeId) {
-        return set_section_theme(lastIndex, themeId);
+        return set_section_theme(mLastIndex, themeId);
     }
 
     /**
      * Changes the theme for the given section.
      *
-     * @param index   - The position of the section in 'extra_sections'
+     * @param index   - The position of the section in 'mExtraSections'
      * @param themeId - The resource id of the theme to use
      * @return - Returns 'this' so methods can be chained.
      * @see this.set_section_theme(int)
      */
     BookListener_ToC set_section_theme(int index, int themeId) {
-        this.extra_sections.get(index).set_theme(themeId);
+        this.mExtraSections.get(index).set_theme(themeId);
         return this;
     }
 
     BookListener_ToC set_section_title(int textId) {
-        return set_section_title(lastIndex, textId);
+        return set_section_title(mLastIndex, textId);
     }
 
     BookListener_ToC set_section_title(int index, int textId) {
-        this.extra_sections.get(index).set_title(textId);
+        this.mExtraSections.get(index).set_title(textId);
         return this;
     }
 
     BookListener_ToC set_section_body(int textId) {
-        return set_section_body(lastIndex, textId);
+        return set_section_body(mLastIndex, textId);
     }
 
     BookListener_ToC set_section_body(int index, int textId) {
-        this.extra_sections.get(index).set_body(textId);
+        this.mExtraSections.get(index).set_body(textId);
         return this;
     }
 
     BookListener_ToC set_section_subtitle(int textId) {
-        return set_section_subtitle(lastIndex, textId);
+        return set_section_subtitle(mLastIndex, textId);
     }
 
     BookListener_ToC set_section_subtitle(int index, int textId) {
-        this.extra_sections.get(index).set_subtitle(textId);
+        this.mExtraSections.get(index).set_subtitle(textId);
         return this;
     }
 
     BookListener_ToC set_section_quote(int textId, int sourceId) {
-        return set_section_quote(lastIndex, textId, sourceId);
+        return set_section_quote(mLastIndex, textId, sourceId);
     }
 
     BookListener_ToC set_section_quote(int index, int textId, int sourceId) {
-        this.extra_sections.get(index).set_quote(textId, sourceId);
+        this.mExtraSections.get(index).set_quote(textId, sourceId);
         return this;
     }
 
     BookListener_ToC set_section_image(int imageId) {
-        return set_section_image(lastIndex, imageId);
+        return set_section_image(mLastIndex, imageId);
     }
 
     BookListener_ToC set_section_image(int index, int imageId) {
-        this.extra_sections.get(index).set_image(imageId);
+        this.mExtraSections.get(index).set_image(imageId);
         return this;
     }
 
     BookListener_ToC set_section_image_scaleType(int scaleType) {
-        return set_section_image_scaleType(lastIndex, scaleType);
+        return set_section_image_scaleType(mLastIndex, scaleType);
     }
 
     BookListener_ToC set_section_image_scaleType(int index, int scaleType) {
-        this.extra_sections.get(index).set_image_scaleType(scaleType);
+        this.mExtraSections.get(index).set_image_scaleType(scaleType);
         return this;
     }
 
@@ -137,9 +137,9 @@ public class BookListener_ToC implements View.OnClickListener {
         Context context = view.getContext();
         Intent intent = new Intent(context, BookActivity_ToC.class);
 
-        intent.putExtra("theme", this.extra_theme);
-        intent.putExtra("title", this.extra_title);
-        intent.putExtra("sections", this.extra_sections);
+        intent.putExtra("theme", this.mExtraTheme);
+        intent.putExtra("title", this.mExtraTitle);
+        intent.putExtra("sections", this.mExtraSections);
 
         context.startActivity(intent);
     }

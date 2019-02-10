@@ -30,7 +30,7 @@ public class SectionAdapter extends ArrayAdapter<SectionBase> {
 
         TextView view_textTop = view.findViewById(R.id.list_item_top);
         assert listItem != null;
-        view_textTop.setText(listItem.extra_title);
+        view_textTop.setText(listItem.extraTitle);
 
         return view;
     }

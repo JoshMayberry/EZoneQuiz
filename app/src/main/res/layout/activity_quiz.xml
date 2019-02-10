@@ -36,10 +36,11 @@
             style="@style/TextAppearance.AppCompat.EZoneQuiz.Large.Inverse.Subtitle"
             tools:text="Question Description" />
 
-        <Spinner
-            android:id="@+id/quiz_spinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/quiz_edit_text"
+            style="@style/Widget.AppCompat.EZoneQuiz.EditText"
+            tools:text="edit text answer"
+            />
 
         <com.example.android.ezonequiz.MyNumberPicker
             android:id="@+id/quiz_numberPicker"

@@ -10,14 +10,14 @@ package com.example.android.ezonequiz;
  */
 public class SectionBase<T extends SectionBase<T>> {
 
-    int extra_theme = R.style.Theme_AppCompat_EZoneQuiz;
-    int extra_title = R.string.app_name;
-    int extra_image = R.drawable.empty;
-    int extra_image_scaleType = 0;
-    int extra_text_body = R.string.future_content;
-    int extra_text_quote = R.string.future_content;
-    int extra_text_subtitle = R.string.empty;
-    int extra_text_quote_source = R.string.empty;
+    int extraTheme = R.style.Theme_AppCompat_EZoneQuiz;
+    int extraTitle = R.string.app_name;
+    int extraImage = R.drawable.empty;
+    int extraImageScaleType = 0;
+    int extraTextBody = R.string.future_content;
+    int extraTextQuote = R.string.future_content;
+    int extraTextSubtitle = R.string.empty;
+    int extraTextQuoteSource = R.string.empty;
 
     SectionBase() {
 
@@ -30,14 +30,14 @@ public class SectionBase<T extends SectionBase<T>> {
      * @param parcel - A SectionParcel object obtained as an extra from an intent
      */
     SectionBase(SectionParcel parcel) {
-        this.extra_theme = parcel.extra_theme;
-        this.extra_title = parcel.extra_title;
-        this.extra_image = parcel.extra_image;
-        this.extra_text_body = parcel.extra_text_body;
-        this.extra_text_quote = parcel.extra_text_quote;
-        this.extra_text_subtitle = parcel.extra_text_subtitle;
-        this.extra_image_scaleType = parcel.extra_image_scaleType;
-        this.extra_text_quote_source = parcel.extra_text_quote_source;
+        this.extraTheme = parcel.extraTheme;
+        this.extraTitle = parcel.extraTitle;
+        this.extraImage = parcel.extraImage;
+        this.extraTextBody = parcel.extraTextBody;
+        this.extraTextQuote = parcel.extraTextQuote;
+        this.extraTextSubtitle = parcel.extraTextSubtitle;
+        this.extraImageScaleType = parcel.extraImageScaleType;
+        this.extraTextQuoteSource = parcel.extraTextQuoteSource;
     }
 
     /**
@@ -49,7 +49,7 @@ public class SectionBase<T extends SectionBase<T>> {
      * @see SectionParcel
      */
     T set_theme(int themeId) {
-        this.extra_theme = themeId;
+        this.extraTheme = themeId;
         return (T) this;
     }
 
@@ -62,28 +62,28 @@ public class SectionBase<T extends SectionBase<T>> {
      * @see SectionParcel
      */
     T set_title(int textId) {
-        this.extra_title = textId;
+        this.extraTitle = textId;
         return (T) this;
     }
 
     T set_body(int textId) {
-        this.extra_text_body = textId;
+        this.extraTextBody = textId;
         return (T) this;
     }
 
     T set_subtitle(int textId) {
-        this.extra_text_subtitle = textId;
+        this.extraTextSubtitle = textId;
         return (T) this;
     }
 
     T set_quote(int textId, int sourceId) {
-        this.extra_text_quote = textId;
-        this.extra_text_quote_source = sourceId;
+        this.extraTextQuote = textId;
+        this.extraTextQuoteSource = sourceId;
         return (T) this;
     }
 
     T set_image(int imageId) {
-        this.extra_image = imageId;
+        this.extraImage = imageId;
         return (T) this;
     }
 
@@ -95,7 +95,7 @@ public class SectionBase<T extends SectionBase<T>> {
      * @return
      */
     T set_image_scaleType(int scaleType) {
-        this.extra_image_scaleType = scaleType;
+        this.extraImageScaleType = scaleType;
         return (T) this;
     }
 }

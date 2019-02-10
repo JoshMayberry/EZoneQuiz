@@ -13,11 +13,11 @@ import android.widget.TextView;
  */
 public class BookActivity_Text extends AppCompatActivity {
 
-    public TextView view_body;
-    public TextView view_subtitle;
-    public TextView view_quoteText;
-    public TextView view_quoteSource;
-    public ImageView view_image;
+    public TextView viewBody;
+    public TextView viewSubtitle;
+    public TextView viewQuoteText;
+    public TextView viewQuoteSource;
+    public ImageView viewImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,15 +30,14 @@ public class BookActivity_Text extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.display_text);
-        view_body = findViewById(R.id.book_body);
-        view_subtitle = findViewById(R.id.book_subtitle);
-        view_quoteText = findViewById(R.id.book_quoteText);
-        view_quoteSource = findViewById(R.id.book_quoteSource);
-        view_image = findViewById(R.id.book_image);
+        viewBody = findViewById(R.id.book_body);
+        viewSubtitle = findViewById(R.id.book_subtitle);
+        viewQuoteText = findViewById(R.id.book_quoteText);
+        viewQuoteSource = findViewById(R.id.book_quoteSource);
+        viewImage = findViewById(R.id.book_image);
 
         applyExtras_intent(intent);
         applyExtras_theme();
-
     }
 
     /**
@@ -49,21 +48,21 @@ public class BookActivity_Text extends AppCompatActivity {
      */
     private void applyExtras_intent(Intent intent) {
         setTitle(intent.getIntExtra("title", R.string.app_name));
-        view_image.setImageResource(intent.getIntExtra("image", R.drawable.empty));
+        viewImage.setImageResource(intent.getIntExtra("image", R.drawable.empty));
 
         switch (intent.getIntExtra("image_scaleType", 0)) {
             case 0:
-                view_image.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                viewImage.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 break;
             case 1:
-                view_image.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+                viewImage.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
                 break;
         }
 
-        view_body.setText(intent.getIntExtra("text_body", R.string.future_content));
-        view_subtitle.setText(intent.getIntExtra("text_subtitle", R.string.future_content));
-        view_quoteText.setText(intent.getIntExtra("text_quote", R.string.empty));
-        view_quoteSource.setText(intent.getIntExtra("text_quote_source", R.string.empty));
+        viewBody.setText(intent.getIntExtra("text_body", R.string.future_content));
+        viewSubtitle.setText(intent.getIntExtra("text_subtitle", R.string.future_content));
+        viewQuoteText.setText(intent.getIntExtra("text_quote", R.string.empty));
+        viewQuoteSource.setText(intent.getIntExtra("text_quote_source", R.string.empty));
     }
 
     /**
@@ -80,13 +79,13 @@ public class BookActivity_Text extends AppCompatActivity {
         if (!(myTheme.resolveAttribute(R.attr.colorAccent, typedValue, true))) {
             typedValue.data = R.color.colorPrimaryLight;
         }
-        view_body.setBackgroundColor(typedValue.data);
-        view_image.setBackgroundColor(typedValue.data);
+        viewBody.setBackgroundColor(typedValue.data);
+        viewImage.setBackgroundColor(typedValue.data);
 
         if (!(myTheme.resolveAttribute(R.attr.colorPrimary, typedValue, true))) {
             typedValue.data = R.color.colorPrimary;
         }
-        view_quoteText.setBackgroundColor(typedValue.data);
-        view_quoteSource.setBackgroundColor(typedValue.data);
+        viewQuoteText.setBackgroundColor(typedValue.data);
+        viewQuoteSource.setBackgroundColor(typedValue.data);
     }
 }

@@ -4,31 +4,31 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
 public class QuizActivity extends AppCompatActivity {
 
-    public RadioButton[] view_radioButton = new RadioButton[5];
-    public CheckBox[] view_checkBox = new CheckBox[5];
-    public NumberPicker view_numberPicker;
-    public RadioGroup view_radioGroup;
-    public TextView view_questionText;
-    public Spinner view_spinner;
-    public ImageView view_image;
+    public RadioButton[] viewRadioButton = new RadioButton[5];
+    public CheckBox[] viewCheckBox = new CheckBox[5];
+    public NumberPicker viewNumberPicker;
+    public RadioGroup viewRadioGroup;
+    public TextView viewQuestionText;
+    public ProgressBar viewProgress;
+    public EditText viewEditText;
+    public ImageView viewImage;
 
-    public ProgressBar view_progress;
-
-    private List<Question> questions = new ArrayList<>();
+    private List<Question> mQuestions = new ArrayList<>();
     public Question currentQuestion;
 
     public int score;
@@ -42,22 +42,22 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
         //Get Resources
-        view_progress = findViewById(R.id.quiz_progress);
-        view_radioButton[0] = findViewById(R.id.quiz_radioButton_0);
-        view_radioButton[1] = findViewById(R.id.quiz_radioButton_1);
-        view_radioButton[2] = findViewById(R.id.quiz_radioButton_2);
-        view_radioButton[3] = findViewById(R.id.quiz_radioButton_3);
-        view_radioButton[4] = findViewById(R.id.quiz_radioButton_4);
-        view_checkBox[0] = findViewById(R.id.quiz_checkBox_0);
-        view_checkBox[1] = findViewById(R.id.quiz_checkBox_1);
-        view_checkBox[2] = findViewById(R.id.quiz_checkBox_2);
-        view_checkBox[3] = findViewById(R.id.quiz_checkBox_3);
-        view_checkBox[4] = findViewById(R.id.quiz_checkBox_4);
-        view_numberPicker = findViewById(R.id.quiz_numberPicker);
-        view_spinner = findViewById(R.id.quiz_spinner);
-        view_questionText = findViewById(R.id.quiz_title);
-        view_radioGroup = findViewById(R.id.quiz_radioGroup);
-        view_image = findViewById(R.id.quiz_image);
+        viewProgress = findViewById(R.id.quiz_progress);
+        viewRadioButton[0] = findViewById(R.id.quiz_radioButton_0);
+        viewRadioButton[1] = findViewById(R.id.quiz_radioButton_1);
+        viewRadioButton[2] = findViewById(R.id.quiz_radioButton_2);
+        viewRadioButton[3] = findViewById(R.id.quiz_radioButton_3);
+        viewRadioButton[4] = findViewById(R.id.quiz_radioButton_4);
+        viewCheckBox[0] = findViewById(R.id.quiz_checkBox_0);
+        viewCheckBox[1] = findViewById(R.id.quiz_checkBox_1);
+        viewCheckBox[2] = findViewById(R.id.quiz_checkBox_2);
+        viewCheckBox[3] = findViewById(R.id.quiz_checkBox_3);
+        viewCheckBox[4] = findViewById(R.id.quiz_checkBox_4);
+        viewNumberPicker = findViewById(R.id.quiz_numberPicker);
+        viewRadioGroup = findViewById(R.id.quiz_radioGroup);
+        viewEditText = findViewById(R.id.quiz_edit_text);
+        viewQuestionText = findViewById(R.id.quiz_title);
+        viewImage = findViewById(R.id.quiz_image);
 
         correctList[0] = getResources().getString(R.string.correct_1);
         correctList[1] = getResources().getString(R.string.correct_2);
@@ -80,66 +80,49 @@ public class QuizActivity extends AppCompatActivity {
      * Fills the question array with structured question objects.
      */
     private void generateQuestions() {
-        questions.clear();
-        questions.add(new Question(this,
-                R.drawable.quiz1_1,
-                R.string.quiz1_1,
-                R.string.quiz1_1_correct,
-                R.string.quiz1_1_incorrect,
-                new int[]{R.string.quiz1_1_a1, R.string.quiz1_1_a2},
-                0
-        ));
-        questions.add(new Question(this,
-                R.drawable.quiz1_2,
-                R.string.quiz1_2,
-                R.string.quiz1_2_correct,
-                R.string.quiz1_2_incorrect,
-                new int[]{R.string.quiz1_2_a1, R.string.quiz1_2_a2},
-                1
-        ));
-        questions.add(new Question(this,
-                R.drawable.quiz1_3,
-                R.string.quiz1_3,
-                R.string.quiz1_3_correct,
-                R.string.quiz1_3_incorrect,
-                new int[]{R.string.quiz1_3_a1, R.string.quiz1_3_a2},
-                1
-        ));
-        questions.add(new Question(this,
-                R.drawable.quiz2_1,
-                R.string.quiz2_1,
-                R.string.quiz2_1_correct,
-                R.string.quiz2_1_incorrect,
-                new int[]{R.string.quiz2_1_a1, R.string.quiz2_1_a2, R.string.quiz2_1_a3, R.string.quiz2_1_a4},
-                new int[]{0, 1, 2, 3}
-        ));
-        questions.add(new Question(this,
-                R.drawable.quiz3_1,
-                R.string.quiz3_1,
-                R.string.quiz3_1_correct,
-                R.string.quiz3_1_incorrect,
-                1,
-                6,
-                2
-        ));
-        questions.add(new Question(this,
-                R.drawable.quiz3_2,
-                R.string.quiz3_2,
-                R.string.quiz3_2_correct,
-                R.string.quiz3_2_incorrect,
-                1,
-                12,
-                3
-        ));
-        questions.add(new Question(this,
-                R.drawable.quiz_3_3,
-                R.string.quiz3_3,
-                R.string.quiz3_3_correct,
-                R.string.quiz3_3_incorrect,
-                1,
-                100,
-                72
-        ));
+        mQuestions.clear();
+        mQuestions.add(new Question(this)
+                .setImage(R.drawable.quiz1_1)
+                .setType_single(R.string.quiz1_1, new int[]{R.string.quiz1_1_a1, R.string.quiz1_1_a2}, 0)
+                .setMessage_correct(R.string.quiz1_1_correct)
+                .setMessage_incorrect(R.string.quiz1_1_incorrect)
+        );
+        mQuestions.add(new Question(this)
+                .setImage(R.drawable.quiz1_2)
+                .setType_single(R.string.quiz1_2, new int[]{R.string.quiz1_2_a1, R.string.quiz1_2_a2}, 1)
+                .setMessage_correct(R.string.quiz1_2_correct)
+                .setMessage_incorrect(R.string.quiz1_2_incorrect)
+        );
+        mQuestions.add(new Question(this)
+                .setImage(R.drawable.quiz1_3)
+                .setType_single(R.string.quiz1_3, new int[]{R.string.quiz1_3_a1, R.string.quiz1_3_a2}, 1)
+                .setMessage_correct(R.string.quiz1_3_correct)
+                .setMessage_incorrect(R.string.quiz1_3_incorrect)
+        );
+        mQuestions.add(new Question(this)
+                .setImage(R.drawable.quiz2_1)
+                .setType_multiple(R.string.quiz2_1, new int[]{R.string.quiz2_1_a1, R.string.quiz2_1_a2, R.string.quiz2_1_a3, R.string.quiz2_1_a4}, new int[]{0, 1, 2, 3})
+                .setMessage_correct(R.string.quiz2_1_correct)
+                .setMessage_incorrect(R.string.quiz2_1_incorrect)
+        );
+        mQuestions.add(new Question(this)
+                .setImage(R.drawable.quiz3_1)
+                .setType_integer(R.string.quiz3_1, 1, 6, 2)
+                .setMessage_correct(R.string.quiz3_1_correct)
+                .setMessage_incorrect(R.string.quiz3_1_incorrect)
+        );
+        mQuestions.add(new Question(this)
+                .setImage(R.drawable.quiz3_2)
+                .setType_integer(R.string.quiz3_2, 1, 12, 3)
+                .setMessage_correct(R.string.quiz3_2_correct)
+                .setMessage_incorrect(R.string.quiz3_2_incorrect)
+        );
+        mQuestions.add(new Question(this)
+                .setImage(R.drawable.quiz3_3)
+                .setType_string(R.string.quiz3_3, new int[]{R.string.quiz3_3_a1, R.string.quiz3_3_a2, R.string.quiz3_3_a3, R.string.quiz3_3_a4, R.string.quiz3_3_a5, R.string.quiz3_3_a6, R.string.quiz3_3_a7, R.string.quiz3_3_a8, R.string.quiz3_3_a9, R.string.quiz3_3_a10, R.string.quiz3_3_a11, R.string.quiz3_3_a12, R.string.quiz3_3_a13, R.string.quiz3_3_a14, R.string.quiz3_3_a15, R.string.quiz3_3_a16, R.string.quiz3_3_a17, R.string.quiz3_3_a18, R.string.quiz3_3_a19, R.string.quiz3_3_a20, R.string.quiz3_3_a21, R.string.quiz3_3_a22, R.string.quiz3_3_a23, R.string.quiz3_3_a24, R.string.quiz3_3_a25, R.string.quiz3_3_a26, R.string.quiz3_3_a27, R.string.quiz3_3_a28, R.string.quiz3_3_a29, R.string.quiz3_3_a30, R.string.quiz3_3_a31, R.string.quiz3_3_a32, R.string.quiz3_3_a33, R.string.quiz3_3_a34, R.string.quiz3_3_a35, R.string.quiz3_3_a36, R.string.quiz3_3_a37, R.string.quiz3_3_a38, R.string.quiz3_3_a39, R.string.quiz3_3_a40, R.string.quiz3_3_a41, R.string.quiz3_3_a42, R.string.quiz3_3_a43, R.string.quiz3_3_a44, R.string.quiz3_3_a45, R.string.quiz3_3_a46, R.string.quiz3_3_a47, R.string.quiz3_3_a48, R.string.quiz3_3_a49, R.string.quiz3_3_a50})
+                .setMessage_correct(R.string.quiz3_3_correct)
+                .setMessage_incorrect(R.string.quiz3_3_incorrect)
+        );
     }
 
     /**
@@ -149,25 +132,25 @@ public class QuizActivity extends AppCompatActivity {
         score = 0;
 
         //Hide all widgets
-        view_spinner.setVisibility(View.GONE);
-        view_numberPicker.setVisibility(View.GONE);
-        view_radioButton[0].setVisibility(View.GONE);
-        view_radioButton[1].setVisibility(View.GONE);
-        view_radioButton[2].setVisibility(View.GONE);
-        view_radioButton[3].setVisibility(View.GONE);
-        view_radioButton[4].setVisibility(View.GONE);
-        view_checkBox[0].setVisibility(View.GONE);
-        view_checkBox[1].setVisibility(View.GONE);
-        view_checkBox[2].setVisibility(View.GONE);
-        view_checkBox[3].setVisibility(View.GONE);
-        view_checkBox[4].setVisibility(View.GONE);
+        viewEditText.setVisibility(View.GONE);
+        viewNumberPicker.setVisibility(View.GONE);
+        viewRadioButton[0].setVisibility(View.GONE);
+        viewRadioButton[1].setVisibility(View.GONE);
+        viewRadioButton[2].setVisibility(View.GONE);
+        viewRadioButton[3].setVisibility(View.GONE);
+        viewRadioButton[4].setVisibility(View.GONE);
+        viewCheckBox[0].setVisibility(View.GONE);
+        viewCheckBox[1].setVisibility(View.GONE);
+        viewCheckBox[2].setVisibility(View.GONE);
+        viewCheckBox[3].setVisibility(View.GONE);
+        viewCheckBox[4].setVisibility(View.GONE);
 
         //Scramble question order
-//        Collections.shuffle(questions);
+        Collections.shuffle(mQuestions);
 
         //Reset progress bar
-        view_progress.setMax(questions.size());
-        view_progress.setProgress(0);
+        viewProgress.setMax(mQuestions.size());
+        viewProgress.setProgress(0);
 
         //Show the first question
         currentQuestion = null;
@@ -183,16 +166,16 @@ public class QuizActivity extends AppCompatActivity {
         boolean correct = currentQuestion.check();
         if (correct) {
             if (!(currentQuestion.pointCounted)) {
-                score += 1;
+                score++;
                 currentQuestion.pointCounted = true;
             }
         } else {
             if (currentQuestion.pointCounted) {
-                score -= 1;
+                score--;
                 currentQuestion.pointCounted = false;
             }
         }
-        QuizDialog quizDialog = new QuizDialog(this, questions.size() <= 0, correct);
+        QuizDialog quizDialog = new QuizDialog(this, mQuestions.size() <= 0, correct);
         quizDialog.show();
     }
 
@@ -203,8 +186,8 @@ public class QuizActivity extends AppCompatActivity {
         if (currentQuestion != null) {
             currentQuestion.hide();
         }
-        view_progress.setProgress(view_progress.getProgress() + 1);
-        currentQuestion = questions.remove(0);
+        viewProgress.setProgress(viewProgress.getProgress() + 1);
+        currentQuestion = mQuestions.remove(0);
         currentQuestion.show();
     }
 }
