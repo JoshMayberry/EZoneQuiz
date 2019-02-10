@@ -8,7 +8,7 @@
     android:padding="@dimen/dialog_border">
 
     <TextView
-        android:id="@+id/dialog_message_incorrect"
+        android:id="@+id/dialog_message"
         style="@style/TextAppearance.AppCompat.EZoneQuiz.Medium.Inverse"
         android:layout_width="wrap_content"
         android:gravity="center"
@@ -31,14 +31,14 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/dialog_button_yes"
+            android:id="@+id/dialog_button_cancel"
             style="@style/Widget.AppCompat.EZoneQuiz.Button"
             android:layout_marginEnd="@dimen/button_spacing"
             android:background="@color/colorPrimaryLight"
             android:text="@string/dialog_yes" />
 
         <Button
-            android:id="@+id/dialog_button_no"
+            android:id="@+id/dialog_button_next"
             style="@style/Widget.AppCompat.EZoneQuiz.Button"
             android:layout_marginStart="@dimen/button_spacing"
             android:background="@color/colorPrimaryLight"

@@ -53,14 +53,16 @@
     <style name="Widget.AppCompat.EZoneQuiz.RadioButton" parent="@style/Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textColor">@android:color/white</item> <!-- For some reason, android:textAppearance is not changing the color -->
+        <item name="android:textAppearance">?android:attr/textAppearanceMediumInverse</item>
         <item name="android:checked">false</item>
     </style>
 
     <style name="Widget.AppCompat.EZoneQuiz.CheckBox" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textColor">@android:color/white</item> <!-- For some reason, android:textAppearance is not changing the color -->
+        <item name="android:textAppearance">?android:attr/textAppearanceMediumInverse</item>
         <item name="android:checked">false</item>
     </style>
 

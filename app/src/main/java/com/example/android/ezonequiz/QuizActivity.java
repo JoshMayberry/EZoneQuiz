@@ -26,12 +26,12 @@ public class QuizActivity extends AppCompatActivity {
     public Spinner view_spinner;
     public ImageView view_image;
 
-    private ProgressBar view_progress;
+    public ProgressBar view_progress;
 
     private List<Question> questions = new ArrayList<>();
     public Question currentQuestion;
 
-    private int score;
+    public int score;
     public Random random = new Random();
     public String[] correctList = new String[3]; //Different ways to say correct
     public String[] incorrectList = new String[2]; //Different ways to say incorrect
@@ -180,33 +180,20 @@ public class QuizActivity extends AppCompatActivity {
      * @param view - The button view that fired this method
      */
     public void onNext(View view) {
-        if (questions.size() <= 0) {
-            score += 1;
-            DialogCorrect dialogCorrect = new DialogCorrect(this,
-                    getResources().getString(R.string.dialog_score, score, view_numberPicker.getMaxValue()),
-                    getResources().getString(R.string.dialog_finish),
-                    true
-            );
-            dialogCorrect.show();
-            return;
-        }
-        showDialog();
-    }
-
-    /**
-     * Shows the dialog box for moving on to the next question.
-     */
-    private void showDialog() {
-        if (currentQuestion != null) {
-            if (!currentQuestion.check()) {
-                DialogIncorrect dialogIncorrect = new DialogIncorrect(this, currentQuestion.getMessage_incorrect());
-                dialogIncorrect.show();
-            } else {
-                DialogCorrect dialogCorrect = new DialogCorrect(this, currentQuestion.getMessage_correct());
-                dialogCorrect.show();
+        boolean correct = currentQuestion.check();
+        if (correct) {
+            if (!(currentQuestion.pointCounted)) {
                 score += 1;
+                currentQuestion.pointCounted = true;
+            }
+        } else {
+            if (currentQuestion.pointCounted) {
+                score -= 1;
+                currentQuestion.pointCounted = false;
             }
         }
+        QuizDialog quizDialog = new QuizDialog(this, questions.size() <= 0, correct);
+        quizDialog.show();
     }
 
     /**

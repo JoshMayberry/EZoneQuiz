@@ -8,7 +8,7 @@
     android:padding="@dimen/dialog_border">
 
     <TextView
-        android:id="@+id/dialog_message_correct"
+        android:id="@+id/dialog_message"
         style="@style/TextAppearance.AppCompat.EZoneQuiz.Medium.Inverse"
         android:layout_width="wrap_content"
         android:gravity="center"

@@ -12,8 +12,8 @@ public class SectionBase<T extends SectionBase<T>> {
 
     int extra_theme = R.style.Theme_AppCompat_EZoneQuiz;
     int extra_title = R.string.app_name;
-    int extra_text_body = R.string.empty;
-    int extra_text_quote = R.string.empty;
+    int extra_text_body = R.string.future_content;
+    int extra_text_quote = R.string.future_content;
     int extra_text_subtitle = R.string.empty;
     int extra_text_quote_source = R.string.empty;
 

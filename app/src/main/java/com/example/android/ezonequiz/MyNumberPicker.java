@@ -44,7 +44,7 @@ public class MyNumberPicker extends android.widget.NumberPicker {
      */
     private void updateView(View view) {
         if (view instanceof EditText) {
-            ((EditText) view).setTextAppearance(view.getContext(), android.R.style.TextAppearance_Large);
+            ((EditText) view).setTextAppearance(view.getContext(), android.R.style.TextAppearance_Large_Inverse);
         }
     }
 }

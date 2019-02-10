@@ -18,7 +18,7 @@ enum QuestionType {
 /**
  * A container to store data about the question in.
  */
-public class Question {
+class Question {
     private QuizActivity activity;
     private QuestionType type; //Which type of question this is
     private int textId; //Which question to ask
@@ -31,6 +31,8 @@ public class Question {
     private List<Integer> answerList = new ArrayList<>(); //Which answers belong to this question
     private List<View> viewList = new ArrayList<>(); //Which widgets to use for the answers
     private int imageId; //Which image to use for this question
+
+    boolean pointCounted = false; //Makes it so the user cannot increase their score by dismissing the next question dialog
 
     /**
      * Used for questions that use the radio buttons.
@@ -116,7 +118,7 @@ public class Question {
     /**
      * Hides this question on the screen.
      */
-    public void hide() {
+    void hide() {
         for (View view : this.activity.currentQuestion.viewList) {
             view.setVisibility(View.GONE);
         }
@@ -125,7 +127,7 @@ public class Question {
     /**
      * Shows this question on the screen.
      */
-    public void show() {
+    void show() {
         for (View view : this.activity.currentQuestion.viewList) {
             view.setVisibility(View.VISIBLE);
         }
@@ -161,7 +163,7 @@ public class Question {
      *
      * @return - Whether or not the user chose correctly
      */
-    public boolean check() {
+    boolean check() {
         switch (this.type) {
             case Single:
                 for (int i = 0; i < this.viewList.size(); i++) {
@@ -191,7 +193,7 @@ public class Question {
      * @return The message to show in the dialog box
      * See: https://www.baeldung.com/java-random-list-element#highlighter_812240
      */
-    public String getMessage_correct() {
+    String getMessage_correct() {
         return this.activity.getResources().getString(this.correctId, this.activity.correctList[this.activity.random.nextInt(this.activity.correctList.length)]);
     }
 
@@ -200,7 +202,7 @@ public class Question {
      *
      * @return The message to show in the dialog box
      */
-    public String getMessage_incorrect() {
+    String getMessage_incorrect() {
         return this.activity.getResources().getString(this.incorrectId, this.activity.incorrectList[this.activity.random.nextInt(this.activity.incorrectList.length)]);
     }
 }
