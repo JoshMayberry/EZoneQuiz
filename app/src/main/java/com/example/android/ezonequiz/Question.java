@@ -6,6 +6,7 @@ import android.widget.CheckBox;
 import android.widget.RadioButton;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 enum QuestionType {
@@ -30,82 +31,63 @@ class Question {
     private List<Integer> mCorrectIndexList = new ArrayList<>(); //The index numbers of the correct answers
     private List<Integer> mAnswerList = new ArrayList<>(); //Which answers belong to this question
     private List<View> mViewList = new ArrayList<>(); //Which widgets to use for the answers
-    private int mImageId; //Which image to use for this question
+    private int mImageId = R.drawable.empty; //Which image to use for this question
 
     boolean pointCounted = false; //Makes it so the user cannot increase their score by dismissing the next question dialog
 
-    /**
-     * Used for questions that use the radio buttons.
-     *
-     * @param textId       - The resource id for the string to use for the question
-     * @param correctId    - The resource id for the string to use for the correct answer message
-     * @param incorrectId  - The resource id for the string to use for the incorrect answer message
-     * @param answerIdList - The resource ids for the strings to use for the answer widgets
-     * @param correctIndex - The index of the correct answer
-     */
-    Question(QuizActivity activity, int imageId, int textId, int correctId, int incorrectId, int[] answerIdList, int correctIndex) {
+    Question(QuizActivity activity) {
         this.mActivity = activity;
+    }
+
+    Question setImage(int imageId) {
+        this.mImageId = imageId;
+        return this;
+    }
+
+    Question setMessage_correct(int textId) {
+        this.mCorrectId = textId;
+        return this;
+    }
+
+    Question setMessage_incorrect(int textId) {
+        this.mIncorrectId = textId;
+        return this;
+    }
+
+    Question setType_single(int textId, int[] answerIdList, int correctIndex) {
         this.mType = QuestionType.Single;
         this.mTextId = textId;
-        this.mImageId = imageId;
-        this.mCorrectId = correctId;
-        this.mIncorrectId = incorrectId;
 
         for (int i = 0; i < answerIdList.length; i++) {
             this.mAnswerList.add(answerIdList[i]);
-            this.mViewList.add(activity.viewRadioButton[i]);
+            this.mViewList.add(this.mActivity.viewRadioButton[i]);
         }
 
         assert this.mAnswerList.size() > correctIndex;
         this.mCorrectIndexList.add(correctIndex);
-
+        return this;
     }
 
-    /**
-     * Used for questions that use the check boxes.
-     *
-     * @param textId       - The resource id for the string to use for the question
-     * @param correctId    - The resource id for the string to use for the correct answer message
-     * @param incorrectId  - The resource id for the string to use for the incorrect answer message
-     * @param answerIdList - The resource ids for the strings to use for the answer widgets
-     * @param correctIndex - The indexes of the correct answers
-     */
-    Question(QuizActivity activity, int imageId, int textId, int correctId, int incorrectId, int[] answerIdList, int[] correctIndex) {
-        this.mActivity = activity;
+    Question setType_multiple(int textId, int[] answerIdList, int[] correctIndexList) {
         this.mType = QuestionType.Multiple;
         this.mTextId = textId;
-        this.mImageId = imageId;
-        this.mCorrectId = correctId;
-        this.mIncorrectId = incorrectId;
 
         for (int i = 0; i < answerIdList.length; i++) {
             this.mAnswerList.add(answerIdList[i]);
             this.mViewList.add(this.mActivity.viewCheckBox[i]);
         }
 
-        for (int i : correctIndex) {
+        for (int i : correctIndexList) {
             assert this.mAnswerList.size() > i;
             this.mCorrectIndexList.add(i);
         }
+        return this;
     }
 
-    /**
-     * Used for questions with a number spinner.
-     *
-     * @param textId       - The resource id for the string to use for the question
-     * @param correctId    - The resource id for the string to use for the correct answer message
-     * @param incorrectId  - The resource id for the string to use for the incorrect answer message
-     * @param rangeMin     - The lowest value the number spinner can have
-     * @param rangeMax     - The highest value the number spinner can have
-     * @param correctValue - The correct value to select
-     */
-    Question(QuizActivity activity, int imageId, int textId, int correctId, int incorrectId, int rangeMin, int rangeMax, int correctValue) {
-        this.mActivity = activity;
+    Question setType_integer(int textId, int rangeMin, int rangeMax, int correctValue) {
         this.mType = QuestionType.Integer;
         this.mTextId = textId;
-        this.mImageId = imageId;
-        this.mCorrectId = correctId;
-        this.mIncorrectId = incorrectId;
+
         this.mRangeMin = rangeMin;
         this.mRangeMax = rangeMax;
 
@@ -113,6 +95,20 @@ class Question {
         assert rangeMax >= correctValue;
         this.mCorrectValue = correctValue;
         this.mViewList.add(this.mActivity.viewNumberPicker);
+
+        return this;
+    }
+
+    Question setType_string(int textId, int[] correctAnswerList) {
+        this.mType = QuestionType.String;
+        this.mTextId = textId;
+
+        this.mViewList.add(this.mActivity.viewEditText);
+        for (int i : correctAnswerList) {
+            this.mCorrectIndexList.add(i);
+        }
+
+        return this;
     }
 
     /**
@@ -183,6 +179,14 @@ class Question {
                 return true;
             case Integer:
                 return this.mActivity.viewNumberPicker.getValue() == this.mCorrectValue;
+            case String:
+                String value = String.valueOf(this.mActivity.viewEditText.getText()).trim();
+                for (int i: this.mCorrectIndexList) {
+                    if (value.equalsIgnoreCase(this.mActivity.getString(i))) {
+                        return true;
+                    }
+                }
+                return false;
         }
         return false;
     }

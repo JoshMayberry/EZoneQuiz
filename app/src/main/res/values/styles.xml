@@ -66,6 +66,13 @@
         <item name="android:checked">false</item>
     </style>
 
+    <style name="Widget.AppCompat.EZoneQuiz.EditText" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item> <!-- For some reason, android:textAppearance is not changing the color -->
+        <item name="android:textAppearance">?android:attr/textAppearanceMediumInverse</item>
+    </style>
+
     <style name="Widget.AppCompat.EZoneQuiz.Button" parent="@style/Widget.AppCompat.Button">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
