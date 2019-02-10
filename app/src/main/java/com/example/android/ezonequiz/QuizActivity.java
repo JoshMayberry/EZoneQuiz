@@ -13,6 +13,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -163,7 +164,7 @@ public class QuizActivity extends AppCompatActivity {
         view_checkBox[4].setVisibility(View.GONE);
 
         //Scramble question order
-//        Collections.shuffle(questions);
+        Collections.shuffle(questions);
 
         //Reset progress bar
         view_progress.setMax(questions.size());
@@ -183,12 +184,12 @@ public class QuizActivity extends AppCompatActivity {
         boolean correct = currentQuestion.check();
         if (correct) {
             if (!(currentQuestion.pointCounted)) {
-                score += 1;
+                score++;
                 currentQuestion.pointCounted = true;
             }
         } else {
             if (currentQuestion.pointCounted) {
-                score -= 1;
+                score--;
                 currentQuestion.pointCounted = false;
             }
         }
