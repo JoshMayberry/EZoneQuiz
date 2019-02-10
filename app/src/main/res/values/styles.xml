@@ -1,79 +1,181 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Activity Themes -->
+    <style name="Theme.AppCompat.EZoneQuiz" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorPrimaryLight</item>
         <item name="colorButtonNormal">@color/colorPrimaryDark</item>
         <item name="android:buttonTint">@color/colorPrimaryDark</item>
     </style>
-    <style name="AppTheme_Introduction" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    <style name="Theme.AppCompat.EZoneQuiz.Introduction" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorIntroduction</item>
         <item name="colorPrimaryDark">@color/colorIntroductionDark</item>
         <item name="colorAccent">@color/colorIntroductionLight</item>
         <item name="colorButtonNormal">@color/colorIntroductionDark</item>
         <item name="android:buttonTint">@color/colorIntroductionDark</item>
     </style>
-    <style name="AppTheme_ChapterOne" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    <style name="Theme.AppCompat.EZoneQuiz.ChapterOne" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorChapterOne</item>
         <item name="colorPrimaryDark">@color/colorChapterOneDark</item>
         <item name="colorAccent">@color/colorChapterOneLight</item>
         <item name="colorButtonNormal">@color/colorChapterOneDark</item>
         <item name="android:buttonTint">@color/colorChapterOneDark</item>
     </style>
-    <style name="AppTheme_ChapterTwo" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    <style name="Theme.AppCompat.EZoneQuiz.ChapterTwo" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorChapterTwo</item>
         <item name="colorPrimaryDark">@color/colorChapterTwoDark</item>
         <item name="colorAccent">@color/colorChapterTwoLight</item>
         <item name="colorButtonNormal">@color/colorChapterTwoDark</item>
         <item name="android:buttonTint">@color/colorChapterTwoDark</item>
     </style>
-    <style name="AppTheme_ChapterThree" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    <style name="Theme.AppCompat.EZoneQuiz.ChapterThree" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorChapterThree</item>
         <item name="colorPrimaryDark">@color/colorChapterThreeDark</item>
         <item name="colorAccent">@color/colorChapterThreeLight</item>
         <item name="colorButtonNormal">@color/colorChapterThreeDark</item>
         <item name="android:buttonTint">@color/colorChapterThreeDark</item>
     </style>
-    <style name="AppTheme_Quiz" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    <style name="Theme.AppCompat.EZoneQuiz.Quiz" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorQuiz</item>
         <item name="colorPrimaryDark">@color/colorQuizDark</item>
         <item name="colorAccent">@color/colorQuizLight</item>
         <item name="colorButtonNormal">@color/colorQuizDark</item>
         <item name="android:buttonTint">@color/colorQuizDark</item>
     </style>
-    <style name="Widget.AppCompat.EZoneQuiz.RadioButton.Answer" parent="@style/Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">@dimen/text_answerSize</item>
-        <item name="android:checked">false</item>
-        <item name="android:buttonTint">@color/colorQuizDark</item>
-    </style>
 
-    <style name="Widget.AppCompat.EZoneQuiz.CheckBox.Answer" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+    <!-- Widget Styles -->
+    <style name="Widget.AppCompat.EZoneQuiz.RadioButton" parent="@style/Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">@dimen/text_answerSize</item>
+        <item name="android:textColor">@android:color/white</item> <!-- For some reason, android:textAppearance is not changing the color -->
+        <item name="android:textAppearance">?android:attr/textAppearanceMediumInverse</item>
         <item name="android:checked">false</item>
     </style>
 
-    <style name="CategoryStyle">
+    <style name="Widget.AppCompat.EZoneQuiz.CheckBox" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item> <!-- For some reason, android:textAppearance is not changing the color -->
+        <item name="android:textAppearance">?android:attr/textAppearanceMediumInverse</item>
+        <item name="android:checked">false</item>
+    </style>
+
+    <style name="Widget.AppCompat.EZoneQuiz.Button" parent="@style/Widget.AppCompat.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/padding_default</item>
+        <item name="android:paddingBottom">@dimen/padding_default</item>
+        <item name="android:paddingLeft">@dimen/padding_default</item>
+        <item name="android:paddingRight">@dimen/padding_default</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLargeInverse</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.EZoneQuiz.Medium.Inverse.ChapterSelect" parent="@style/TextAppearance.AppCompat.Medium.Inverse">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:padding">16dp</item>
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:paddingTop">@dimen/padding_default</item>
+        <item name="android:paddingBottom">@dimen/padding_default</item>
+        <item name="android:paddingLeft">@dimen/padding_default</item>
+        <item name="android:paddingRight">@dimen/padding_default</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textAppearance">?android:textAppearanceMedium</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style name="TextAppearance.AppCompat.EZoneQuiz.Large.Inverse.Subtitle" parent="@style/TextAppearance.AppCompat.Large.Inverse">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingTop">@dimen/padding_default</item>
+        <item name="android:paddingBottom">@dimen/padding_default</item>
+        <item name="android:paddingStart">@dimen/padding_default</item>
+        <item name="android:paddingEnd">@dimen/padding_default</item>
+
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_vertical</item>
+
+        <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="TextAppearance.AppCompat.EZoneQuiz.Medium" parent="@style/TextAppearance.AppCompat.Medium">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingTop">@dimen/padding_default</item>
+        <item name="android:paddingBottom">@dimen/padding_default</item>
+        <item name="android:paddingStart">@dimen/padding_default</item>
+        <item name="android:paddingEnd">@dimen/padding_default</item>
+    </style>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="TextAppearance.AppCompat.EZoneQuiz.Medium.Inverse" parent="@style/TextAppearance.AppCompat.Medium.Inverse">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingTop">@dimen/padding_default</item>
+        <item name="android:paddingBottom">@dimen/padding_default</item>
+        <item name="android:paddingStart">@dimen/padding_default</item>
+        <item name="android:paddingEnd">@dimen/padding_default</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.EZoneQuiz.Large" parent="@style/TextAppearance.AppCompat.Large">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingTop">@dimen/padding_default</item>
+        <item name="android:paddingBottom">@dimen/padding_default</item>
+        <item name="android:paddingStart">@dimen/padding_default</item>
+        <item name="android:paddingEnd">@dimen/padding_default</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.EZoneQuiz.Large.Inverse" parent="@style/TextAppearance.AppCompat.Large.Inverse">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingTop">@dimen/padding_default</item>
+        <item name="android:paddingBottom">@dimen/padding_default</item>
+        <item name="android:paddingStart">@dimen/padding_default</item>
+        <item name="android:paddingEnd">@dimen/padding_default</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.EZoneQuiz.Medium.Quote" parent="@style/TextAppearance.AppCompat.Medium">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingTop">@dimen/padding_default</item>
+        <item name="android:paddingBottom">@dimen/padding_default</item>
+        <item name="android:paddingStart">@dimen/padding_default</item>
+        <item name="android:paddingEnd">@dimen/padding_default</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.EZoneQuiz.Small" parent="@style/TextAppearance.AppCompat.Small">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingTop">@dimen/padding_default</item>
+        <item name="android:paddingBottom">@dimen/padding_default</item>
+        <item name="android:paddingStart">@dimen/padding_default</item>
+        <item name="android:paddingEnd">@dimen/padding_default</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.EZoneQuiz.Small.Inverse" parent="@style/TextAppearance.AppCompat.Small.Inverse">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingTop">@dimen/padding_default</item>
+        <item name="android:paddingBottom">@dimen/padding_default</item>
+        <item name="android:paddingStart">@dimen/padding_default</item>
+        <item name="android:paddingEnd">@dimen/padding_default</item>
+    </style>
+
+    <style name="Theme.AppCompat.EZoneQuiz.ImageView" parent="@style/Theme.AppCompat">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:contentDescription">@string/error</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/empty</item>
+    </style>
 </resources>

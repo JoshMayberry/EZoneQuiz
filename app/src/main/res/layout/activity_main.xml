@@ -11,53 +11,45 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="4">
+
         <ImageView
-            android:id="@+id/mainImage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="0dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/empty" />
+            android:id="@+id/main_image"
+            style="@style/Theme.AppCompat.EZoneQuiz.ImageView" />
 
         <TextView
-            android:id="@+id/mainSubtitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/mainImage"
+            android:id="@+id/main_subtitle"
+            style="@style/TextAppearance.AppCompat.EZoneQuiz.Large.Inverse.Subtitle"
             android:text="@string/tagLine"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/text_titleSize" />
+            tools:textColor="@android:color/darker_gray" />
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/section1"
-        style="@style/CategoryStyle"
+        android:id="@+id/main_section1"
+        style="@style/TextAppearance.AppCompat.EZoneQuiz.Medium.Inverse.ChapterSelect"
         android:background="@color/colorIntroduction"
         android:text="@string/section1" />
 
     <TextView
-        android:id="@+id/section2"
-        style="@style/CategoryStyle"
+        android:id="@+id/main_section2"
+        style="@style/TextAppearance.AppCompat.EZoneQuiz.Medium.Inverse.ChapterSelect"
         android:background="@color/colorChapterOne"
         android:text="@string/section2" />
 
     <TextView
-        android:id="@+id/section3"
-        style="@style/CategoryStyle"
+        android:id="@+id/main_section3"
+        style="@style/TextAppearance.AppCompat.EZoneQuiz.Medium.Inverse.ChapterSelect"
         android:background="@color/colorChapterTwo"
         android:text="@string/section3" />
 
     <TextView
-        android:id="@+id/section4"
-        style="@style/CategoryStyle"
+        android:id="@+id/main_section4"
+        style="@style/TextAppearance.AppCompat.EZoneQuiz.Medium.Inverse.ChapterSelect"
         android:background="@color/colorChapterThree"
         android:text="@string/section4" />
 
     <TextView
-        android:id="@+id/quiz"
-        style="@style/CategoryStyle"
+        android:id="@+id/main_quiz"
+        style="@style/TextAppearance.AppCompat.EZoneQuiz.Medium.Inverse.ChapterSelect"
         android:background="@color/colorQuiz"
         android:text="@string/quiz" />
 </LinearLayout>

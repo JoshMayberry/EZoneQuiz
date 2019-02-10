@@ -2,7 +2,6 @@ package com.example.android.ezonequiz;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -27,12 +26,12 @@ public class QuizActivity extends AppCompatActivity {
     public Spinner view_spinner;
     public ImageView view_image;
 
-    private ProgressBar view_progress;
+    public ProgressBar view_progress;
 
     private List<Question> questions = new ArrayList<>();
     public Question currentQuestion;
 
-    private int score;
+    public int score;
     public Random random = new Random();
     public String[] correctList = new String[3]; //Different ways to say correct
     public String[] incorrectList = new String[2]; //Different ways to say incorrect
@@ -43,21 +42,21 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
         //Get Resources
-        view_progress = findViewById(R.id.quizProgress);
-        view_radioButton[0] = findViewById(R.id.radioButton_0);
-        view_radioButton[1] = findViewById(R.id.radioButton_1);
-        view_radioButton[2] = findViewById(R.id.radioButton_2);
-        view_radioButton[3] = findViewById(R.id.radioButton_3);
-        view_radioButton[4] = findViewById(R.id.radioButton_4);
-        view_checkBox[0] = findViewById(R.id.checkBox_0);
-        view_checkBox[1] = findViewById(R.id.checkBox_1);
-        view_checkBox[2] = findViewById(R.id.checkBox_2);
-        view_checkBox[3] = findViewById(R.id.checkBox_3);
-        view_checkBox[4] = findViewById(R.id.checkBox_4);
-        view_numberPicker = findViewById(R.id.numberPicker);
-        view_spinner = findViewById(R.id.spinner);
+        view_progress = findViewById(R.id.quiz_progress);
+        view_radioButton[0] = findViewById(R.id.quiz_radioButton_0);
+        view_radioButton[1] = findViewById(R.id.quiz_radioButton_1);
+        view_radioButton[2] = findViewById(R.id.quiz_radioButton_2);
+        view_radioButton[3] = findViewById(R.id.quiz_radioButton_3);
+        view_radioButton[4] = findViewById(R.id.quiz_radioButton_4);
+        view_checkBox[0] = findViewById(R.id.quiz_checkBox_0);
+        view_checkBox[1] = findViewById(R.id.quiz_checkBox_1);
+        view_checkBox[2] = findViewById(R.id.quiz_checkBox_2);
+        view_checkBox[3] = findViewById(R.id.quiz_checkBox_3);
+        view_checkBox[4] = findViewById(R.id.quiz_checkBox_4);
+        view_numberPicker = findViewById(R.id.quiz_numberPicker);
+        view_spinner = findViewById(R.id.quiz_spinner);
         view_questionText = findViewById(R.id.quiz_title);
-        view_radioGroup = findViewById(R.id.radioGroup);
+        view_radioGroup = findViewById(R.id.quiz_radioGroup);
         view_image = findViewById(R.id.quiz_image);
 
         correctList[0] = getResources().getString(R.string.correct_1);
@@ -83,39 +82,39 @@ public class QuizActivity extends AppCompatActivity {
     private void generateQuestions() {
         questions.clear();
         questions.add(new Question(this,
-                R.drawable.word_tiles_fear,
+                R.drawable.quiz1_1,
                 R.string.quiz1_1,
                 R.string.quiz1_1_correct,
                 R.string.quiz1_1_incorrect,
-                new int[] {R.string.quiz1_1_a1, R.string.quiz1_1_a2},
+                new int[]{R.string.quiz1_1_a1, R.string.quiz1_1_a2},
                 0
         ));
         questions.add(new Question(this,
-                R.drawable.dumbbell,
+                R.drawable.quiz1_2,
                 R.string.quiz1_2,
                 R.string.quiz1_2_correct,
                 R.string.quiz1_2_incorrect,
-                new int[] {R.string.quiz1_2_a1, R.string.quiz1_2_a2},
+                new int[]{R.string.quiz1_2_a1, R.string.quiz1_2_a2},
                 1
         ));
         questions.add(new Question(this,
-                R.drawable.survival_kit,
+                R.drawable.quiz1_3,
                 R.string.quiz1_3,
                 R.string.quiz1_3_correct,
                 R.string.quiz1_3_incorrect,
-                new int[] {R.string.quiz1_3_a1, R.string.quiz1_3_a2},
+                new int[]{R.string.quiz1_3_a1, R.string.quiz1_3_a2},
                 1
         ));
         questions.add(new Question(this,
-                R.drawable.pillars,
+                R.drawable.quiz2_1,
                 R.string.quiz2_1,
                 R.string.quiz2_1_correct,
                 R.string.quiz2_1_incorrect,
-                new int[] {R.string.quiz2_1_a1, R.string.quiz2_1_a2, R.string.quiz2_1_a3, R.string.quiz2_1_a4},
-                new int[] {0, 1, 2, 3}
+                new int[]{R.string.quiz2_1_a1, R.string.quiz2_1_a2, R.string.quiz2_1_a3, R.string.quiz2_1_a4},
+                new int[]{0, 1, 2, 3}
         ));
         questions.add(new Question(this,
-                R.drawable.water,
+                R.drawable.quiz3_1,
                 R.string.quiz3_1,
                 R.string.quiz3_1_correct,
                 R.string.quiz3_1_incorrect,
@@ -124,7 +123,7 @@ public class QuizActivity extends AppCompatActivity {
                 2
         ));
         questions.add(new Question(this,
-                R.drawable.food_storage,
+                R.drawable.quiz3_2,
                 R.string.quiz3_2,
                 R.string.quiz3_2_correct,
                 R.string.quiz3_2_incorrect,
@@ -133,7 +132,7 @@ public class QuizActivity extends AppCompatActivity {
                 3
         ));
         questions.add(new Question(this,
-                R.drawable.bug_out_bag,
+                R.drawable.quiz_3_3,
                 R.string.quiz3_3,
                 R.string.quiz3_3_correct,
                 R.string.quiz3_3_incorrect,
@@ -174,38 +173,29 @@ public class QuizActivity extends AppCompatActivity {
         currentQuestion = null;
         showNext();
     }
+
     /**
      * The user wants to submit their answer to this question and see the next question.
+     *
      * @param view - The button view that fired this method
      */
     public void onNext(View view) {
-        if (questions.size() <= 0) {
-            score += 1;
-            DialogCorrect dialogCorrect = new DialogCorrect(this,
-                    getResources().getString(R.string.dialog_score, score, view_numberPicker.getMaxValue()),
-                    getResources().getString(R.string.dialog_finish),
-                    true
-                    );
-            dialogCorrect.show();
-            return;
-        }
-        showDialog();
-    }
-    /**
-     * Shows the dialog box for moving on to the next question.
-     */
-    private void showDialog() {
-        if (currentQuestion != null) {
-            if (!currentQuestion.check()) {
-                DialogIncorrect dialogIncorrect = new DialogIncorrect(this, currentQuestion.getMessage_incorrect());
-                dialogIncorrect.show();
-            } else {
-                DialogCorrect dialogCorrect = new DialogCorrect(this, currentQuestion.getMessage_correct());
-                dialogCorrect.show();
+        boolean correct = currentQuestion.check();
+        if (correct) {
+            if (!(currentQuestion.pointCounted)) {
                 score += 1;
+                currentQuestion.pointCounted = true;
+            }
+        } else {
+            if (currentQuestion.pointCounted) {
+                score -= 1;
+                currentQuestion.pointCounted = false;
             }
         }
+        QuizDialog quizDialog = new QuizDialog(this, questions.size() <= 0, correct);
+        quizDialog.show();
     }
+
     /**
      * Shows the next question.
      */

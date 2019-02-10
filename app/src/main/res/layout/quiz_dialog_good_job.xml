@@ -1,41 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="@dimen/dialog_border"
     android:background="@color/colorQuiz"
     android:orientation="vertical"
-    >
+    android:padding="@dimen/dialog_border">
+
     <TextView
-        android:id="@+id/dialog_message_correct"
+        android:id="@+id/dialog_message"
+        style="@style/TextAppearance.AppCompat.EZoneQuiz.Medium.Inverse"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
-        tools:text="Correct answer"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        />
+        tools:text="Correct answer" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/dialog_button_next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
+            style="@style/Widget.AppCompat.EZoneQuiz.Button"
             android:background="@color/colorQuizDark"
-            android:focusable="true"
-            android:clickable="true"
-            tools:text="Next Question"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            />
+            tools:text="Next Question" />
     </LinearLayout>
 </LinearLayout>

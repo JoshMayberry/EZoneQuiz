@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="text_titleSize">24sp</dimen>
-    <dimen name="text_answerSize">16sp</dimen>
-    <dimen name="margin_answer">12dp</dimen>
+    <dimen name="padding_default">16dp</dimen>
     <dimen name="widget_menuItemHeight">88dp</dimen>
-
     <dimen name="dialog_border">10dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="tab_width">24dp</dimen>
+    <dimen name="button_spacing">5dp</dimen>
 </resources>
