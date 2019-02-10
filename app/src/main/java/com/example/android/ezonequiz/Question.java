@@ -19,18 +19,18 @@ enum QuestionType {
  * A container to store data about the question in.
  */
 class Question {
-    private QuizActivity activity;
-    private QuestionType type; //Which type of question this is
-    private int textId; //Which question to ask
-    private int correctId; //What text to show when the answer was correct
-    private int incorrectId; //What text to show when the answer was incorrect
-    private int rangeMin; //Used for Number Spinners
-    private int rangeMax; //Used for Number Spinners
-    private int correctValue; //Used for Number Spinners
-    private List<Integer> correctIndex = new ArrayList<>(); //The index numbers of the correct answers
-    private List<Integer> answerList = new ArrayList<>(); //Which answers belong to this question
-    private List<View> viewList = new ArrayList<>(); //Which widgets to use for the answers
-    private int imageId; //Which image to use for this question
+    private QuizActivity mActivity;
+    private QuestionType mType; //Which mType of question this is
+    private int mTextId; //Which question to ask
+    private int mCorrectId; //What text to show when the answer was correct
+    private int mIncorrectId; //What text to show when the answer was incorrect
+    private int mRangeMin; //Used for Number Spinners
+    private int mRangeMax; //Used for Number Spinners
+    private int mCorrectValue; //Used for Number Spinners
+    private List<Integer> mCorrectIndexList = new ArrayList<>(); //The index numbers of the correct answers
+    private List<Integer> mAnswerList = new ArrayList<>(); //Which answers belong to this question
+    private List<View> mViewList = new ArrayList<>(); //Which widgets to use for the answers
+    private int mImageId; //Which image to use for this question
 
     boolean pointCounted = false; //Makes it so the user cannot increase their score by dismissing the next question dialog
 
@@ -44,20 +44,20 @@ class Question {
      * @param correctIndex - The index of the correct answer
      */
     Question(QuizActivity activity, int imageId, int textId, int correctId, int incorrectId, int[] answerIdList, int correctIndex) {
-        this.activity = activity;
-        this.type = QuestionType.Single;
-        this.textId = textId;
-        this.imageId = imageId;
-        this.correctId = correctId;
-        this.incorrectId = incorrectId;
+        this.mActivity = activity;
+        this.mType = QuestionType.Single;
+        this.mTextId = textId;
+        this.mImageId = imageId;
+        this.mCorrectId = correctId;
+        this.mIncorrectId = incorrectId;
 
         for (int i = 0; i < answerIdList.length; i++) {
-            this.answerList.add(answerIdList[i]);
-            this.viewList.add(activity.view_radioButton[i]);
+            this.mAnswerList.add(answerIdList[i]);
+            this.mViewList.add(activity.viewRadioButton[i]);
         }
 
-        assert this.answerList.size() > correctIndex;
-        this.correctIndex.add(correctIndex);
+        assert this.mAnswerList.size() > correctIndex;
+        this.mCorrectIndexList.add(correctIndex);
 
     }
 
@@ -71,21 +71,21 @@ class Question {
      * @param correctIndex - The indexes of the correct answers
      */
     Question(QuizActivity activity, int imageId, int textId, int correctId, int incorrectId, int[] answerIdList, int[] correctIndex) {
-        this.activity = activity;
-        this.type = QuestionType.Multiple;
-        this.textId = textId;
-        this.imageId = imageId;
-        this.correctId = correctId;
-        this.incorrectId = incorrectId;
+        this.mActivity = activity;
+        this.mType = QuestionType.Multiple;
+        this.mTextId = textId;
+        this.mImageId = imageId;
+        this.mCorrectId = correctId;
+        this.mIncorrectId = incorrectId;
 
         for (int i = 0; i < answerIdList.length; i++) {
-            this.answerList.add(answerIdList[i]);
-            this.viewList.add(this.activity.view_checkBox[i]);
+            this.mAnswerList.add(answerIdList[i]);
+            this.mViewList.add(this.mActivity.viewCheckBox[i]);
         }
 
         for (int i : correctIndex) {
-            assert this.answerList.size() > i;
-            this.correctIndex.add(i);
+            assert this.mAnswerList.size() > i;
+            this.mCorrectIndexList.add(i);
         }
     }
 
@@ -100,26 +100,26 @@ class Question {
      * @param correctValue - The correct value to select
      */
     Question(QuizActivity activity, int imageId, int textId, int correctId, int incorrectId, int rangeMin, int rangeMax, int correctValue) {
-        this.activity = activity;
-        this.type = QuestionType.Integer;
-        this.textId = textId;
-        this.imageId = imageId;
-        this.correctId = correctId;
-        this.incorrectId = incorrectId;
-        this.rangeMin = rangeMin;
-        this.rangeMax = rangeMax;
+        this.mActivity = activity;
+        this.mType = QuestionType.Integer;
+        this.mTextId = textId;
+        this.mImageId = imageId;
+        this.mCorrectId = correctId;
+        this.mIncorrectId = incorrectId;
+        this.mRangeMin = rangeMin;
+        this.mRangeMax = rangeMax;
 
         assert rangeMin <= correctValue;
         assert rangeMax >= correctValue;
-        this.correctValue = correctValue;
-        this.viewList.add(this.activity.view_numberPicker);
+        this.mCorrectValue = correctValue;
+        this.mViewList.add(this.mActivity.viewNumberPicker);
     }
 
     /**
      * Hides this question on the screen.
      */
     void hide() {
-        for (View view : this.activity.currentQuestion.viewList) {
+        for (View view : this.mActivity.currentQuestion.mViewList) {
             view.setVisibility(View.GONE);
         }
     }
@@ -128,32 +128,32 @@ class Question {
      * Shows this question on the screen.
      */
     void show() {
-        for (View view : this.activity.currentQuestion.viewList) {
+        for (View view : this.mActivity.currentQuestion.mViewList) {
             view.setVisibility(View.VISIBLE);
         }
 
-        this.activity.view_image.setImageDrawable(ContextCompat.getDrawable(activity, this.imageId));
-        this.activity.view_questionText.setText(this.activity.currentQuestion.textId);
+        this.mActivity.viewImage.setImageDrawable(ContextCompat.getDrawable(mActivity, this.mImageId));
+        this.mActivity.viewQuestionText.setText(this.mActivity.currentQuestion.mTextId);
 
-        switch (this.type) {
+        switch (this.mType) {
             case Single:
-                for (int i = 0; i < this.viewList.size(); i++) {
-                    RadioButton view = (RadioButton) viewList.get(i);
-                    view.setText(this.answerList.get(i));
+                for (int i = 0; i < this.mViewList.size(); i++) {
+                    RadioButton view = (RadioButton) mViewList.get(i);
+                    view.setText(this.mAnswerList.get(i));
                 }
-                this.activity.view_radioGroup.clearCheck();
+                this.mActivity.viewRadioGroup.clearCheck();
                 break;
             case Multiple:
-                for (int i = 0; i < this.viewList.size(); i++) {
-                    CheckBox view = (CheckBox) viewList.get(i);
-                    view.setText(this.answerList.get(i));
+                for (int i = 0; i < this.mViewList.size(); i++) {
+                    CheckBox view = (CheckBox) mViewList.get(i);
+                    view.setText(this.mAnswerList.get(i));
                     view.setChecked(false);
                 }
                 break;
             case Integer:
                 //See: https://stackoverflow.com/questions/17805040/how-to-create-a-number-picker-dialog/17806895#17806895
-                this.activity.view_numberPicker.setMinValue(this.rangeMin);
-                this.activity.view_numberPicker.setMaxValue(this.rangeMax);
+                this.mActivity.viewNumberPicker.setMinValue(this.mRangeMin);
+                this.mActivity.viewNumberPicker.setMaxValue(this.mRangeMax);
                 //Use: https://stackoverflow.com/questions/12979643/change-the-step-size-of-a-numberpicker/30469826#30469826
         }
     }
@@ -164,25 +164,25 @@ class Question {
      * @return - Whether or not the user chose correctly
      */
     boolean check() {
-        switch (this.type) {
+        switch (this.mType) {
             case Single:
-                for (int i = 0; i < this.viewList.size(); i++) {
-                    RadioButton view = (RadioButton) viewList.get(i);
-                    if (view.isChecked() != this.correctIndex.contains(i)) {
+                for (int i = 0; i < this.mViewList.size(); i++) {
+                    RadioButton view = (RadioButton) mViewList.get(i);
+                    if (view.isChecked() != this.mCorrectIndexList.contains(i)) {
                         return false;
                     }
                 }
                 return true;
             case Multiple:
-                for (int i = 0; i < this.viewList.size(); i++) {
-                    CheckBox view = (CheckBox) viewList.get(i);
-                    if (view.isChecked() != this.correctIndex.contains(i)) {
+                for (int i = 0; i < this.mViewList.size(); i++) {
+                    CheckBox view = (CheckBox) mViewList.get(i);
+                    if (view.isChecked() != this.mCorrectIndexList.contains(i)) {
                         return false;
                     }
                 }
                 return true;
             case Integer:
-                return this.activity.view_numberPicker.getValue() == this.correctValue;
+                return this.mActivity.viewNumberPicker.getValue() == this.mCorrectValue;
         }
         return false;
     }
@@ -194,7 +194,7 @@ class Question {
      * See: https://www.baeldung.com/java-random-list-element#highlighter_812240
      */
     String getMessage_correct() {
-        return this.activity.getResources().getString(this.correctId, this.activity.correctList[this.activity.random.nextInt(this.activity.correctList.length)]);
+        return this.mActivity.getResources().getString(this.mCorrectId, this.mActivity.correctList[this.mActivity.random.nextInt(this.mActivity.correctList.length)]);
     }
 
     /**
@@ -203,6 +203,6 @@ class Question {
      * @return The message to show in the dialog box
      */
     String getMessage_incorrect() {
-        return this.activity.getResources().getString(this.incorrectId, this.activity.incorrectList[this.activity.random.nextInt(this.activity.incorrectList.length)]);
+        return this.mActivity.getResources().getString(this.mIncorrectId, this.mActivity.incorrectList[this.mActivity.random.nextInt(this.mActivity.incorrectList.length)]);
     }
 }

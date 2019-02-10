@@ -18,8 +18,8 @@ import java.util.ArrayList;
  */
 public class BookActivity_ToC extends AppCompatActivity {
 
-    public LinearLayout view_root;
-    public ListView view_sectionList;
+    public LinearLayout viewRoot;
+    public ListView viewSectionList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +32,8 @@ public class BookActivity_ToC extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.display_sections);
-        view_sectionList = findViewById(R.id.book_ToC_list);
-        view_root = findViewById(R.id.book_ToC_root);
+        viewSectionList = findViewById(R.id.book_ToC_list);
+        viewRoot = findViewById(R.id.book_ToC_root);
 
         applyExtras_intent(intent);
         applyExtras_theme();
@@ -79,7 +79,7 @@ public class BookActivity_ToC extends AppCompatActivity {
         if (!(myTheme.resolveAttribute(R.attr.colorAccent, typedValue, true))) {
             typedValue.data = R.color.colorPrimaryLight;
         }
-        view_sectionList.setBackgroundColor(typedValue.data);
-        view_root.setBackgroundColor(typedValue.data); //Fill in background in case 'view_sectionList' is smaller than the screen
+        viewSectionList.setBackgroundColor(typedValue.data);
+        viewRoot.setBackgroundColor(typedValue.data); //Fill in background in case 'viewSectionList' is smaller than the screen
     }
 }

@@ -26,14 +26,14 @@ public class BookListener_Text extends SectionBase<BookListener_Text> implements
      * @see SectionBase
      */
     BookListener_Text(SectionBase selectedItem) {
-        this.extra_theme = selectedItem.extra_theme;
-        this.extra_title = selectedItem.extra_title;
-        this.extra_image = selectedItem.extra_image;
-        this.extra_text_body = selectedItem.extra_text_body;
-        this.extra_text_quote = selectedItem.extra_text_quote;
-        this.extra_text_subtitle = selectedItem.extra_text_subtitle;
-        this.extra_image_scaleType = selectedItem.extra_image_scaleType;
-        this.extra_text_quote_source = selectedItem.extra_text_quote_source;
+        this.extraTheme = selectedItem.extraTheme;
+        this.extraTitle = selectedItem.extraTitle;
+        this.extraImage = selectedItem.extraImage;
+        this.extraTextBody = selectedItem.extraTextBody;
+        this.extraTextQuote = selectedItem.extraTextQuote;
+        this.extraTextSubtitle = selectedItem.extraTextSubtitle;
+        this.extraImageScaleType = selectedItem.extraImageScaleType;
+        this.extraTextQuoteSource = selectedItem.extraTextQuoteSource;
     }
 
     @Override
@@ -42,14 +42,14 @@ public class BookListener_Text extends SectionBase<BookListener_Text> implements
         Context context = view.getContext();
         Intent intent = new Intent(context, BookActivity_Text.class);
 
-        intent.putExtra("theme", this.extra_theme);
-        intent.putExtra("title", this.extra_title);
-        intent.putExtra("image", this.extra_image);
-        intent.putExtra("text_body", this.extra_text_body);
-        intent.putExtra("text_quote", this.extra_text_quote);
-        intent.putExtra("text_subtitle", this.extra_text_subtitle);
-        intent.putExtra("image_scaleType", this.extra_image_scaleType);
-        intent.putExtra("text_quote_source", this.extra_text_quote_source);
+        intent.putExtra("theme", this.extraTheme);
+        intent.putExtra("title", this.extraTitle);
+        intent.putExtra("image", this.extraImage);
+        intent.putExtra("text_body", this.extraTextBody);
+        intent.putExtra("text_quote", this.extraTextQuote);
+        intent.putExtra("text_subtitle", this.extraTextSubtitle);
+        intent.putExtra("image_scaleType", this.extraImageScaleType);
+        intent.putExtra("text_quote_source", this.extraTextQuoteSource);
 
         context.startActivity(intent);
     }

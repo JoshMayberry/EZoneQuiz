@@ -1,6 +1,5 @@
 package com.example.android.ezonequiz;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
@@ -9,21 +8,21 @@ import android.widget.Button;
 import android.widget.TextView;
 
 /**
- * A dialog box that lets the user know they got the answer correct.
+ * A dialog box that lets the user know they got the answer mCorrect.
  * Use: https://stackoverflow.com/questions/13341560/how-to-create-a-custom-dialog-box-in-android/13342157#13342157
  * See: https://developer.android.com/guide/topics/ui/dialogs#PassingEvents
  */
 public class QuizDialog extends Dialog implements android.view.View.OnClickListener {
 
-    private QuizActivity activity;
-    private boolean lastQuestion;
-    private boolean correct;
+    private QuizActivity mActivity;
+    private boolean mLastQuestion;
+    private boolean mCorrect;
 
     QuizDialog(QuizActivity activity, boolean lastQuestion, boolean correct) {
         super(activity);
-        this.activity = activity;
-        this.correct = correct;
-        this.lastQuestion = lastQuestion;
+        this.mActivity = activity;
+        this.mCorrect = correct;
+        this.mLastQuestion = lastQuestion;
     }
 
     @Override
@@ -32,25 +31,25 @@ public class QuizDialog extends Dialog implements android.view.View.OnClickListe
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         String message;
-        if (this.correct) {
+        if (this.mCorrect) {
             setContentView(R.layout.quiz_dialog_good_job);
-            message = activity.currentQuestion.getMessage_correct();
+            message = mActivity.currentQuestion.getMessage_correct();
         } else {
             setContentView(R.layout.quiz_dialog_try_again);
             findViewById(R.id.dialog_button_cancel).setOnClickListener(this);
-            message = activity.currentQuestion.getMessage_incorrect();
+            message = mActivity.currentQuestion.getMessage_incorrect();
         }
 
-        Button view_next = findViewById(R.id.dialog_button_next);
-        view_next.setOnClickListener(this);
-        if (this.lastQuestion) {
-            view_next.setText(R.string.dialog_finish);
-            message += "\n\n" + activity.getString(R.string.dialog_score, activity.score, activity.view_progress.getMax());
+        Button viewNext = findViewById(R.id.dialog_button_next);
+        viewNext.setOnClickListener(this);
+        if (this.mLastQuestion) {
+            viewNext.setText(R.string.dialog_finish);
+            message += "\n\n" + mActivity.getString(R.string.dialog_score, mActivity.score, mActivity.viewProgress.getMax());
         } else {
-            if (this.correct) {
-                view_next.setText(R.string.dialog_next);
+            if (this.mCorrect) {
+                viewNext.setText(R.string.dialog_next);
             } else {
-                view_next.setText(R.string.dialog_no);
+                viewNext.setText(R.string.dialog_no);
             }
         }
 
@@ -61,11 +60,11 @@ public class QuizDialog extends Dialog implements android.view.View.OnClickListe
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.dialog_button_next) {
-            if (this.lastQuestion) {
-                activity.finish();
+            if (this.mLastQuestion) {
+                mActivity.finish();
                 return;
             }
-            activity.showNext();
+            mActivity.showNext();
         }
         dismiss();
     }

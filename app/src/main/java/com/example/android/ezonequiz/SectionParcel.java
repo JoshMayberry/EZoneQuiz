@@ -20,25 +20,25 @@ public class SectionParcel extends SectionBase<SectionParcel> implements Parcela
     //Parcelable Methods
     @Override
     public void writeToParcel(Parcel out, int flags) {
-        out.writeInt(this.extra_theme);
-        out.writeInt(this.extra_title);
-        out.writeInt(this.extra_image);
-        out.writeInt(this.extra_text_body);
-        out.writeInt(this.extra_text_quote);
-        out.writeInt(this.extra_text_subtitle);
-        out.writeInt(this.extra_image_scaleType);
-        out.writeInt(this.extra_text_quote_source);
+        out.writeInt(this.extraTheme);
+        out.writeInt(this.extraTitle);
+        out.writeInt(this.extraImage);
+        out.writeInt(this.extraTextBody);
+        out.writeInt(this.extraTextQuote);
+        out.writeInt(this.extraTextSubtitle);
+        out.writeInt(this.extraImageScaleType);
+        out.writeInt(this.extraTextQuoteSource);
     }
 
     private SectionParcel(Parcel in) {
-        this.extra_theme = in.readInt();
-        this.extra_title = in.readInt();
-        this.extra_image = in.readInt();
-        this.extra_text_body = in.readInt();
-        this.extra_text_quote = in.readInt();
-        this.extra_text_subtitle = in.readInt();
-        this.extra_image_scaleType = in.readInt();
-        this.extra_text_quote_source = in.readInt();
+        this.extraTheme = in.readInt();
+        this.extraTitle = in.readInt();
+        this.extraImage = in.readInt();
+        this.extraTextBody = in.readInt();
+        this.extraTextQuote = in.readInt();
+        this.extraTextSubtitle = in.readInt();
+        this.extraImageScaleType = in.readInt();
+        this.extraTextQuoteSource = in.readInt();
     }
 
     @Override
