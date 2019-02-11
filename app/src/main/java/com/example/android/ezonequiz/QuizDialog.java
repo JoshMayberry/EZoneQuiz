@@ -33,11 +33,11 @@ public class QuizDialog extends Dialog implements android.view.View.OnClickListe
         String message;
         if (this.mCorrect) {
             setContentView(R.layout.quiz_dialog_good_job);
-            message = mActivity.currentQuestion.getMessage_correct();
+            message = mActivity.currentQuestion.getMessageCorrect();
         } else {
             setContentView(R.layout.quiz_dialog_try_again);
             findViewById(R.id.dialog_button_cancel).setOnClickListener(this);
-            message = mActivity.currentQuestion.getMessage_incorrect();
+            message = mActivity.currentQuestion.getMessageIncorrect();
         }
 
         Button viewNext = findViewById(R.id.dialog_button_next);

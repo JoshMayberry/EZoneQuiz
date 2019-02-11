@@ -6,7 +6,6 @@ import android.widget.CheckBox;
 import android.widget.RadioButton;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 enum QuestionType {
@@ -44,17 +43,17 @@ class Question {
         return this;
     }
 
-    Question setMessage_correct(int textId) {
+    Question setMessageCorrect(int textId) {
         this.mCorrectId = textId;
         return this;
     }
 
-    Question setMessage_incorrect(int textId) {
+    Question setMessageIncorrect(int textId) {
         this.mIncorrectId = textId;
         return this;
     }
 
-    Question setType_single(int textId, int[] answerIdList, int correctIndex) {
+    Question setTypeSingle(int textId, int[] answerIdList, int correctIndex) {
         this.mType = QuestionType.Single;
         this.mTextId = textId;
 
@@ -68,7 +67,7 @@ class Question {
         return this;
     }
 
-    Question setType_multiple(int textId, int[] answerIdList, int[] correctIndexList) {
+    Question setTypeMultiple(int textId, int[] answerIdList, int[] correctIndexList) {
         this.mType = QuestionType.Multiple;
         this.mTextId = textId;
 
@@ -84,7 +83,7 @@ class Question {
         return this;
     }
 
-    Question setType_integer(int textId, int rangeMin, int rangeMax, int correctValue) {
+    Question setTypeInteger(int textId, int rangeMin, int rangeMax, int correctValue) {
         this.mType = QuestionType.Integer;
         this.mTextId = textId;
 
@@ -99,7 +98,7 @@ class Question {
         return this;
     }
 
-    Question setType_string(int textId, int[] correctAnswerList) {
+    Question setTypeString(int textId, int[] correctAnswerList) {
         this.mType = QuestionType.String;
         this.mTextId = textId;
 
@@ -197,7 +196,7 @@ class Question {
      * @return The message to show in the dialog box
      * See: https://www.baeldung.com/java-random-list-element#highlighter_812240
      */
-    String getMessage_correct() {
+    String getMessageCorrect() {
         return this.mActivity.getResources().getString(this.mCorrectId, this.mActivity.correctList[this.mActivity.random.nextInt(this.mActivity.correctList.length)]);
     }
 
@@ -206,7 +205,7 @@ class Question {
      *
      * @return The message to show in the dialog box
      */
-    String getMessage_incorrect() {
+    String getMessageIncorrect() {
         return this.mActivity.getResources().getString(this.mIncorrectId, this.mActivity.incorrectList[this.mActivity.random.nextInt(this.mActivity.incorrectList.length)]);
     }
 }

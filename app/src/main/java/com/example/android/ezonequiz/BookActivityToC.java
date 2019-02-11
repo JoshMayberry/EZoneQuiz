@@ -14,9 +14,9 @@ import java.util.ArrayList;
  * This class controls what options are displayed to the user for pages to view.
  *
  * @see SectionParcel
- * @see BookListener_Text
+ * @see BookListenerText
  */
-public class BookActivity_ToC extends AppCompatActivity {
+public class BookActivityToC extends AppCompatActivity {
 
     public LinearLayout viewRoot;
     public ListView viewSectionList;
@@ -35,8 +35,8 @@ public class BookActivity_ToC extends AppCompatActivity {
         viewSectionList = findViewById(R.id.book_ToC_list);
         viewRoot = findViewById(R.id.book_ToC_root);
 
-        applyExtras_intent(intent);
-        applyExtras_theme();
+        applyExtrasFromIntent(intent);
+        applyExtrasFromTheme();
     }
 
     /**
@@ -45,7 +45,7 @@ public class BookActivity_ToC extends AppCompatActivity {
      * <p>
      * See: https://stackoverflow.com/questions/4233873/how-do-i-get-extra-data-from-intent-on-android/4233898#4233898
      */
-    private void applyExtras_intent(Intent intent) {
+    private void applyExtrasFromIntent(Intent intent) {
         assert intent.hasExtra("sections");
 
         setTitle(intent.getIntExtra("title", R.string.app_name));
@@ -63,7 +63,7 @@ public class BookActivity_ToC extends AppCompatActivity {
         listView.setAdapter(new SectionAdapter(this, sections));
 
         //Connect onClick behavior
-        listView.setOnItemClickListener(new BookListener_Multiple_Text(sections));
+        listView.setOnItemClickListener(new BookListenerMultipleText(sections));
     }
 
     /**
@@ -72,7 +72,7 @@ public class BookActivity_ToC extends AppCompatActivity {
      * Use: https://stackoverflow.com/questions/17277618/get-color-value-programmatically-when-its-a-reference-theme/17277714#17277714
      * See: https://developer.android.com/reference/android/content/res/Resources.Theme#resolveAttribute(int,%20android.util.TypedValue,%20boolean)
      */
-    private void applyExtras_theme() {
+    private void applyExtrasFromTheme() {
 
         Resources.Theme myTheme = getTheme();
         TypedValue typedValue = new TypedValue();

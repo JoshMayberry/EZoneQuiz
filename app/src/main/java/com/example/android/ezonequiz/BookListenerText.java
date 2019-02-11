@@ -7,14 +7,14 @@ import android.view.View;
 /**
  * This class is meant to be used as a listener for a button that will go to a page in the book.
  * @see MainActivity
- * @see BookActivity_ToC
+ * @see BookActivityToC
  * <p>
  * What shows on the screen depends on what extra data the intent was given.
- * @see BookActivity_Text
+ * @see BookActivityText
  */
-public class BookListener_Text extends SectionBase<BookListener_Text> implements View.OnClickListener {
+public class BookListenerText extends SectionBase<BookListenerText> implements View.OnClickListener {
 
-    BookListener_Text() {
+    BookListenerText() {
 
     }
 
@@ -22,10 +22,10 @@ public class BookListener_Text extends SectionBase<BookListener_Text> implements
      * This method is used to convert the item data from a selected table of contents item.
      *
      * @param selectedItem - The item that the user selected
-     * @see BookListener_Multiple_Text
+     * @see BookListenerMultipleText
      * @see SectionBase
      */
-    BookListener_Text(SectionBase selectedItem) {
+    BookListenerText(SectionBase selectedItem) {
         this.extraTheme = selectedItem.extraTheme;
         this.extraTitle = selectedItem.extraTitle;
         this.extraImage = selectedItem.extraImage;
@@ -40,7 +40,7 @@ public class BookListener_Text extends SectionBase<BookListener_Text> implements
     public void onClick(View view) {
         //http://www.vogella.com/tutorials/AndroidIntent/article.html#starting-activities-or-services
         Context context = view.getContext();
-        Intent intent = new Intent(context, BookActivity_Text.class);
+        Intent intent = new Intent(context, BookActivityText.class);
 
         intent.putExtra("theme", this.extraTheme);
         intent.putExtra("title", this.extraTitle);

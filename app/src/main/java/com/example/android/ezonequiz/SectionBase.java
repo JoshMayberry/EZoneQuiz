@@ -6,7 +6,7 @@ package com.example.android.ezonequiz;
  * @param <T> - The class type of the child class that extends this
  *            Use: https://stackoverflow.com/questions/18204190/java-abstract-classes-returning-this-pointer-for-derived-classes/39897781#39897781
  * @see SectionParcel
- * @see BookListener_Text
+ * @see BookListenerText
  */
 public class SectionBase<T extends SectionBase<T>> {
 
@@ -45,10 +45,10 @@ public class SectionBase<T extends SectionBase<T>> {
      *
      * @param themeId - The resource id for the app theme to use
      * @return - Returns 'this' so methods can be chained.
-     * @see BookListener_Text
+     * @see BookListenerText
      * @see SectionParcel
      */
-    T set_theme(int themeId) {
+    T setTheme(int themeId) {
         this.extraTheme = themeId;
         return (T) this;
     }
@@ -58,31 +58,31 @@ public class SectionBase<T extends SectionBase<T>> {
      *
      * @param textId - The resource id for the activity label to use
      * @return - Returns 'this' so methods can be chained.
-     * @see BookListener_Text
+     * @see BookListenerText
      * @see SectionParcel
      */
-    T set_title(int textId) {
+    T setTitle(int textId) {
         this.extraTitle = textId;
         return (T) this;
     }
 
-    T set_body(int textId) {
+    T setBody(int textId) {
         this.extraTextBody = textId;
         return (T) this;
     }
 
-    T set_subtitle(int textId) {
+    T setSubtitle(int textId) {
         this.extraTextSubtitle = textId;
         return (T) this;
     }
 
-    T set_quote(int textId, int sourceId) {
+    T setQuote(int textId, int sourceId) {
         this.extraTextQuote = textId;
         this.extraTextQuoteSource = sourceId;
         return (T) this;
     }
 
-    T set_image(int imageId) {
+    T setImage(int imageId) {
         this.extraImage = imageId;
         return (T) this;
     }
@@ -94,7 +94,7 @@ public class SectionBase<T extends SectionBase<T>> {
      * @param scaleType - Which ScaleType to use for the image
      * @return
      */
-    T set_image_scaleType(int scaleType) {
+    T setImageScaleType(int scaleType) {
         this.extraImageScaleType = scaleType;
         return (T) this;
     }

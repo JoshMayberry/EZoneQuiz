@@ -6,8 +6,8 @@ import android.os.Parcelable;
 /**
  * This is used to transfer data about what each Table of Contents item does.
  * One should be created for each item, and then stored in an Array or ArrayList.
- * @see BookListener_ToC
- * @see BookActivity_Text
+ * @see BookListenerToC
+ * @see BookActivityText
  * <p>
  * Use: https://guides.codepath.com/android/using-parcelable#defining-a-parcelable-object
  */

@@ -21,17 +21,16 @@ public class SectionAdapter extends ArrayAdapter<SectionBase> {
     @Override
     public View getView(int position, @Nullable View scrapView, @NonNull ViewGroup parent) {
         // Check if the existing view is being reused, otherwise inflate the view
-        View view = scrapView;
-        if (view == null) {
-            view = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
+        if (scrapView == null) {
+            scrapView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 
         SectionBase listItem = getItem(position);
 
-        TextView view_textTop = view.findViewById(R.id.list_item_top);
+        TextView view_textTop = scrapView.findViewById(R.id.list_item_top);
         assert listItem != null;
         view_textTop.setText(listItem.extraTitle);
 
-        return view;
+        return scrapView;
     }
 }

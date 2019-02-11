@@ -11,7 +11,7 @@ import android.widget.TextView;
 /**
  * This class controls showing page contents to the user.
  */
-public class BookActivity_Text extends AppCompatActivity {
+public class BookActivityText extends AppCompatActivity {
 
     public TextView viewBody;
     public TextView viewSubtitle;
@@ -36,8 +36,8 @@ public class BookActivity_Text extends AppCompatActivity {
         viewQuoteSource = findViewById(R.id.book_quoteSource);
         viewImage = findViewById(R.id.book_image);
 
-        applyExtras_intent(intent);
-        applyExtras_theme();
+        applyExtrasFromIntent(intent);
+        applyExtrasFromTheme();
     }
 
     /**
@@ -46,7 +46,7 @@ public class BookActivity_Text extends AppCompatActivity {
      * <p>
      * See: https://stackoverflow.com/questions/4233873/how-do-i-get-extra-data-from-intent-on-android/4233898#4233898
      */
-    private void applyExtras_intent(Intent intent) {
+    private void applyExtrasFromIntent(Intent intent) {
         setTitle(intent.getIntExtra("title", R.string.app_name));
         viewImage.setImageResource(intent.getIntExtra("image", R.drawable.empty));
 
@@ -71,7 +71,7 @@ public class BookActivity_Text extends AppCompatActivity {
      * Use: https://stackoverflow.com/questions/17277618/get-color-value-programmatically-when-its-a-reference-theme/17277714#17277714
      * See: https://developer.android.com/reference/android/content/res/Resources.Theme#resolveAttribute(int,%20android.util.TypedValue,%20boolean)
      */
-    private void applyExtras_theme() {
+    private void applyExtrasFromTheme() {
 
         Resources.Theme myTheme = this.getTheme();
         TypedValue typedValue = new TypedValue();
